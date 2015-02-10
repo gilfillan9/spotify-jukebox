@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jukebox</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/simple-line-icons.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body>
+<aside class="aside" id="nav">
+    <div class="aside-top"></div>
+    <nav class="left-nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="icon-disc"></i>
+                    <span>Browse</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-music-tone-alt"></i>
+                    <span>Playlists</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="aside-bottom"></div>
+</aside>
+<header>
+    <section class="search-wrap">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="search" placeholder="Search songs, albums, artists...">
+    </section>
+</header>
+<main>
+
+</main>
+<aside class="play-queue" id="play-queue">
+    <ul>
+        <li><span class="title">Title</span><span class="artist">artist</span><i class="remove-track">X</i></li>
+        <li><span class="title">Title</span><span class="artist">artist</span><i class="remove-track">X</i></li>
+        <li><span class="title">Title</span><span class="artist">artist</span><i class="remove-track">X</i></li>
+        <li><span class="title">Title</span><span class="artist">artist</span><i class="remove-track">X</i></li>
+        <li><span class="title">Title</span><span class="artist">artist</span><i class="remove-track">X</i></li>
+        <li><span class="title">Title</span><span class="artist">artist</span><i class="remove-track">X</i></li>
+    </ul>
+</aside>
+<footer>
+    <section class="play-control">
+        <button class="back icon-control-rewind"></button>
+        <button class="play icon-control-play"></button>
+        <button class="next icon-control-forward"></button>
+    </section>
+    <section class="duration-wrap">
+        <input type="range" class="duration-slider">
+    </section>
+    <section class="audio-control">
+        <label class="current-time"></label>
+        <label class="length"></label>
+
+        <div class="volume-wrap">
+            <i class="icon-volume-2"></i>
+            <input type="range" class="volume-slider"/>
+        </div>
+        <button class="shuffle-button icon-shuffle"></button>
+        <button class="loop-button icon-loop"></button>
+    </section>
+</footer>
+</body>
+</html>

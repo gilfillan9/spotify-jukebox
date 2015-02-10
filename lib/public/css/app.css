@@ -1,0 +1,260 @@
+body {
+    overflow: hidden;
+}
+
+header, footer {
+    height: 60px;
+    position: absolute;
+    left: 70px;
+    right: 280px;
+    display: block;
+}
+
+main {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    right: 280px;
+    bottom: 60px;
+    background: #F2F4F8;
+}
+
+header {
+    background: white;
+    padding-left: 20px;
+    top: 0;
+}
+
+header .search-wrap {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #777;
+}
+
+header .search {
+    border: none;
+    margin-left: 10px;
+    padding: 5px;
+    outline: none;
+    width: 500px;
+    border-bottom: 1px solid lightgrey;
+    transition: border 500ms;
+}
+
+header .search:focus {
+    border-bottom-color: #777777;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    background: #5a6a7a;
+    color: #c9d0d7;
+    padding: 0 5px;
+}
+
+aside#nav {
+    width: 70px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #181f24;
+}
+
+aside#nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside#nav ul li {
+    height: 50px;
+    overflow: hidden;
+    display: block;
+}
+
+aside#nav ul li a {
+    transition: top 300ms;
+    height: 100px;
+    display: block;
+    position: relative;
+    top: 0;
+}
+
+aside#nav ul li:hover a {
+    top: -50px;
+}
+
+aside#nav ul li i, aside#nav ul li span {
+    height: 50px;
+    width: 70px;
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+aside#nav ul li i {
+}
+
+aside#nav ul li span {
+    bottom: 0;
+    font-size: 15px;
+    color: #aaa;
+}
+
+aside#nav ul li:hover {
+    background: #2c3942;
+}
+
+aside#nav .aside-top, aside#nav .aside-bottom {
+    background: #232c32;
+    height: 60px;
+    width: 100%;
+}
+
+aside#nav .aside-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+footer button {
+    border: 0;
+    background: none;
+    font-size: 21px;
+    height: 100%;
+    padding: 0 10px;
+    vertical-align: middle;
+    outline: none;
+    transition: color 200ms;
+}
+
+footer button:hover {
+    color: #aaafb5;
+}
+
+footer .play-control .play, footer .play-control .pause {
+    font-size: 30px;
+}
+
+footer > section {
+    height: 100%;
+    display: inline-block;
+}
+
+.play-control {
+    width: 150px;
+}
+
+footer .duration-wrap {
+    background: #4d5d6e;
+    position: absolute;
+    left: 150px;
+    right: 230px;
+    top: 0;
+    bottom: 0;
+}
+
+footer .duration-wrap input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+
+footer .duration-wrap input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 60px;
+    width: 4px;
+    background: #55cfe6;
+    margin-top: 0; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+footer .duration-wrap input::-webkit-slider-runnable-track {
+}
+
+footer .duration-wrap input:focus {
+    outline: none;
+}
+
+footer .audio-control {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 240px;
+}
+
+footer .audio-control .volume-wrap {
+    display: inline-block;
+    width: 120px;
+    margin-top: 20px;
+}
+
+footer .audio-control .volume-wrap i {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+footer .audio-control .volume-wrap input {
+    width: 80px;
+    float: right;
+}
+
+footer .audio-control > button {
+    margin-top: -8px;
+}
+
+aside.play-queue {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    background: #e0eaec;
+}
+
+aside.play-queue ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+aside.play-queue ul li {
+    border-bottom: 1px solid #d4dee0;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    position: relative;
+}
+
+aside.play-queue ul li .title {
+    font-size: 15px;
+}
+
+aside.play-queue ul li .artist {
+    padding-left: 7px;
+    color: #878787;
+    font-size: 12px;
+}
+
+aside.play-queue ul li .remove-track {
+    position: absolute;
+    right: 9px;
+    top: 12px;
+    color: #878787;
+    font-size: 9px;
+    padding: 5px;
+    line-height: normal;
+}
+
+aside.play-queue ul li .remove-track:hover {
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}

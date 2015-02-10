@@ -1,0 +1,9 @@
+{
+  "name": "Office-Jukebox",
+  "private": true,
+  "repository": "none",
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*"
+  }
+}
