@@ -134,6 +134,9 @@ footer button {
 footer button:hover {
     color: #aaafb5;
 }
+footer button.active {
+    color: #60b567;
+}
 
 footer .play-control .play, footer .play-control .pause {
     font-size: 30px;
@@ -231,6 +234,7 @@ aside.play-queue ul li {
     line-height: 40px;
     padding: 0 10px;
     position: relative;
+    overflow: hidden;
 }
 
 aside.play-queue ul li .title {
