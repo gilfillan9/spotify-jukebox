@@ -289,3 +289,9 @@ aside.play-queue ul li .remove-track:hover {
     margin: -5px 10px -5px 0;
     height: 56px;
 }
+
+.search-results li .artist {
+    font-size: 12px;
+    padding-left: 10px;
+    color: grey;
+}
