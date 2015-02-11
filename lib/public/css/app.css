@@ -17,6 +17,7 @@ main {
     right: 280px;
     bottom: 60px;
     background: #F2F4F8;
+    overflow-y: auto;
 }
 
 header {
@@ -131,9 +132,18 @@ footer button {
     transition: color 200ms;
 }
 
+footer button.loop-button.repeat-single {
+    color: red;
+}
+
+footer button.loop-button.repeat-all {
+    color: green;
+}
+
 footer button:hover {
     color: #aaafb5;
 }
+
 footer button.active {
     color: #60b567;
 }
@@ -261,4 +271,21 @@ aside.play-queue ul li .remove-track:hover {
     cursor: pointer;
     color: #000;
     font-weight: bold;
+}
+
+.search-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-results li {
+    border-bottom: 1px solid #000000;
+    padding: 5px 10px 5px 0;
+    cursor: pointer;
+}
+
+.search-results li img {
+    margin: -5px 10px -5px 0;
+    height: 56px;
 }
