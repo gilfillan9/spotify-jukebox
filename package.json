@@ -4,6 +4,8 @@
   "repository": "none",
   "dependencies": {
     "express": "*",
+    "promise": "*",
+    "loudness": "*",
     "socket.io": "*"
   }
 }
