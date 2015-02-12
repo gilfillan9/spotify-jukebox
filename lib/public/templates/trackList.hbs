@@ -1,0 +1,6 @@
+<ul class="{{class}}">
+    {{#each tracks}}
+        <li data-uri='{{uri}}' data-action='play'>
+            <img src='{{album.images.[2].url}}'/>{{name}}{{#each artists}}<span class="artist">{{name}}</span>{{/each}}</li>
+    {{/each}}
+</ul>
