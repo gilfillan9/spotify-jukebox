@@ -51,8 +51,8 @@ footer {
     position: absolute;
     bottom: 0;
     overflow: hidden;
-    background: #5a6a7a;
-    color: #c9d0d7;
+    background: #5A6A7A;
+    color: #C9D0D7;
     padding: 0 5px;
 }
 
@@ -61,7 +61,7 @@ aside#nav {
     position: absolute;
     top: 0;
     bottom: 0;
-    background: #181f24;
+    background: #181F24;
 }
 
 aside#nav ul {
@@ -103,15 +103,15 @@ aside#nav ul li i {
 aside#nav ul li span {
     bottom: 0;
     font-size: 15px;
-    color: #aaa;
+    color: #AAA;
 }
 
 aside#nav ul li:hover {
-    background: #2c3942;
+    background: #2C3942;
 }
 
 aside#nav .aside-top, aside#nav .aside-bottom {
-    background: #232c32;
+    background: #232C32;
     height: 60px;
     width: 100%;
 }
@@ -141,11 +141,11 @@ footer button.loop-button.repeat-all {
 }
 
 footer button:hover {
-    color: #aaafb5;
+    color: #AAAFB5;
 }
 
 footer button.active {
-    color: #60b567;
+    color: #60B567;
 }
 
 footer .play-control .play, footer .play-control .pause {
@@ -162,7 +162,7 @@ footer > section {
 }
 
 footer .duration-wrap {
-    background: #4d5d6e;
+    background: #4D5D6E;
     position: absolute;
     left: 150px;
     right: 230px;
@@ -182,7 +182,7 @@ footer .duration-wrap input::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 60px;
     width: 4px;
-    background: #55cfe6;
+    background: #55CFE6;
     margin-top: 0; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
@@ -227,7 +227,7 @@ aside.play-queue {
     top: 0;
     bottom: 0;
     width: 280px;
-    background: #e0eaec;
+    background: #E0EAEC;
 }
 
 aside.play-queue ul {
@@ -239,7 +239,7 @@ aside.play-queue ul {
 }
 
 aside.play-queue ul li {
-    border-bottom: 1px solid #d4dee0;
+    border-bottom: 1px solid #D4DEE0;
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
@@ -294,4 +294,19 @@ aside.play-queue ul li .remove-track:hover {
     font-size: 12px;
     padding-left: 10px;
     color: grey;
+}
+
+body > .loader {
+    opacity: 0;
+    -webkit-transition: opacity 500ms;-moz-transition: opacity 500ms;-ms-transition: opacity 500ms;-o-transition: opacity 500ms;transition: opacity 500ms;
+    background: #F2F4F8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+body.loading > .loader {
+    opacity: 1;
 }
