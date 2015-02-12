@@ -1,0 +1,11 @@
+{
+    "http":    {
+        "ip":   "0.0.0.0",
+        "port": 80
+    },
+    "spotify": {
+        "username":       "gilfillan9",
+        "password":       "***REMOVED***",
+        "apiKeyLocation": "./spotify_appkey.key"
+    }
+}
