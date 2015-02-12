@@ -298,7 +298,11 @@ aside.play-queue ul li .remove-track:hover {
 
 body > .loader {
     opacity: 0;
-    -webkit-transition: opacity 500ms;-moz-transition: opacity 500ms;-ms-transition: opacity 500ms;-o-transition: opacity 500ms;transition: opacity 500ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
     background: #F2F4F8;
     position: absolute;
     top: 0;
@@ -310,4 +314,8 @@ body > .loader {
 
 body.loading > .loader {
     opacity: 1;
+}
+
+body.showLoader > .loader {
+    display: block;
 }
