@@ -320,6 +320,10 @@ body.showLoader > .loader {
     display: block;
 }
 
+main > h2 {
+    margin: 20px 10px;
+}
+
 ul.playlists {
     padding: 0;
     margin: 0;
@@ -361,4 +365,14 @@ ul.playlists li .text-content {
 
 .now-playing .text-content .name {
     font-size: 20px;
+}
+
+.now-playing .text-content .artist::after {
+    display: inline-block;
+    content: '-';
+    margin: 0 3px;
+}
+
+.now-playing .text-content .artist:last-of-type::after {
+    display: none;
 }
