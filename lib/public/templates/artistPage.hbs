@@ -1,0 +1,9 @@
+<h2>{{name}}</h2>
+<div class="track-table-wrap">
+    <table class="track-table">
+        {{> trackTableTop}}
+        {{#each tracks}}
+                {{> track}}
+        {{/each}}
+    </table>
+</div>
