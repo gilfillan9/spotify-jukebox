@@ -1,7 +1,18 @@
-<li data-uri='{{uri}}' data-action='add' class="track-item">
-    <img src='{{album.images.[2].url}}'/>
-    <span class="name">{{name}}</span>
-    {{#each artists}}
-        <span class="artist">{{name}}</span>
-    {{/each}}
-</li>
+<tr data-uri='{{uri}}' data-action='add' class="track-item">
+    <td>
+        <span class="name">{{name}}</span>
+    </td>
+    <td>
+        {{#each artists}}
+            <a class="artist" data-uri="{{uri}}" data-action="view">{{name}}</a>
+        {{/each}}
+    </td>
+    <td class="time">
+        {{duration duration_ms}}
+    </td>
+    <td class="album">
+        <a data-uri="{{album.uri}}" data-action="view">
+            {{album.name}}
+        </a>
+    </td>
+</tr>

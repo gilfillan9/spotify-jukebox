@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}
+
 body {
     overflow: hidden;
 }
@@ -253,7 +261,7 @@ aside.play-queue ul li .title {
     font-size: 15px;
 }
 
-.artist {
+span.artist {
     padding-left: 7px;
     color: #878787;
     font-size: 12px;
@@ -279,15 +287,47 @@ aside.play-queue ul li .remove-track:hover {
     margin: 0;
 }
 
-li.track-item {
-    border-bottom: 1px solid #000000;
-    padding: 5px 10px 5px 0;
-    cursor: pointer;
+.track-table-wrap {
+    padding: 10px;
 }
 
-li.track-item {
-    margin: -5px 10px -5px 0;
-    height: 56px;
+.track-table {
+    width: 100%;
+}
+
+.track-table th {
+    position: relative;
+}
+
+.track-table th::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 7px;
+    width: 1px;
+    background: #000;
+}
+
+.track-table th:last-of-type::after {
+    display: none;
+}
+
+tr.track-item {
+    border-bottom: 1px solid #000000;
+}
+
+tr.track-item td {
+    padding: 5px 10px 5px 0;
+}
+
+tr.track-item td.time {
+    width: 60px;
+}
+
+tr.track-item:first-of-type {
+    border-top: 1px solid #000000;
 }
 
 body > .loader {

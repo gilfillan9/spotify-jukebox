@@ -1,6 +1,9 @@
 <h2>Search Results</h2>
-<ul class="search-results">
-    {{#each tracks}}
-        {{> track}}
-    {{/each}}
-</ul>
+<div class="track-table-wrap">
+    <table class="track-table">
+        {{> trackTableTop}}
+        {{#each tracks}}
+            {{> track}}
+        {{/each}}
+    </table>
+</div>

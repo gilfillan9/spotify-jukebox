@@ -1,8 +1,11 @@
 <h2>{{name}}</h2>
-<ul class="tracks">
-    {{#each tracks.items}}
-        {{#with track}}
-            {{> track}}
-        {{/with}}
-    {{/each}}
-</ul>
+<div class="track-table-wrap">
+    <table class="track-table">
+        {{> trackTableTop}}
+        {{#each tracks.items}}
+            {{#with track}}
+                {{> track}}
+            {{/with}}
+        {{/each}}
+    </table>
+</div>
