@@ -1,0 +1,8 @@
+<h2>{{name}}</h2>
+<ul class="tracks">
+    {{#each tracks.items}}
+        {{#with track}}
+            {{> track}}
+        {{/with}}
+    {{/each}}
+</ul>

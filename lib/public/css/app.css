@@ -20,6 +20,10 @@ main {
     overflow-y: auto;
 }
 
+ul, li {
+    list-style: none;
+}
+
 header {
     background: white;
     padding-left: 20px;
@@ -65,7 +69,6 @@ aside#nav {
 }
 
 aside#nav ul {
-    list-style: none;
     padding: 0;
 }
 
@@ -231,7 +234,6 @@ aside.play-queue {
 }
 
 aside.play-queue ul {
-    list-style: none;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -251,7 +253,7 @@ aside.play-queue ul li .title {
     font-size: 15px;
 }
 
-aside.play-queue ul li .artist {
+.artist {
     padding-left: 7px;
     color: #878787;
     font-size: 12px;
@@ -274,26 +276,18 @@ aside.play-queue ul li .remove-track:hover {
 }
 
 .search-results {
-    list-style: none;
-    padding: 0;
     margin: 0;
 }
 
-.search-results li {
+li.track-item {
     border-bottom: 1px solid #000000;
     padding: 5px 10px 5px 0;
     cursor: pointer;
 }
 
-.search-results li img {
+li.track-item {
     margin: -5px 10px -5px 0;
     height: 56px;
-}
-
-.search-results li .artist {
-    font-size: 12px;
-    padding-left: 10px;
-    color: grey;
 }
 
 body > .loader {
@@ -330,7 +324,6 @@ ul.playlists {
 }
 
 ul.playlists li {
-    list-style: none;
     width: 200px;
     float: left;
     margin: 10px;
@@ -367,12 +360,12 @@ ul.playlists li .text-content {
     font-size: 20px;
 }
 
-.now-playing .text-content .artist::after {
+.artist::after {
     display: inline-block;
     content: '-';
     margin: 0 3px;
 }
 
-.now-playing .text-content .artist:last-of-type::after {
+.artist:last-of-type::after {
     display: none;
 }
