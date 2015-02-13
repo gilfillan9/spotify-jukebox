@@ -316,7 +316,7 @@ body.showLoader > .loader {
 }
 
 .loader > span {
-    position: relative;
+    position: absolute;
     top: 44%;
     font-size: 20px;
 }
