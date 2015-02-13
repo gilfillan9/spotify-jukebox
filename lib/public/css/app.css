@@ -439,10 +439,20 @@ ul.playlists li .text-content {
     font-size: 20px;
 }
 
+.artist {
+    position: relative;
+    margin-right: 10px;
+}
+
 .artist::after {
     display: inline-block;
     content: '-';
-    margin: 0 3px;
+    position: absolute;
+    right: -9px;
+}
+
+.artist:last-of-type {
+    margin-right: 0;
 }
 
 .artist:last-of-type::after {
