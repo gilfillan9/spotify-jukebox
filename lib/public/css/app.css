@@ -20,6 +20,10 @@ main {
     overflow-y: auto;
 }
 
+ul, li {
+    list-style: none;
+}
+
 header {
     background: white;
     padding-left: 20px;
@@ -65,7 +69,6 @@ aside#nav {
 }
 
 aside#nav ul {
-    list-style: none;
     padding: 0;
 }
 
@@ -231,7 +234,6 @@ aside.play-queue {
 }
 
 aside.play-queue ul {
-    list-style: none;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -251,7 +253,7 @@ aside.play-queue ul li .title {
     font-size: 15px;
 }
 
-aside.play-queue ul li .artist {
+.artist {
     padding-left: 7px;
     color: #878787;
     font-size: 12px;
@@ -274,31 +276,27 @@ aside.play-queue ul li .remove-track:hover {
 }
 
 .search-results {
-    list-style: none;
-    padding: 0;
     margin: 0;
 }
 
-.search-results li {
+li.track-item {
     border-bottom: 1px solid #000000;
     padding: 5px 10px 5px 0;
     cursor: pointer;
 }
 
-.search-results li img {
+li.track-item {
     margin: -5px 10px -5px 0;
     height: 56px;
 }
 
-.search-results li .artist {
-    font-size: 12px;
-    padding-left: 10px;
-    color: grey;
-}
-
 body > .loader {
     opacity: 0;
-    -webkit-transition: opacity 500ms;-moz-transition: opacity 500ms;-ms-transition: opacity 500ms;-o-transition: opacity 500ms;transition: opacity 500ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
     background: #F2F4F8;
     position: absolute;
     top: 0;
@@ -310,4 +308,64 @@ body > .loader {
 
 body.loading > .loader {
     opacity: 1;
+}
+
+body.showLoader > .loader {
+    display: block;
+}
+
+main > h2 {
+    margin: 20px 10px;
+}
+
+ul.playlists {
+    padding: 0;
+    margin: 0;
+}
+
+ul.playlists li {
+    width: 200px;
+    float: left;
+    margin: 10px;
+    background: #232C32;
+    color: #C9D0D7;
+}
+
+ul.playlists li img {
+    width: 200px;
+}
+
+ul.playlists li .text-content {
+    padding: 3px 5px;
+    max-height: 47px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.now-playing {
+    margin: auto;
+    width: 500px;
+}
+
+.now-playing img {
+    max-width: 500px;
+    margin: auto;
+}
+
+.now-playing .text-content {
+    text-align: center;
+}
+
+.now-playing .text-content .name {
+    font-size: 20px;
+}
+
+.artist::after {
+    display: inline-block;
+    content: '-';
+    margin: 0 3px;
+}
+
+.artist:last-of-type::after {
+    display: none;
 }

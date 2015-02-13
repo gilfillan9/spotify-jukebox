@@ -1,0 +1,15 @@
+<h2>Now Playing</h2>
+<div class="now-playing">
+    <img src="{{album.images.[0].url}}">
+
+    <div class="text-content">
+        <div class="name">{{name}}</div>
+
+        <div class="artist-wrap">
+            {{#each artists}}
+                <span class="artist">{{name}}</span>
+            {{/each}}
+        </div>
+        <div class="album">{{album.name}}</div>
+    </div>
+</div>

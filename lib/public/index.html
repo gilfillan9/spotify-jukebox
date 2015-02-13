@@ -11,9 +11,10 @@
     <script src="/js/underscore.js"></script>
     <script src="/js/async.js"></script>
     <script src="/js/spotify-web-api.js"></script>
+    <script src="/js/handlebars-v3.0.0.js"></script>
     <script src="/js/app.js"></script>
 </head>
-<body class="loading">
+<body class="loading showLoader">
 <aside class="aside" id="nav">
     <div class="aside-top"></div>
     <nav class="left-nav">
@@ -25,9 +26,9 @@
                 </a>
             </li>
             <li>
-                <a href="#" data-nav="playlists">
+                <a href="#" data-nav="nowPlaying">
                     <i class="icon-music-tone-alt"></i>
-                    <span>Playlists</span>
+                    <span>Playing</span>
                 </a>
             </li>
             <li>
@@ -81,7 +82,7 @@
     </section>
 </footer>
 <div class="loader">
-    
+
 </div>
 </body>
 </html>
