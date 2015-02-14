@@ -331,13 +331,6 @@ tr.track-item:first-of-type {
 }
 
 body > .loader {
-    opacity: 0;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -ms-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    transition: opacity 500ms;
-    background: #F2F4F8;
     position: absolute;
     top: 0;
     left: 0;
@@ -345,6 +338,16 @@ body > .loader {
     bottom: 0;
     display: none;
     text-align: center;
+}
+
+body > .loader {
+    opacity: 0;
+    background: #F2F4F8;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
 }
 
 body.loading > .loader {
@@ -397,12 +400,12 @@ main > h2 {
     margin: 20px 10px;
 }
 
-ul.playlists {
+ul.pills {
     padding: 0;
     margin: 0;
 }
 
-ul.playlists li {
+ul.pills li {
     width: 200px;
     float: left;
     margin: 10px;
@@ -410,11 +413,11 @@ ul.playlists li {
     color: #C9D0D7;
 }
 
-ul.playlists li img {
+ul.pills li img {
     width: 200px;
 }
 
-ul.playlists li .text-content {
+ul.pills li .text-content {
     padding: 3px 5px;
     max-height: 47px;
     overflow: hidden;
@@ -457,4 +460,49 @@ ul.playlists li .text-content {
 
 .artist:last-of-type::after {
     display: none;
+}
+
+.search-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 500ms;
+    position: absolute;
+    top: 60px;
+    right: 280px;
+    bottom: 60px;
+    left: 70px;
+    overflow: auto;
+    background: white;
+}
+
+.search-content.show {
+    display: block;
+}
+
+.search-content.fadein {
+    opacity: 1;
+}
+
+.search-content .search-tabs {
+    display: block;
+    text-align: center;
+}
+
+.search-content .search-tabs .search-tab {
+    display: inline-block;
+    padding: 4px 10px;
+    border-right: 1px solid #efefef;
+    color: #5A6A7A;
+}
+
+.search-content .search-tabs .search-tab:last-of-type {
+    border-right: 0;
+}
+
+.search-content .search-tabs .search-tab.selected {
+    background: #C9D0D7;
+}
+
+.search-content {
+
 }

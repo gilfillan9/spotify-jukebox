@@ -1,9 +1,47 @@
-<h2>Search Results</h2>
-<div class="track-table-wrap">
-    <table class="track-table">
-        {{> trackTableTop}}
-        {{#each tracks}}
-            {{> track}}
-        {{/each}}
-    </table>
+<div class="search-tabs">
+    <a class="search-tab {{#if tracks}}selected{{/if}}" data-tab="track">Tracks</a><a
+        class="search-tab {{#if artists}}selected{{/if}}" data-tab="artist">Artists</a><a
+        class="search-tab {{#if albums}}selected{{/if}}" data-tab="album">Albums</a><a
+        class="search-tab {{#if playlists}}selected{{/if}}" data-tab="playlist">Playlists</a>
 </div>
+<h2>Search Results</h2>
+{{#if loading}}
+    <div class="loader">
+        <span>Loading...</span>
+
+        <div class="spinner"></div>
+    </div>
+{{else}}
+    {{#if tracks}}
+        <div class="track-table-wrap">
+            <table class="track-table">
+                {{> trackTableTop}}
+                {{#each tracks}}
+                    {{> track}}
+                {{/each}}
+            </table>
+        </div>
+    {{/if}}
+    {{#if artists}}
+        <ul class="pills">
+            {{#each artists}}
+                {{> artistPill}}
+            {{/each}}
+        </ul>
+    {{/if}}
+    {{#if albums}}
+        <ul class="pills">
+
+            {{#each albums}}
+                {{> albumPill}}
+            {{/each}}
+        </ul>
+    {{/if}}
+    {{#if playlists}}
+        <ul class="pills">
+            {{#each playlists}}
+                {{> playlistPill}}
+            {{/each}}
+        </ul>
+    {{/if}}
+{{/if}}

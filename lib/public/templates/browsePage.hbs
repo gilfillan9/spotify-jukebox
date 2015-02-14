@@ -1,12 +1,6 @@
 <h2>{{message}}</h2>
-<ul class="playlists">
+<ul class="pills">
     {{#each playlists}}
-        <li data-uri="{{uri}}" data-action="view">
-            <img src="{{images.[0].url}}"/>
-
-            <div class="text-content">
-                <span class="name">{{name}}</span>
-            </div>
-        </li>
+        {{> playlistPill}}
     {{/each}}
 </ul>
