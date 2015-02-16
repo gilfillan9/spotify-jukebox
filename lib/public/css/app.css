@@ -320,6 +320,15 @@ tr.track-item {
 
 tr.track-item td {
     padding: 5px 10px 5px 0;
+    cursor: default;
+}
+
+tr.track-item:hover td {
+    background: #eff1f5;
+}
+
+tr.track-item:active td {
+    background: #ebedf1;
 }
 
 tr.track-item td.time {
