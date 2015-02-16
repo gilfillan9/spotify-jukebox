@@ -511,7 +511,7 @@ ul.pills li .text-content {
 .view-details .view-detail-top {
     border-bottom: 1px solid black;
     height: 150px;
-    margin: 0 20px 20px;
+    padding: 0 20px 20px;
     background: #dddee2;
 }
 
