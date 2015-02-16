@@ -362,6 +362,7 @@ body.showLoader > .loader {
     position: absolute;
     top: 42%;
     font-size: 20px;
+    left: 50%;
 }
 
 .loader > .spinner {
