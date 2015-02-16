@@ -506,3 +506,36 @@ ul.pills li .text-content {
 .search-content {
 
 }
+
+.view-details .view-detail-top {
+    border-bottom: 1px solid black;
+    height: 150px;
+    margin: 0 20px 20px;
+    background: #dddee2;
+}
+
+.view-details .view-detail-top {
+}
+
+.view-details .view-detail-top img {
+    height: 120px;
+    float: left;
+    margin-top: 30px;
+}
+
+.view-details .view-detail-top .detail-text {
+    display: inline-block;
+    margin-left: 10px;
+    float: left;
+}
+
+.view-details .view-detail-top .detail-text h3 {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #AAAFB5;
+    font-weight: normal;
+}
+
+.view-details .view-detail-top .detail-text h2 {
+    margin: 0;
+}

@@ -1,9 +1,19 @@
-<h2>{{name}}</h2>
-<div class="track-table-wrap">
-    <table class="track-table">
-        {{> trackTableTop}}
-        {{#each tracks}}
+<div class="view-details">
+    <div class="view-detail-top">
+        <img src="{{images.[0].url}}" class="detail-image"/>
+
+        <div class="detail-text">
+            <h3>Album</h3>
+
+            <h2>{{name}}</h2>
+        </div>
+    </div>
+    <div class="track-table-wrap">
+        <table class="track-table">
+            {{> trackTableTop}}
+            {{#each tracks}}
                 {{> track}}
-        {{/each}}
-    </table>
+            {{/each}}
+        </table>
+    </div>
 </div>
