@@ -8,6 +8,8 @@
             <h2>{{name}}</h2>
         </div>
     </div>
+    <h4>Popular Tracks</h4>
+
     <div class="track-table-wrap">
         <table class="track-table">
             {{> trackTableTop}}
@@ -16,4 +18,10 @@
             {{/each}}
         </table>
     </div>
+    <h4>Albums</h4>
+    <ul class="pills">
+        {{#each albums}}
+            {{> albumPill}}
+        {{/each}}
+    </ul>
 </div>

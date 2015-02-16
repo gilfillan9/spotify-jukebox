@@ -307,7 +307,7 @@ aside.play-queue ul li .remove-track:hover {
     bottom: 2px;
     right: 7px;
     width: 1px;
-    background: #000;
+    background: #aaa;
 }
 
 .track-table th:last-of-type::after {
@@ -315,7 +315,7 @@ aside.play-queue ul li .remove-track:hover {
 }
 
 tr.track-item {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #aaa;
 }
 
 tr.track-item td {
@@ -509,7 +509,7 @@ ul.pills li .text-content {
 }
 
 .view-details .view-detail-top {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #aaa;
     height: 150px;
     padding: 0 20px 20px;
     background: #dddee2;
@@ -539,4 +539,10 @@ ul.pills li .text-content {
 
 .view-details .view-detail-top .detail-text h2 {
     margin: 0;
+}
+
+h4 {
+    margin: 7px 10px 3px 10px;
+    padding: 4px 0 7px 0;
+    border-bottom: 1px solid #aaa;
 }
