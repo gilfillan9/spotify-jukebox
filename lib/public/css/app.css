@@ -307,7 +307,7 @@ aside.play-queue ul li .remove-track:hover {
     bottom: 2px;
     right: 7px;
     width: 1px;
-    background: #aaa;
+    background: #AAA;
 }
 
 .track-table th:last-of-type::after {
@@ -315,7 +315,7 @@ aside.play-queue ul li .remove-track:hover {
 }
 
 tr.track-item {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #AAA;
 }
 
 tr.track-item td {
@@ -324,11 +324,11 @@ tr.track-item td {
 }
 
 tr.track-item:hover td {
-    background: #eff1f5;
+    background: #EFF1F5;
 }
 
 tr.track-item:active td {
-    background: #ebedf1;
+    background: #EBEDF1;
 }
 
 tr.track-item td.time {
@@ -417,7 +417,7 @@ ul.pills {
 
 ul.pills li {
     width: 200px;
-    float: left;
+    display: inline-block;
     margin: 10px;
     background: #232C32;
     color: #C9D0D7;
@@ -501,7 +501,7 @@ ul.pills li .text-content {
 .search-content .search-tabs .search-tab {
     display: inline-block;
     padding: 4px 10px;
-    border-right: 1px solid #efefef;
+    border-right: 1px solid #EFEFEF;
     color: #5A6A7A;
 }
 
@@ -514,14 +514,13 @@ ul.pills li .text-content {
 }
 
 .search-content {
-
 }
 
 .view-details .view-detail-top {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #AAA;
     height: 150px;
     padding: 0 20px 20px;
-    background: #dddee2;
+    background: #DDDEE2;
 }
 
 .view-details .view-detail-top {
@@ -553,5 +552,5 @@ ul.pills li .text-content {
 h4 {
     margin: 7px 10px 3px 10px;
     padding: 4px 0 7px 0;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #AAA;
 }
