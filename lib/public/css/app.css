@@ -283,6 +283,30 @@ aside.play-queue ul li .remove-track:hover {
     font-weight: bold;
 }
 
+aside.play-queue ul li .vote-buttons {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    padding-left: 10px;
+    background: -webkit-linear-gradient(left, rgba(224, 234, 236, 0), rgba(224, 234, 236, 0.8), rgba(224, 234, 236, 1),rgba(224, 234, 236, 1),rgba(224, 234, 236, 1));
+}
+
+aside.play-queue ul li .vote-buttons button {
+    background: none;
+    border: 0;
+    height: 20px;
+    width: 15px;
+    padding: 0;
+}
+
+aside.play-queue ul li .vote-buttons button.up.active {
+    color: green;
+}
+
+aside.play-queue ul li .vote-buttons button.down.active {
+    color: red;
+}
+
 .search-results {
     margin: 0;
 }

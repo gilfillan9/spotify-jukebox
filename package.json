@@ -8,6 +8,7 @@
     "loudness": "*",
     "socket.io": "*",
     "async": "*",
-    "request": "*"
+    "request": "*",
+    "node-uuid": "*"
   }
 }

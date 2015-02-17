@@ -1,7 +1,12 @@
 <ul>
     {{#each tracks}}
-        <li>
+        <li data-uuid="{{uuid}}">
             <span class="title">{{name}}</span>{{#each artists}}<span class="artist">{{name}}</span>{{/each}}
+            <div class="vote-buttons">
+                <button class="up icon-arrow-up {{#if votedUp}}active{{/if}}"></button>
+                <span>{{votes}}</span>
+                <button class="down icon-arrow-down {{#if votedDown}}active{{/if}}"></button>
+            </div>
         </li>
     {{/each}}
 </ul>
