@@ -1,6 +1,6 @@
 <ul>
     {{#each tracks}}
-        <li data-uuid="{{uuid}}">
+        <li data-uuid="{{uuid}}" data-uri="{{uri}}" data-id="{{id}}">
             <span class="title">{{name}}</span>{{#each artists}}<span class="artist">{{name}}</span>{{/each}}
             <div class="vote-buttons">
                 <button class="up icon-arrow-up {{#if votedUp}}active{{/if}}"></button>
