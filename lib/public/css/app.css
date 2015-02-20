@@ -135,9 +135,9 @@ aside#nav .aside-bottom {
 footer button {
     border: 0;
     background: none;
-    font-size: 21px;
+    font-size: 16px;
     height: 100%;
-    padding: 0 10px;
+    padding: 0 5px;
     vertical-align: middle;
     outline: none;
     transition: color 200ms;
@@ -159,6 +159,10 @@ footer button.active {
     color: #60B567;
 }
 
+footer .play-control button {
+    font-size: 21px;
+}
+
 footer .play-control .play, footer .play-control .pause {
     font-size: 30px;
 }
@@ -169,14 +173,14 @@ footer > section {
 }
 
 .play-control {
-    width: 150px;
+    width: 125px;
 }
 
 footer .duration-wrap {
     background: #4D5D6E;
     position: absolute;
-    left: 150px;
-    right: 230px;
+    left: 125px;
+    right: 300px;
     top: 0;
     bottom: 0;
 }
@@ -208,7 +212,19 @@ footer .audio-control {
     position: absolute;
     right: 0;
     top: 0;
-    width: 230px;
+    width: 300px;
+}
+
+footer .audio-control .durations {
+    display: inline-block;
+    width: 100px;
+    padding: 0 5px 0 10px;
+    position: relative;
+    top: -2px;
+}
+
+footer .audio-control .durations .length {
+    float: right;
 }
 
 footer .audio-control .volume-wrap {
@@ -267,22 +283,6 @@ span.artist {
     font-size: 12px;
 }
 
-aside.play-queue ul li .remove-track {
-    position: absolute;
-    right: 9px;
-    top: 12px;
-    color: #878787;
-    font-size: 9px;
-    padding: 5px;
-    line-height: normal;
-}
-
-aside.play-queue ul li .remove-track:hover {
-    cursor: pointer;
-    color: #000;
-    font-weight: bold;
-}
-
 aside.play-queue ul li .vote-buttons {
     position: absolute;
     right: 5px;
@@ -305,6 +305,14 @@ aside.play-queue ul li .vote-buttons button.up.active {
 
 aside.play-queue ul li .vote-buttons button.down.active {
     color: red;
+}
+
+aside.play-queue ul li:first-of-type {
+    background: #cbd5d7;
+}
+
+aside.play-queue ul li:first-of-type .vote-buttons {
+    background: -webkit-linear-gradient(left, rgba(203, 213, 215, 0), rgba(203, 213, 215, 0.8), rgba(203, 213, 215, 1), rgba(203, 213, 215, 1), rgba(203, 213, 215, 1));
 }
 
 .search-results {
