@@ -1,0 +1,17 @@
+<div class="track-popup">
+    <img src="{{album.images.[0].url}}"/>
+
+    <div class="track-popup-text">
+        <p class="name">{{name}}</p>
+
+        <p class="artists">
+            {{#each artists}}
+                <a data-action="view" data-uri="{{uri}}">{{name}}</a>
+            {{/each}}
+        </p>
+
+        <p class="album">
+            <a data-action="view" data-uri="{{album.uri}}">{{album.name}}</a>
+        </p>
+    </div>
+</div>

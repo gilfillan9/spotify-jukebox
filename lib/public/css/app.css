@@ -288,7 +288,7 @@ aside.play-queue ul li .vote-buttons {
     right: 5px;
     top: 0;
     padding-left: 10px;
-    background: -webkit-linear-gradient(left, rgba(224, 234, 236, 0), rgba(224, 234, 236, 0.8), rgba(224, 234, 236, 1),rgba(224, 234, 236, 1),rgba(224, 234, 236, 1));
+    background: -webkit-linear-gradient(left, rgba(224, 234, 236, 0), rgba(224, 234, 236, 0.8), rgba(224, 234, 236, 1), rgba(224, 234, 236, 1), rgba(224, 234, 236, 1));
 }
 
 aside.play-queue ul li .vote-buttons button {
@@ -488,6 +488,10 @@ ul.pills li .text-content {
     right: -9px;
 }
 
+.artist:first-of-type {
+    padding: 0;
+}
+
 .artist:last-of-type {
     margin-right: 0;
 }
@@ -577,4 +581,31 @@ h4 {
     margin: 7px 10px 3px 10px;
     padding: 4px 0 7px 0;
     border-bottom: 1px solid #AAA;
+}
+
+.track-popup {
+    position: absolute;
+    width: 300px;
+    right: 275px;
+    z-index: 10;
+    background: #eff1f5;
+    box-shadow: -3px 3px 5px rgba(60, 60, 60, 0.3);
+}
+
+.track-popup img {
+    width: 300px;
+}
+
+.track-popup .track-popup-text {
+    padding: 15px 20px;
+}
+
+.track-popup .track-popup-text .name {
+    font-size: 16px;
+    color: #010101;
+}
+
+.track-popup .track-popup-text .album {
+    color: #878787;
+    font-size: 11px;
 }
