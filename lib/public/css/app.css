@@ -87,7 +87,7 @@ aside#nav ul li {
 }
 
 aside#nav ul li a {
-    transition: top 300ms;
+    transition: top 200ms ease-in-out;
     height: 100px;
     display: block;
     position: relative;
