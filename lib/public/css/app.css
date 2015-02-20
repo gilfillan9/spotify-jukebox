@@ -437,6 +437,7 @@ main > h2 {
 ul.pills {
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 ul.pills li {
