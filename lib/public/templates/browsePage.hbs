@@ -1,6 +1,13 @@
 <h2>{{message}}</h2>
+<h4>Featured</h4>
 <ul class="pills">
-    {{#each playlists}}
+    {{#each featured}}
         {{> playlistPill}}
+    {{/each}}
+</ul>
+<h4>Categories</h4>
+<ul class="pills">
+    {{#each categories}}
+        {{> categoryPill}}
     {{/each}}
 </ul>

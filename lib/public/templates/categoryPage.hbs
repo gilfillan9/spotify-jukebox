@@ -1,0 +1,16 @@
+<div class="view-details">
+    <div class="view-detail-top">
+        <img src="{{icons.[0].url}}" class="detail-image"/>
+
+        <div class="detail-text">
+            <h3>Category</h3>
+
+            <h2>{{name}}</h2>
+        </div>
+    </div>
+    <ul class="pills">
+        {{#each playlists}}
+            {{> playlistPill}}
+        {{/each}}
+    </ul>
+</div>
