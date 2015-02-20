@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -8,6 +9,7 @@ a {
 
 body {
     overflow: hidden;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header, footer {
@@ -180,7 +182,7 @@ footer .duration-wrap {
     background: #4D5D6E;
     position: absolute;
     left: 125px;
-    right: 300px;
+    right: 280px;
     top: 0;
     bottom: 0;
 }
@@ -212,15 +214,17 @@ footer .audio-control {
     position: absolute;
     right: 0;
     top: 0;
-    width: 300px;
+    width: 280px;
 }
 
 footer .audio-control .durations {
     display: inline-block;
-    width: 100px;
+    width: 82px;
     padding: 0 5px 0 10px;
     position: relative;
-    top: -2px;
+    top: -4px;
+    font-size: 12px;
+    color: #acb7c1;
 }
 
 footer .audio-control .durations .length {
@@ -465,6 +469,10 @@ ul.pills li .text-content {
     max-height: 47px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+ul.pills li .artist {
+    padding-bottom: 6px;
+    display: inline-block;
 }
 
 .now-playing {
