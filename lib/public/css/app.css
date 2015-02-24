@@ -464,6 +464,7 @@ ul.pills li {
 
 ul.pills li img {
     width: 200px;
+    min-height: 150px;
 }
 
 ul.pills li .text-content {
