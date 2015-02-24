@@ -633,12 +633,13 @@ h4 {
 	position: absolute;
 	left: 0;
 	right: 0;
+	top: 20px;
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #ffffff;
 	text-align: center;
 	font-size: 15px;
-	padding-top: 20px;
-}	
+    pointer-events: none;
+}
 
 .add-to-playlist{
 	float: left;
