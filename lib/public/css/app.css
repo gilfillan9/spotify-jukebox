@@ -631,10 +631,11 @@ h4 {
 
 .song-name{
 	position: absolute;
-	left: 125px;
-	right: 280px;
+	left: 0;
+	right: 0;
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #ffffff;
 	text-align: center;
-	font-size: 16px;
+	font-size: 15px;
+	padding-top: 20px;
 }	
