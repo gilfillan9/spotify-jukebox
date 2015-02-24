@@ -352,6 +352,7 @@ aside.play-queue ul li:first-of-type .vote-buttons {
 
 tr.track-item {
     border-bottom: 1px solid #AAA;
+	cursor: pointer;
 }
 
 tr.track-item td {
@@ -458,6 +459,7 @@ ul.pills li {
     margin: 10px;
     background: #232C32;
     color: #C9D0D7;
+	cursor: pointer;
 }
 
 ul.pills li img {
@@ -626,3 +628,13 @@ h4 {
     color: #878787;
     font-size: 11px;
 }
+
+.song-name{
+	position: absolute;
+	left: 125px;
+	right: 280px;
+	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	text-align: center;
+	font-size: 16px;
+}	
