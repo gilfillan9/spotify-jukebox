@@ -7,9 +7,9 @@
 
         <div class="artist-wrap">
             {{#each artists}}
-                <span class="artist">{{name}}</span>
+                <a class="artist" data-action="view" data-uri="{{uri}}">{{name}}</a>
             {{/each}}
         </div>
-        <div class="album">{{album.name}}</div>
+        <a class="album" data-action="view" data-uri="{{album.uri}}">{{album.name}}</a>
     </div>
 </div>
