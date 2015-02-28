@@ -352,7 +352,7 @@ aside.play-queue ul li:first-of-type .vote-buttons {
 
 tr.track-item {
     border-bottom: 1px solid #AAA;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 tr.track-item td {
@@ -459,7 +459,7 @@ ul.pills li {
     margin: 10px;
     background: #232C32;
     color: #C9D0D7;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 ul.pills li img {
@@ -473,6 +473,7 @@ ul.pills li .text-content {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 ul.pills li .artist {
     padding-bottom: 6px;
     display: inline-block;
@@ -561,7 +562,13 @@ ul.pills li .artist {
     background: #C9D0D7;
 }
 
-.search-content {
+.search-content .close-search {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
 }
 
 .view-details .view-detail-top {
@@ -630,26 +637,26 @@ h4 {
     font-size: 11px;
 }
 
-.song-name{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 20px;
-	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #ffffff;
-	text-align: center;
-	font-size: 15px;
+.song-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
     pointer-events: none;
 }
 
-.add-to-playlist{
-	float: left;
-	display: block;
-	cursor: pointer;
-	font-size: 14px;
-	margin: 3px 11px 3px 4px;
+.add-to-playlist {
+    float: left;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 3px 11px 3px 4px;
 }
 
-.add-to-playlist:hover{
-	text-decoration: none;
+.add-to-playlist:hover {
+    text-decoration: none;
 }
