@@ -3,12 +3,13 @@
   "private": true,
   "repository": "none",
   "dependencies": {
-    "express": "*",
-    "promise": "*",
-    "loudness": "*",
-    "socket.io": "*",
     "async": "*",
+    "cron": "^1.0.8",
+    "express": "*",
+    "loudness": "*",
+    "node-uuid": "*",
+    "promise": "*",
     "request": "*",
-    "node-uuid": "*"
+    "socket.io": "*"
   }
 }
