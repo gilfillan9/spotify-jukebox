@@ -96,6 +96,10 @@ aside#nav ul li a {
     top: 0;
 }
 
+aside#nav ul li a.active {
+    color: green;
+}
+
 aside#nav ul li:hover a {
     top: -50px;
 }
