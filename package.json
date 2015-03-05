@@ -9,6 +9,7 @@
     "node-uuid": "*",
     "promise": "*",
     "request": "*",
-    "socket.io": "*"
+    "socket.io": "*",
+    "nedb": "*"
   }
 }
