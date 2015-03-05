@@ -664,3 +664,7 @@ h4 {
 .add-to-playlist:hover {
     text-decoration: none;
 }
+
+.settings-page {
+    padding: 0 20px;
+}
