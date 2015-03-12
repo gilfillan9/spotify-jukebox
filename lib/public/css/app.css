@@ -97,20 +97,20 @@ aside#nav ul li a {
     top: 0;
 }
 
+aside#nav ul li a.selected {
+    background: #3A4953;
+}
+
+aside#nav ul li a:focus i {
+    color: #337AB7;
+}
+
 aside#nav ul li a.active {
     color: green;
 }
 
-aside#nav ul li a.selected {
-    background: #3a4953;
-}
-
 aside#nav ul li:hover a {
     top: -50px;
-}
-
-aside#nav ul li a:focus i {
-    color: #337ab7;
 }
 
 aside#nav ul li i, aside#nav ul li span {
@@ -242,7 +242,7 @@ footer .audio-control .durations {
     position: relative;
     top: -4px;
     font-size: 12px;
-    color: #acb7c1;
+    color: #ACB7C1;
 }
 
 footer .audio-control .durations .length {
@@ -330,7 +330,7 @@ aside.play-queue ul li .vote-buttons button.down.active {
 }
 
 aside.play-queue ul li:first-of-type {
-    background: #cbd5d7;
+    background: #CBD5D7;
 }
 
 aside.play-queue ul li:first-of-type .vote-buttons {
@@ -633,7 +633,7 @@ h4 {
     width: 300px;
     right: 275px;
     z-index: 10;
-    background: #eff1f5;
+    background: #EFF1F5;
     box-shadow: -3px 3px 5px rgba(60, 60, 60, 0.3);
 }
 
@@ -661,7 +661,7 @@ h4 {
     right: 0;
     top: 20px;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #ffffff;
+    color: #FFFFFF;
     text-align: center;
     font-size: 15px;
     pointer-events: none;
