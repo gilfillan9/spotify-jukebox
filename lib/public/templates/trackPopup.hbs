@@ -13,5 +13,7 @@
         <p class="album">
             <a data-action="view" data-uri="{{album.uri}}">{{album.name}}</a>
         </p>
+
+        {{#if source}}Added from <a class="source" data-uri="{{source.uri}}" data-action="view">{{source.name}}</a>{{/if}}
     </div>
 </div>
