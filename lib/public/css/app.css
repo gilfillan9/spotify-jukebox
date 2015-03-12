@@ -672,7 +672,11 @@ h4 {
     display: block;
     cursor: pointer;
     font-size: 14px;
-    margin: 3px 11px 3px 4px;
+    margin: 3px 4px;
+}
+
+.add-to-playlist + span {
+    margin-left: 8px;
 }
 
 .add-to-playlist:hover {

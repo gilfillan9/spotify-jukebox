@@ -1,6 +1,9 @@
 <tr data-uri='{{uri}}' data-double-action='add' class="track-item">
     <td>
-		<a data-uri='{{uri}}' data-action='add' class="add-to-playlist icon-plus"></a>
+        <a data-uri='{{uri}}' data-action='add' class="add-to-playlist icon-plus"></a>
+        {{#if time}}<span>{{timestamp time}}</span>{{/if}}
+    </td>
+    <td>
         <span class="name">{{name}}</span>
     </td>
     <td>
