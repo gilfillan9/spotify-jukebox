@@ -483,25 +483,32 @@ ul.pills li {
     width: 200px;
     display: inline-block;
     margin: 10px;
-    background: #232C32;
-    color: #C9D0D7;
+    color: #545a5f;
     cursor: pointer;
+    text-align: left;
+    vertical-align: top;
 }
 
 ul.pills li img {
     width: 200px;
     min-height: 150px;
+    border-radius: 6px;
 }
 
 ul.pills li .text-content {
-    padding: 3px 5px;
-    max-height: 47px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 3px 1px;
 }
 
-ul.pills li .artist {
-    padding-bottom: 6px;
+ul.pills li .text-content .name {
+    height: 18px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ul.pills li .text-content .artist {
+    padding: 0 0 6px 0;
     display: inline-block;
 }
 
