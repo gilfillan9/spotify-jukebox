@@ -701,3 +701,15 @@ h4 {
 .settings-page {
     padding: 0 20px;
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    display: block;
+    border-radius: 3px;
+    background: rgba(135, 135, 135, 0.80);
+    background-clip: padding-box;
+}
