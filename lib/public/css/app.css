@@ -123,13 +123,10 @@ aside#nav ul li i, aside#nav ul li span {
     line-height: 50px;
 }
 
-aside#nav ul li i {
-}
-
 aside#nav ul li span {
     bottom: 0;
     font-size: 15px;
-    color: #AAA;
+    color: #e4e4e4;
 }
 
 aside#nav ul li:hover {
