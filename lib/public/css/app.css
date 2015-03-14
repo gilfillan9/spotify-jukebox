@@ -704,6 +704,7 @@ h4 {
 
 ::-webkit-scrollbar {
     width: 6px;
+    background: rgba(0, 0, 0, 0.15);
 }
 
 /* Handle */
