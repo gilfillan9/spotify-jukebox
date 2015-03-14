@@ -606,28 +606,37 @@ ul.pills li .text-content .artist {
 
 .view-details .view-detail-top {
     border-bottom: 1px solid #AAA;
-    height: 150px;
-    padding: 0 20px 20px;
+    height: 230px;
+    padding: 0 20px 0;
     background: #DDDEE2;
 }
 
-.view-details .view-detail-top {
-}
-
 .view-details .view-detail-top img {
-    height: 120px;
+    height: 200px;
     float: left;
-    margin-top: 29px;
+    margin-top: 15px;
 }
 
 .view-details .view-detail-top .detail-text {
     display: inline-block;
     margin-left: 10px;
     float: left;
+    height: 100%;
+    min-width: 200px;
+    position: relative;
+}
+
+.view-details .view-detail-top .buttons-wrap {
+    position: absolute;
+    display: inline-block;
+    bottom: 15px;
+}
+.view-details .view-detail-top .buttons-wrap button{
+    margin-right: 5px;
 }
 
 .view-details .view-detail-top .detail-text h3 {
-    margin-top: 30px;
+    margin: 15px 0 2px 0;
     font-size: 18px;
     color: #AAAFB5;
     font-weight: normal;

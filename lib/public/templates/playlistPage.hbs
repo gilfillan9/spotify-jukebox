@@ -6,8 +6,11 @@
             <h3>Playlist</h3>
 
             <h2>{{name}}</h2>
-            <button data-uri="{{uri}}" data-action="add">Add to queue</button>
-            <button data-uri="{{uri}}" data-action="clear|add">Play</button>
+
+            <div class="buttons-wrap">
+                <button data-uri="{{uri}}" data-action="add">Add to queue</button>
+                <button data-uri="{{uri}}" data-action="clear|add">Play</button>
+            </div>
         </div>
     </div>
     <div class="track-table-wrap">
