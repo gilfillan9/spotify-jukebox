@@ -176,8 +176,14 @@ footer button.active {
     color: #60B567;
 }
 
+footer .play-control {
+    width: 150px;
+    padding: 0 5px;
+}
+
 footer .play-control button {
     font-size: 21px;
+    margin: 0 4px;
 }
 
 footer .play-control .play, footer .play-control .pause {
@@ -189,14 +195,10 @@ footer > section {
     display: inline-block;
 }
 
-.play-control {
-    width: 125px;
-}
-
 footer .duration-wrap {
     background: #4D5D6E;
     position: absolute;
-    left: 125px;
+    left: 150px;
     right: 320px;
     top: 0;
     bottom: 0;
@@ -268,9 +270,13 @@ footer .audio-control > button {
     padding: 0 9px;
 }
 
-footer .audio-control > button.shuffle-button { margin-left: 7px; }
+footer .audio-control > button.shuffle-button {
+    margin-left: 7px;
+}
 
-footer .audio-control > button.loop-button { margin-top: -4px; }
+footer .audio-control > button.loop-button {
+    margin-top: -4px;
+}
 
 aside.play-queue {
     position: absolute;
