@@ -105,7 +105,7 @@ aside#nav ul li a:focus i {
     color: #337AB7;
 }
 
-aside#nav ul li a.active {
+aside#nav ul li a.active i {
     color: green;
 }
 
