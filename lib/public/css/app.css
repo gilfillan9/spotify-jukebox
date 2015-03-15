@@ -295,12 +295,22 @@ aside.play-queue ul {
 }
 
 aside.play-queue ul li {
-    border-bottom: 1px solid #D4DEE0;
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
     position: relative;
     overflow: hidden;
+}
+
+aside.play-queue ul li::after {
+    display: block;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(212, 222, 224, 0.1), #D4DEE0, rgba(212, 222, 224, 0.1));
 }
 
 aside.play-queue ul li .title {
@@ -631,7 +641,8 @@ ul.pills li .text-content .artist {
     display: inline-block;
     bottom: 15px;
 }
-.view-details .view-detail-top .buttons-wrap button{
+
+.view-details .view-detail-top .buttons-wrap button {
     margin-right: 5px;
 }
 
