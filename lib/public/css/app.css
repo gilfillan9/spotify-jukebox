@@ -161,14 +161,6 @@ footer button {
     transition: color 200ms;
 }
 
-footer button.loop-button.repeat-single {
-    color: red;
-}
-
-footer button.loop-button.repeat-all {
-    color: green;
-}
-
 footer button:hover {
     color: #AAAFB5;
 }
@@ -200,7 +192,7 @@ footer .duration-wrap {
     background: #4D5D6E;
     position: absolute;
     left: 150px;
-    right: 320px;
+    right: 290px;
     top: 0;
     bottom: 0;
 }
@@ -232,7 +224,7 @@ footer .audio-control {
     position: absolute;
     right: 0;
     top: 0;
-    width: 320px;
+    width: 282px;
 }
 
 footer .audio-control .durations {
