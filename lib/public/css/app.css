@@ -38,6 +38,7 @@ header {
     background: white;
     padding-left: 20px;
     top: 0;
+    z-index: 5;
 }
 
 header .search-wrap {
@@ -420,10 +421,8 @@ body > .loader {
     bottom: 0;
     display: none;
     text-align: center;
-}
-
-body > .loader {
     opacity: 0;
+    z-index: 999;
     background: #F2F4F8;
     -webkit-transition: opacity 500ms;
     -moz-transition: opacity 500ms;
@@ -567,11 +566,11 @@ ul.pills li .text-content .artist {
 .search-content {
     display: none;
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 700ms, top 500ms, bottom 500ms;
     position: absolute;
-    top: 60px;
+    top: -100%;
     right: 280px;
-    bottom: 60px;
+    bottom: 100%;
     left: 70px;
     overflow: auto;
     background: white;
@@ -582,6 +581,8 @@ ul.pills li .text-content .artist {
 }
 
 .search-content.fadein {
+    top: 60px;
+    bottom: 60px;
     opacity: 1;
 }
 
