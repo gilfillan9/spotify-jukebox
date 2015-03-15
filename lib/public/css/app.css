@@ -138,6 +138,15 @@ aside#nav .aside-top, aside#nav .aside-bottom {
     background: #232C32;
     height: 60px;
     width: 100%;
+    color: transparent;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+body.disconnected aside#nav .aside-top {
+    background: #570000;
+    color: #F00;
 }
 
 aside#nav .aside-bottom {
