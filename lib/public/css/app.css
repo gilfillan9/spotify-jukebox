@@ -118,7 +118,15 @@ aside#nav {
 
 body.disconnected aside#nav .aside-top {
   background: #570000;
-  color: #F00; }
+  color: #F00;
+  font-size: 28px; }
+  body.disconnected aside#nav .aside-top::before {
+    display: inline-block;
+    -webkit-transform: rotate(24deg);
+    -moz-transform: rotate(24deg);
+    -ms-transform: rotate(24deg);
+    -o-transform: rotate(24deg);
+    transform: rotate(24deg); }
 
 footer {
   position: absolute;

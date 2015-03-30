@@ -140,6 +140,12 @@ aside#nav {
 body.disconnected aside#nav .aside-top {
   background: #570000;
   color: #F00;
+  font-size: 28px;
+
+  &::before {
+    display: inline-block;
+    @include transform(rotate(24deg));
+  }
 }
 
 footer {
