@@ -35,19 +35,23 @@ header {
     margin-bottom: 16px;
     font-size: 12px;
     color: #777;
+    i {
+      font-size: 15px;
+    }
 
     .search {
       border: none;
       margin-left: 10px;
       padding: 5px;
       outline: none;
-      width: 500px;
+      max-width: 600px;
+      width: 90%;
       border-bottom: 1px solid lightgrey;
+      color: #777777;
       transition: border 500ms;
 
       &:focus {
         border-bottom-color: #777777;
-
       }
     }
   }
@@ -473,17 +477,38 @@ ul.pills {
   margin: 0;
   text-align: center;
   li {
-    width: 200px;
+    width: 12%;
     display: inline-block;
-    margin: 10px;
+    margin: 0.7%;
     color: #545a5f;
     cursor: pointer;
     text-align: left;
     vertical-align: top;
+
+    @media only screen and (max-width: 1200px) {
+      width: 17%;
+      margin: 0.8%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      width: 23%;
+      margin: 0.45%;
+    }
+    @media only screen and (max-width: 850px) {
+      width: 45%;
+      margin: 1.24%;
+    }
+
     img {
-      width: 200px;
-      min-height: 150px;
+      width: 100%;
       border-radius: 6px;
+
+      &[src=''] {
+        height: 0;
+        padding-bottom: 100%;
+        overflow: hidden;
+        background: #E0EAEC;
+      }
     }
     .text-content {
       padding: 3px 1px;
