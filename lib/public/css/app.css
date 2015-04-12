@@ -261,6 +261,10 @@ aside.play-queue {
         background: #CBD5D7; }
         aside.play-queue ul li:first-of-type .vote-buttons {
           display: none; }
+      aside.play-queue ul li.forced-top {
+        background: #C9D0D7; }
+        aside.play-queue ul li.forced-top .vote-buttons {
+          display: none; }
       aside.play-queue ul li .title {
         font-size: 14px; }
       aside.play-queue ul li .vote-buttons {
@@ -570,5 +574,28 @@ span.artist {
   padding-left: 7px;
   color: #878787;
   font-size: 12px; }
+
+.context-menu {
+  position: absolute;
+  background: #ecedf2;
+  min-width: 200px;
+  border: 1px solid #aaaaaa; }
+  .context-menu ul {
+    padding: 0;
+    margin: 0; }
+    .context-menu ul li {
+      padding: 5px 10px;
+      cursor: pointer; }
+      .context-menu ul li.separator {
+        padding: 0;
+        border-bottom: 1px solid #aaaaaa;
+        margin: 5px 4px; }
+      .context-menu ul li:hover {
+        background: #fbfbfc; }
+        .context-menu ul li:hover i {
+          color: #000000; }
+      .context-menu ul li i {
+        color: #737373;
+        margin-right: 5px; }
 
 /*# sourceMappingURL=app.css.map */

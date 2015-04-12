@@ -320,6 +320,13 @@ aside.play-queue {
         }
       }
 
+      &.forced-top {
+        background: #C9D0D7;
+        .vote-buttons {
+          display: none;
+        }
+      }
+
       .title {
         font-size: 14px;
       }
@@ -722,4 +729,39 @@ span.artist {
   padding-left: 7px;
   color: #878787;
   font-size: 12px;
+}
+
+.context-menu {
+  position: absolute;
+  background: #ecedf2;
+  min-width: 200px;
+  border: 1px solid #aaaaaa;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &.separator {
+        padding: 0;
+        border-bottom: 1px solid #aaaaaa;
+        margin: 5px 4px;
+      }
+
+      &:hover {
+        background: lighten(#ecedf2, 5%);
+
+        i {
+          color: #000000;
+        }
+      }
+
+      i {
+        color: #737373;
+        margin-right: 5px;
+      }
+    }
+  }
 }

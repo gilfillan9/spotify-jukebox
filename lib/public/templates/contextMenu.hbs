@@ -1,0 +1,16 @@
+<div class="context-menu">
+    <ul>
+        {{#each items}}
+            {{#ifCond "text" type}}
+                <li data-action="{{action}}" data-uri="{{uri}}">
+                    {{#if icon}}<i class="{{icon}} context-icon"></i>{{/if}}
+                    {{#if image}}<img src="{{image}}" class="context-icon"/>{{/if}}
+                    <span class="content">{{text}}</span>
+                </li>
+            {{/ifCond}}
+            {{#ifCond "separator" type}}
+                <li class="separator"></li>
+            {{/ifCond}}
+        {{/each}}
+    </ul>
+</div>
