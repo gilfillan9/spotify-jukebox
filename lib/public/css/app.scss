@@ -309,7 +309,7 @@ aside.play-queue {
         height: 1px;
         left: 0;
         right: 0;
-        background: linear-gradient(to right, rgba(212, 222, 224, 0.1), #D4DEE0, rgba(212, 222, 224, 0.1));
+        background: linear-gradient(to right, rgba(212, 222, 224, 0.1), #c9d2d4, rgba(212, 222, 224, 0.1));
       }
 
       &:first-of-type {
@@ -321,7 +321,7 @@ aside.play-queue {
       }
 
       .title {
-        font-size: 15px;
+        font-size: 14px;
       }
 
       .vote-buttons {
