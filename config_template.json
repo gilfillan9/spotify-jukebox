@@ -8,6 +8,7 @@
         "password":       "<CHANGEME>",
         "apiKeyLocation": "./spotify_appkey.key",
         "clientId":      "<CHANGEME>",
-        "clientSecret":   "<CHANGEME>"
+        "clientSecret":   "<CHANGEME>",
+	"traceFileLocation": "./data/trace.log"
     }
 }
