@@ -3,9 +3,9 @@
         <li data-uuid="{{uuid}}" data-uri="{{uri}}" data-id="{{id}}" class="{{#if forcedTop}}forced-top{{/if}}">
             <span class="title">{{name}}</span>{{#each artists}}<span class="artist">{{name}}</span>{{/each}}
             <div class="vote-buttons">
-                <button class="up icon-arrow-up {{#if votedUp}}active{{/if}}"></button>
+                <button class="up mdi-action-thumb-up {{#if votedUp}}active{{/if}}"></button>
                 <span>{{votes}}</span>
-                <button class="down icon-arrow-down {{#if votedDown}}active{{/if}}"></button>
+                <button class="down mdi-action-thumb-down {{#if votedDown}}active{{/if}}"></button>
             </div>
         </li>
     {{/each}}

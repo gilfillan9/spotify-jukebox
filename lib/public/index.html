@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>Jukebox</title>
-    <link href="/css/simple-line-icons.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link href="/css/app.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/materialize.js"></script>
     <script src="/js/underscore.js"></script>
     <script src="/js/async.js"></script>
     <script src="/js/spotify-web-api.js"></script>
@@ -14,57 +19,59 @@
     <script src="/js/app.js"></script>
 </head>
 <body class="loading showLoader">
-<aside class="aside" id="nav">
-    <div class="aside-top icon-energy"></div>
-    <nav class="left-nav">
-        <ul>
-            <li>
-                <a href="#" data-nav="browse">
-                    <i class="icon-disc"></i>
-                    <span>Browse</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" data-nav="nowPlaying">
-                    <i class="icon-music-tone-alt"></i>
-                    <span>Playing</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" data-nav="history">
-                    <i class="icon-playlist"></i>
-                    <span>History</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="phone-call-on">
-                    <i class="icon-call-in"></i>
-                    <span>Phone On</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="phone-call-off">
-                    <i class="icon-call-end"></i>
-                    <span>Phone Off</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="bottom">
-            <li>
-                <a href="#" data-nav="settings">
-                    <i class="icon-settings"></i>
-                    <span>Settings</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class="aside-bottom"></div>
-</aside>
+<ul class="left-nav">
+    <li class="waves-effect">
+        <a href="#" data-nav="browse">
+            <i class="mdi-av-album"></i>
+            <span>Browse</span>
+        </a>
+    </li>
+    <li class="waves-effect">
+        <a href="#" data-nav="nowPlaying">
+            <i class="mdi-av-queue-music"></i>
+            <span>Playing</span>
+        </a>
+    </li>
+    <li class="waves-effect">
+        <a href="#" class="phone-call-on">
+            <i class="mdi-notification-phone-in-talk"></i>
+            <span>Phone On</span>
+        </a>
+    </li>
+    <li class="waves-effect">
+        <a href="#" class="phone-call-off">
+            <i class="mdi-communication-ring-volume"></i>
+            <span>Phone Off</span>
+        </a>
+    </li>
+    <li class="waves-effect">
+        <a href="#" data-nav="settings">
+            <i class="mdi-action-settings"></i>
+            <span>Settings</span>
+        </a>
+    </li>
+</ul>
 <header>
-    <section class="search-wrap">
-        <i class="icon-magnifier"></i>
-        <input type="text" class="search" placeholder="Search songs, artists, albums etc...">
-    </section>
+    <nav>
+        <ul class="left hide-on-large-only">
+            <li>
+                <a class="mdi-navigation-menu show-sidebar-btn waves-effect waves-light white-text"></a>
+            </li>
+        </ul>
+        <a class="brand-logo" href="#" data-nav="browse">Jukebox</a>
+        <ul class="right hide-on-large-only">
+            <li>
+                <a class="mdi-action-search show-search-btn waves-effect waves-light white-text"></a>
+            </li>
+            <li>
+                <a class="mdi-action-search hide-search-btn mdi-navigation-close waves-effect waves-light white-text"></a>
+            </li>
+        </ul>
+        <i class="mdi-action-search search-icon center-align"></i>
+        <section class="search-wrap">
+            <input type="text" class="search" placeholder="Search songs, artists, albums etc...">
+        </section>
+    </nav>
 </header>
 <main>
 
@@ -76,32 +83,41 @@
     <ul></ul>
 </aside>
 <footer>
-    <section class="play-control">
-        <button class="back icon-control-rewind"></button>
-        <button class="play icon-control-play"></button>
-        <button class="next icon-control-forward"></button>
-    </section>
     <section class="duration-wrap">
-        <div class="song-name"></div>
         <input type="range" class="duration-slider">
+    </section>
+    <section class="play-control">
+        <button class="btn-flat waves-effect waves-light back mdi-av-skip-previous"></button>
+        <button class="btn-flat waves-effect waves-light play mdi-av-play-arrow"></button>
+        <button class="btn-flat waves-effect waves-light next mdi-av-skip-next"></button>
+    </section>
+    <section class="current-playing">
+        <div class="current-title "></div>
+        <div class="current-artist"></div>
     </section>
     <section class="audio-control">
         <div class="durations">
-            <span class="current-time"></span>
-            <span class="length"></span>
+            <span class="current-time">00:00</span>
+            <span class="length">00:00</span>
         </div>
+        <button class="btn-flat waves-effect waves-light shuffle-button mdi-av-shuffle"></button>
 
         <div class="volume-wrap">
-            <i class="icon-volume-2"></i>
-            <input type="range" min="0" max="100" class="volume volume-slider"/>
+            <i class="mdi-av-volume-up"></i>
+
+            <div class="volume-inner-wrap">
+                <input type="range" min="0" max="100" class="volume volume-slider"/>
+            </div>
         </div>
-        <button class="shuffle-button icon-shuffle"></button>
     </section>
 </footer>
-<div class="loader">
-    <span>Loading...</span>
-
-    <div class="spinner"></div>
-</div>
+<section class="hide-on-med-only hide-on-large-only card mobile-current-playing">
+    <div class="current-art-wrap"><img class="current-art responsive-img"></div>
+    <div class="details-wrap">
+        <span class="current-title"></span>
+        <span class="current-artist"></span>
+    </div>
+    <i class="btn-flat center-align current-playing-btn waves-effect mdi-av-play-circle-outline"></i>
+</section>
 </body>
 </html>

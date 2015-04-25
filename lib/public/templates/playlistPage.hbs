@@ -3,14 +3,15 @@
         <img src="{{images.[0].url}}" class="detail-image"/>
 
         <div class="detail-text">
-            <h3>Playlist</h3>
+            <h4>Playlist</h4>
 
-            <h2>{{name}}</h2>
-            <p>{{description}}</p>
+            <h3>{{name}}</h3>
+
+            <p>{{{description}}}</p>
 
             <div class="buttons-wrap">
-                <button data-uri="{{uri}}" data-action="add">Add to queue</button>
-                <button data-uri="{{uri}}" data-action="clear|add">Play</button>
+                <button data-uri="{{uri}}" data-action="add" class="btn waves-effect">Add to queue</button>
+                <button data-uri="{{uri}}" data-action="clear|add" class="btn waves-effect">Play</button>
             </div>
         </div>
     </div>

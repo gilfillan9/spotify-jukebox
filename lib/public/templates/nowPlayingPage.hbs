@@ -1,15 +1,17 @@
 <h2>Now Playing</h2>
-<div class="now-playing">
-    <img src="{{album.images.[0].url}}">
+<div class="valign-wrapper">
+    <div class="now-playing valign">
+        <img src="{{album.images.[0].url}}">
 
-    <div class="text-content">
-        <div class="name">{{name}}</div>
+        <div class="text-content">
+            <div class="name">{{name}}</div>
 
-        <div class="artist-wrap">
-            {{#each artists}}
-                <a class="artist" data-action="view" data-uri="{{uri}}">{{name}}</a>
-            {{/each}}
+            <div class="artist-wrap">
+                {{#each artists}}
+                    <a class="artist" data-action="view" data-uri="{{uri}}">{{name}}</a>
+                {{/each}}
+            </div>
+            <a class="album" data-action="view" data-uri="{{album.uri}}">{{album.name}}</a>
         </div>
-        <a class="album" data-action="view" data-uri="{{album.uri}}">{{album.name}}</a>
     </div>
 </div>

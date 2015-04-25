@@ -1,12 +1,15 @@
-<h2>{{message}}</h2>
-<ul class="pills">
-    {{#each featured}}
-        {{> playlistPill}}
-    {{/each}}
-</ul>
-<h4>Categories</h4>
-<ul class="pills">
-    {{#each categories}}
-        {{> categoryPill}}
-    {{/each}}
-</ul>
+<div class="browse">
+    <h2 class="flow-text">{{message}}</h2>
+    <ul class="pills">
+        {{#each featured}}
+            {{> playlistPill}}
+        {{/each}}
+    </ul>
+    <div class="sepe"></div>
+    <h5>Categories</h5>
+    <ul class="pills">
+        {{#each categories}}
+            {{> categoryPill}}
+        {{/each}}
+    </ul>
+</div>
