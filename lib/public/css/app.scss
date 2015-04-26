@@ -65,9 +65,16 @@ header {
   width: 100%;
   z-index: 5;
 
-  .show-search-btn, .show-sidebar-btn, .hide-search-btn {
+  .show-search-btn, .show-sidebar-btn, .hide-search-btn, .close-mobile-controls-btn {
     height: 100%;
     font-size: 1.25em;
+  }
+
+  .close-mobile-controls-btn {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
   }
 
   .hide-search-btn {
@@ -99,7 +106,7 @@ header {
   }
   @media only all and (max-device-width: 992px) {
     &.show-search {
-      .show-search-btn, .show-sidebar-btn {
+      .show-search-btn, .show-sidebar-btn, .close-mobile-controls-btn {
         display: none;
       }
       .hide-search-btn {
@@ -124,6 +131,17 @@ header {
         opacity: 0;
         pointer-events: none;
         @include transition-delay(0ms);
+      }
+    }
+
+    body.show-mobile-controls & {
+      .close-mobile-controls-btn {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .show-sidebar-btn {
+        opacity: 0;
+        pointer-events: none;
       }
     }
   }
@@ -270,7 +288,7 @@ footer {
 
 .mobile-current-playing {
   position: fixed;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
   height: 60px;
@@ -316,6 +334,101 @@ footer {
     padding: 0 10px;
     position: absolute;
     right: 0;
+  }
+}
+
+.mobile-controls {
+  @extend .card-panel;
+  position: fixed;
+  top: 55px;
+  bottom: 0;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  @include transform(translateY(-100%));
+  @include transition(transform 500ms);
+
+  body.show-mobile-controls & {
+    @include transform(translateY(0));
+  }
+
+  .current-track-details {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    padding: 3px 10px;
+    overflow: hidden;
+
+    span {
+      display: block;
+      font-size: 1.2em;
+
+      &.current-title {
+        font-weight: bold;
+      }
+
+      &.current-artist {
+        @extend .grey-text.text-darken-3;
+      }
+    }
+  }
+
+  .controls-wrap {
+    overflow: visible;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+
+    .duration-slider {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      right: 0;
+      margin: 0;
+      border-width: 1px 0;
+      z-index: 3;
+    }
+
+    .buttons-wrap {
+      font-size: 1.5em;
+      text-align: center;
+      height: 100%;
+
+      button {
+        height: 100%;
+        padding: 0 20px;
+
+        &:focus {
+          @extend .grey.lighten-3;
+        }
+      }
+    }
+  }
+
+  .durations-wrap {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 55px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+
+    .length {
+      float: right;
+    }
+  }
+  img.current-art {
+    height: 100%;
   }
 }
 

@@ -18,7 +18,7 @@
     <script src="/js/handlebars-v3.0.0.js"></script>
     <script src="/js/app.js"></script>
 </head>
-<body class="loading showLoader">
+<body>
 <ul class="left-nav">
     <li class="waves-effect">
         <a href="#" data-nav="browse">
@@ -56,6 +56,9 @@
         <ul class="left hide-on-large-only">
             <li>
                 <a class="mdi-navigation-menu show-sidebar-btn waves-effect waves-light white-text"></a>
+            </li>
+            <li>
+                <a class="mdi-navigation-arrow-back close-mobile-controls-btn waves-effect waves-light white-text"></a>
             </li>
         </ul>
         <a class="brand-logo" href="#" data-nav="browse">Jukebox</a>
@@ -118,6 +121,27 @@
         <span class="current-artist"></span>
     </div>
     <i class="btn-flat center-align current-playing-btn waves-effect mdi-av-play-circle-outline"></i>
+</section>
+<section class="hide-on-med-only hide-on-large-only mobile-controls">
+    <div class="current-track-details">
+        <span class="current-title"></span>
+        <span class="current-artist"></span>
+    </div>
+    <img class="current-art">
+
+    <div class="durations-wrap">
+        <span class="current-time">00:00</span>
+        <span class="length">00:00</span>
+    </div>
+    <div class="controls-wrap">
+        <input type="range" class="duration-slider">
+
+        <div class="buttons-wrap">
+            <button class="btn-flat waves-effect back mdi-av-skip-previous"></button>
+            <button class="btn-flat waves-effect play mdi-av-play-arrow"></button>
+            <button class="btn-flat waves-effect next mdi-av-skip-next"></button>
+        </div>
+    </div>
 </section>
 </body>
 </html>
