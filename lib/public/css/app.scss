@@ -3,7 +3,11 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .left-nav {
@@ -166,12 +170,14 @@ header {
 }
 
 main {
-  padding-top: 56px;
-  padding-bottom: 50px;
-
+  position: absolute;
+  top: 56px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
   @media only all and (min-width: 992px) {
-    padding-top: 64px;
-
+    top: 64px;
   }
 }
 
@@ -305,8 +311,8 @@ footer {
   }
 
   .details-wrap {
-    float: left;
     padding: 8px 6px;
+    margin-right: 45px;
 
     span {
       display: block;
@@ -334,6 +340,7 @@ footer {
     padding: 0 10px;
     position: absolute;
     right: 0;
+    top: 0;
   }
 }
 
@@ -347,11 +354,12 @@ footer {
   right: 0;
   margin: 0;
   padding: 0;
-  @include transform(translateY(-100%));
-  @include transition(transform 500ms);
+  @include transform(translate3d(0, -100%, 0));
+  @include transition(transform 800ms cubic-bezier(0.42, 0.00, 0.81, 0.4));
 
   body.show-mobile-controls & {
-    @include transform(translateY(0));
+    @include transform(translate3d(0, 0, 0));
+    @include transition(transform 800ms cubic-bezier(0.41, 0.58, 0.43, 1));
   }
 
   .current-track-details {
@@ -361,25 +369,52 @@ footer {
     top: 0;
     right: 0;
     left: 0;
-    height: 60px;
+    height: 70px;
     padding: 3px 10px;
     overflow: hidden;
+    z-index: 3;
+    .text-wrap {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 50px;
+      span {
+        display: block;
+        font-size: 1.2em;
 
-    span {
-      display: block;
-      font-size: 1.2em;
+        &.current-title {
+          font-weight: bold;
+        }
 
-      &.current-title {
-        font-weight: bold;
-      }
-
-      &.current-artist {
-        @extend .grey-text.text-darken-3;
+        &.current-artist {
+          @extend .grey-text.text-darken-3;
+        }
       }
     }
+    button.mobile-show-queue {
+      font-size: 2em;
+      height: 100%;
+      padding: 0 15px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &:focus {
+        @extend .grey.lighten-3;
+      }
+    }
+
+    body.show-mobile-queue & {
+      @extend .z-depth-1;
+      @include transition-delay(60ms);
+    }
+    @include transition(box-shadow 0ms);
+    @include transition-delay(770ms);
   }
 
   .controls-wrap {
+
     overflow: visible;
     margin: 0;
     background: rgba(255, 255, 255, 0.9);
@@ -388,6 +423,7 @@ footer {
     bottom: 0;
     left: 0;
     height: 50px;
+    z-index: 3;
 
     .duration-slider {
       position: absolute;
@@ -427,8 +463,63 @@ footer {
       float: right;
     }
   }
-  img.current-art {
+  .current-art-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
+    img.current-art {
+      height: 100%;
+    }
+  }
+
+  .play-queue {
+    @include transform(translate3d(0, -100%, 0));
+    @include transition(transform 800ms cubic-bezier(0.42, 0.00, 0.81, 0.4));
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-top: 70px;
+    padding-bottom: 55px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: white;
+    z-index: 2;
+
+    body.show-mobile-queue & {
+      @include transform(translate3d(0, 0, 0));
+      @include transition(transform 800ms cubic-bezier(0.41, 0.58, 0.43, 1));
+    }
+
+    ul li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px 10px;
+
+      .title {
+        font-weight: bold;
+      }
+
+      .artist {
+        @extend .grey-text.text-darken-3;
+
+        &::after {
+          content: ", ";
+          display: inline;
+        }
+        &:last-of-type::after {
+          content: "";
+        }
+      }
+      
+      &:first-of-type {
+        display: none;
+      }
+    }
   }
 }
 
@@ -466,7 +557,7 @@ aside.play-queue {
   }
 
   main {
-    margin-left: 80px;
+    left: 80px;
   }
 
   .left-nav {
@@ -568,4 +659,13 @@ aside.play-queue {
       }
     }
   }
+}
+
+.preloader-outer-wrapper {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
 }

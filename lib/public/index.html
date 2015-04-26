@@ -117,17 +117,23 @@
 <section class="hide-on-med-only hide-on-large-only card mobile-current-playing">
     <div class="current-art-wrap"><img class="current-art responsive-img"></div>
     <div class="details-wrap">
-        <span class="current-title"></span>
-        <span class="current-artist"></span>
+        <span class="current-title truncate"></span>
+        <span class="current-artist truncate"></span>
     </div>
-    <i class="btn-flat center-align current-playing-btn waves-effect mdi-av-play-circle-outline"></i>
+    <button class="btn-flat center-align current-playing-btn waves-effect mdi-av-play-circle-outline"></button>
 </section>
 <section class="hide-on-med-only hide-on-large-only mobile-controls">
     <div class="current-track-details">
-        <span class="current-title"></span>
-        <span class="current-artist"></span>
+        <div class="text-wrap">
+            <span class="current-title truncate"></span>
+            <span class="current-artist truncate"></span>
+        </div>
+        <button class="btn-flat waves-effect mdi-action-view-headline mobile-show-queue"></button>
     </div>
-    <img class="current-art">
+    <div class="play-queue"></div>
+    <div class="current-art-wrap">
+        <img class="current-art">
+    </div>
 
     <div class="durations-wrap">
         <span class="current-time">00:00</span>
