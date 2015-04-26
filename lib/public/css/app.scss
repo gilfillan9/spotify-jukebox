@@ -184,6 +184,7 @@ main {
 footer {
   display: none;
   @extend .card-panel, .red.lighten-3;
+  z-index: 2;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -515,7 +516,7 @@ footer {
           content: "";
         }
       }
-      
+
       &:first-of-type {
         display: none;
       }
@@ -537,12 +538,32 @@ footer {
     vertical-align: top;
     margin-bottom: 20px;
 
+    @extend .curve-in;
+
     @media only all and (min-width: 600px) {
       width: 24.5%;
     }
 
     @media only all and (min-width: 992px) {
       width: 13.8%;
+    }
+  }
+}
+
+main {
+  h2, h5 {
+    @include transition(opacity 800ms);
+    opacity: 0;
+  }
+
+  &.animate-in {
+    h2, h5 {
+      opacity: 1;
+    }
+  }
+  &.animate-in.animate-out {
+    h2, h5 {
+      opacity: 0;
     }
   }
 }
@@ -565,7 +586,7 @@ aside.play-queue {
     width: 80px;
     top: 64px;
     bottom: 64px;
-    z-index: 0;
+    z-index: 1;
     padding: 0;
 
     li {
@@ -604,8 +625,9 @@ aside.play-queue {
 }
 
 .view-details {
+
   .view-detail-top {
-    @extend .card-panel;
+    @extend .card-panel, .slide-down-in;
     margin-top: 0;
     .detail-text {
       display: inline-block;
@@ -636,7 +658,7 @@ aside.play-queue {
 }
 
 .track-table {
-  @extend .hoverable, .responsive-table;
+  @extend .hoverable, .responsive-table, .curve-in;
 }
 
 .context-menu {
@@ -668,4 +690,61 @@ aside.play-queue {
   justify-content: center;
   height: 100%;
   overflow: hidden;
+}
+
+@include keyframes(curve-in) {
+  0% {
+    transform-origin: -400% -100%;
+    transform: rotate(4deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    transform-origin: -400% -100%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@include keyframes(curve-out) {
+  0% {
+    transform-origin: -400% -100%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform-origin: -400% -100%;
+    transform: rotate(4deg);
+    opacity: 0;
+  }
+}
+
+.curve-in {
+  @include animation-fill-mode(both);
+  @include animation-duration(800ms);
+  opacity: 0;
+
+  main.animate-in & {
+    @include animation-name(curve-in);
+  }
+  main.animate-in.animate-out & {
+    @include animation-name(curve-out);
+  }
+}
+
+.slide-down-in {
+  @include transition(transform 800ms);
+  @include transform(translateY(-100%));
+
+  main.animate-in & {
+    @include transform(translateY(0));
+  }
+  main.animate-in.animate-out & {
+    @include transform(translateY(-100%));
+  }
 }
