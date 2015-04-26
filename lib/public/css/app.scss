@@ -108,7 +108,7 @@ header {
     left: 44px;
     right: 60px;
   }
-  @media only all and (max-device-width: 992px) {
+  @media only all and (max-width: 992px) {
     &.show-search {
       .show-search-btn, .show-sidebar-btn, .close-mobile-controls-btn {
         display: none;
@@ -162,7 +162,7 @@ header {
 
     .search-icon {
       right: auto;
-      left: 90px;
+      left: 155px;
       opacity: 1;
       @include transform(translateX(100%));
     }
@@ -285,7 +285,7 @@ footer {
     display: block;
   }
 
-  @media only all and (max-device-width: 750px) {
+  @media only all and (max-width: 750px) {
     font-size: 0.9em;
 
     button.btn-flat {
@@ -781,7 +781,7 @@ aside.play-queue {
   @include animation-duration(800ms);
   opacity: 0;
 
-  main.animate-in & {
+  main.animate-in &, aside & {
     @include animation-name(curve-in);
   }
   main.animate-in.animate-out & {
@@ -793,10 +793,38 @@ aside.play-queue {
   @include transition(transform 800ms);
   @include transform(translateY(-100%));
 
-  main.animate-in & {
+  main.animate-in &, aside & {
     @include transform(translateY(0));
   }
-  main.animate-in.animate-out & {
+  main.animate-in.animate-out &{
     @include transform(translateY(-100%));
+  }
+}
+
+.search-content {
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  background: white;
+  overflow-y: auto;
+  padding: 0 10px;
+
+  &.show {
+    display: block;
+  }
+
+  @media only screen and (min-width: 600px) {
+    top: 64px;
+    right: 200px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    left: 80px;
+  }
+  @media only screen and (min-width: 1200px) {
+    right: 300px;
   }
 }

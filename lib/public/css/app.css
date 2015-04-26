@@ -8123,7 +8123,7 @@ header {
     position: absolute;
     left: 44px;
     right: 60px; }
-  @media only all and (max-device-width: 992px) {
+  @media only all and (max-width: 992px) {
     header.show-search .show-search-btn, header.show-search .show-sidebar-btn, header.show-search .close-mobile-controls-btn {
       display: none; }
     header.show-search .hide-search-btn {
@@ -8178,7 +8178,7 @@ header {
       pointer-events: all; }
     header .search-icon {
       right: auto;
-      left: 90px;
+      left: 155px;
       opacity: 1;
       -webkit-transform: translateX(100%);
       -moz-transform: translateX(100%);
@@ -8264,7 +8264,7 @@ footer {
   @media only all and (min-width: 600px) {
     footer {
       display: block; } }
-  @media only all and (max-device-width: 750px) {
+  @media only all and (max-width: 750px) {
     footer {
       font-size: 0.9em; }
       footer button.btn-flat {
@@ -8698,7 +8698,7 @@ aside.play-queue {
   -ms-animation-duration: 800ms;
   -o-animation-duration: 800ms;
   opacity: 0; }
-  main.animate-in .curve-in, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .track-table {
+  main.animate-in .curve-in, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .track-table, aside .curve-in, aside .pills li, .pills aside li, aside .track-table {
     -webkit-animation-name: curve-in;
     -moz-animation-name: curve-in;
     -ms-animation-name: curve-in;
@@ -8722,7 +8722,7 @@ aside.play-queue {
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%); }
-  main.animate-in .slide-down-in, main.animate-in .view-details .view-detail-top, .view-details main.animate-in .view-detail-top {
+  main.animate-in .slide-down-in, main.animate-in .view-details .view-detail-top, .view-details main.animate-in .view-detail-top, aside .slide-down-in, aside .view-details .view-detail-top, .view-details aside .view-detail-top {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -8734,5 +8734,28 @@ aside.play-queue {
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%); }
+
+.search-content {
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  background: white;
+  overflow-y: auto;
+  padding: 0 10px; }
+  .search-content.show {
+    display: block; }
+  @media only screen and (min-width: 600px) {
+    .search-content {
+      top: 64px;
+      right: 200px; } }
+  @media only screen and (min-width: 992px) {
+    .search-content {
+      left: 80px; } }
+  @media only screen and (min-device-width: 1200px) {
+    .search-content {
+      right: 300px; } }
 
 /*# sourceMappingURL=app.css.map */
