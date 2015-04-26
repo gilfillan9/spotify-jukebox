@@ -8687,53 +8687,55 @@ aside.play-queue {
     transform-origin: -400% -100%;
     transform: rotate(4deg);
     opacity: 0; } }
-.curve-in, .pills li, .track-table {
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 800ms;
-  -moz-animation-duration: 800ms;
-  -ms-animation-duration: 800ms;
-  -o-animation-duration: 800ms;
-  opacity: 0; }
-  main.animate-in .curve-in, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .track-table, aside .curve-in, aside .pills li, .pills aside li, aside .track-table {
-    -webkit-animation-name: curve-in;
-    -moz-animation-name: curve-in;
-    -ms-animation-name: curve-in;
-    -o-animation-name: curve-in;
-    animation-name: curve-in; }
-  main.animate-in.animate-out .curve-in, main.animate-in.animate-out .pills li, .pills main.animate-in.animate-out li, main.animate-in.animate-out .track-table {
-    -webkit-animation-name: curve-out;
-    -moz-animation-name: curve-out;
-    -ms-animation-name: curve-out;
-    -o-animation-name: curve-out;
-    animation-name: curve-out; }
+@media only all and (min-width: 600px) {
+  .curve-in, .pills li, .track-table {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 800ms;
+    -moz-animation-duration: 800ms;
+    -ms-animation-duration: 800ms;
+    -o-animation-duration: 800ms;
+    opacity: 0; }
+    main.animate-in .curve-in, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .track-table, aside .curve-in, aside .pills li, .pills aside li, aside .track-table {
+      -webkit-animation-name: curve-in;
+      -moz-animation-name: curve-in;
+      -ms-animation-name: curve-in;
+      -o-animation-name: curve-in;
+      animation-name: curve-in; }
+    main.animate-in.animate-out .curve-in, main.animate-in.animate-out .pills li, .pills main.animate-in.animate-out li, main.animate-in.animate-out .track-table {
+      -webkit-animation-name: curve-out;
+      -moz-animation-name: curve-out;
+      -ms-animation-name: curve-out;
+      -o-animation-name: curve-out;
+      animation-name: curve-out; } }
 
-.slide-down-in, .view-details .view-detail-top {
-  -webkit-transition: transform 800ms;
-  -moz-transition: transform 800ms;
-  -o-transition: transform 800ms;
-  -ms-transition: transform 800ms;
-  transition: transform 800ms;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%); }
-  main.animate-in .slide-down-in, main.animate-in .view-details .view-detail-top, .view-details main.animate-in .view-detail-top, aside .slide-down-in, aside .view-details .view-detail-top, .view-details aside .view-detail-top {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0); }
-  main.animate-in.animate-out .slide-down-in, main.animate-in.animate-out .view-details .view-detail-top, .view-details main.animate-in.animate-out .view-detail-top {
+@media only all and (min-width: 600px) {
+  .slide-down-in, .view-details .view-detail-top {
+    -webkit-transition: transform 800ms;
+    -moz-transition: transform 800ms;
+    -o-transition: transform 800ms;
+    -ms-transition: transform 800ms;
+    transition: transform 800ms;
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%); }
+    main.animate-in .slide-down-in, main.animate-in .view-details .view-detail-top, .view-details main.animate-in .view-detail-top, aside .slide-down-in, aside .view-details .view-detail-top, .view-details aside .view-detail-top {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0); }
+    main.animate-in.animate-out .slide-down-in, main.animate-in.animate-out .view-details .view-detail-top, .view-details main.animate-in.animate-out .view-detail-top {
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%); } }
 
 .search-content {
   display: none;
@@ -8754,7 +8756,7 @@ aside.play-queue {
   @media only screen and (min-width: 992px) {
     .search-content {
       left: 80px; } }
-  @media only screen and (min-device-width: 1200px) {
+  @media only screen and (min-width: 1200px) {
     .search-content {
       right: 300px; } }
 

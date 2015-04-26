@@ -777,27 +777,31 @@ aside.play-queue {
 }
 
 .curve-in {
-  @include animation-fill-mode(both);
-  @include animation-duration(800ms);
-  opacity: 0;
+  @media only all and (min-width: 600px) {
+    @include animation-fill-mode(both);
+    @include animation-duration(800ms);
+    opacity: 0;
 
-  main.animate-in &, aside & {
-    @include animation-name(curve-in);
-  }
-  main.animate-in.animate-out & {
-    @include animation-name(curve-out);
+    main.animate-in &, aside & {
+      @include animation-name(curve-in);
+    }
+    main.animate-in.animate-out & {
+      @include animation-name(curve-out);
+    }
   }
 }
 
 .slide-down-in {
-  @include transition(transform 800ms);
-  @include transform(translateY(-100%));
-
-  main.animate-in &, aside & {
-    @include transform(translateY(0));
-  }
-  main.animate-in.animate-out &{
+  @media only all and (min-width: 600px) {
+    @include transition(transform 800ms);
     @include transform(translateY(-100%));
+
+    main.animate-in &, aside & {
+      @include transform(translateY(0));
+    }
+    main.animate-in.animate-out & {
+      @include transform(translateY(-100%));
+    }
   }
 }
 
