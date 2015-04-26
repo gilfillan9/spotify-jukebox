@@ -1534,7 +1534,7 @@
 .grey-text.text-lighten-4, .view-details .view-detail-top .detail-text h4.text-lighten-4 {
   color: #f5f5f5 !important; }
 
-.grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover {
+.grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type {
   background-color: #eeeeee !important; }
 
 .grey-text.text-lighten-3, .view-details .view-detail-top .detail-text h4.text-lighten-3 {
@@ -1573,7 +1573,7 @@
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3 {
+.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .artist {
   color: #424242 !important; }
 
 .grey.darken-4 {
@@ -8193,9 +8193,13 @@ main {
   left: 0;
   right: 0;
   overflow-y: auto; }
-  @media only all and (min-width: 992px) {
+  @media only all and (min-width: 600px) {
     main {
-      top: 64px; } }
+      top: 64px;
+      right: 200px; } }
+  @media only all and (min-width: 1200px) {
+    main {
+      right: 300px; } }
 
 footer {
   display: none;
@@ -8485,11 +8489,14 @@ footer {
     vertical-align: top;
     padding: 0; }
     .pills li .text-content {
-      padding: 5px 5px; }
+      padding: 5px 9px; }
     @media only all and (min-width: 600px) {
       .pills li {
+        width: 32%; } }
+    @media only all and (min-width: 900px) {
+      .pills li {
         width: 24.5%; } }
-    @media only all and (min-width: 992px) {
+    @media only all and (min-width: 1400px) {
       .pills li {
         width: 13.8%; } }
 
@@ -8504,9 +8511,6 @@ main.animate-in h2, main.animate-in h5 {
   opacity: 1; }
 main.animate-in.animate-out h2, main.animate-in.animate-out h5 {
   opacity: 0; }
-
-aside.play-queue {
-  display: none; }
 
 @media only all and (min-width: 993px) {
   nav a.brand-logo {
@@ -8591,6 +8595,31 @@ aside.play-queue {
   justify-content: center;
   height: 100%;
   overflow: hidden; }
+
+aside.play-queue {
+  position: fixed;
+  right: 0;
+  top: 64px;
+  bottom: 60px;
+  width: 200px;
+  overflow-y: auto; }
+  @media only all and (min-width: 1200px) {
+    aside.play-queue {
+      width: 300px; } }
+  aside.play-queue ul {
+    padding: 0; }
+    aside.play-queue ul li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6px 4px; }
+      aside.play-queue ul li .title {
+        font-weight: bold; }
+      aside.play-queue ul li .artist::after {
+        content: ", ";
+        display: inline; }
+      aside.play-queue ul li .artist:last-of-type::after {
+        content: ""; }
 
 @-webkit-keyframes curve-in {
   0% {

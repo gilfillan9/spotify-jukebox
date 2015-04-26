@@ -176,8 +176,12 @@ main {
   left: 0;
   right: 0;
   overflow-y: auto;
-  @media only all and (min-width: 992px) {
+  @media only all and (min-width: 600px) {
     top: 64px;
+    right: 200px;
+  }
+  @media only all and (min-width: 1200px) {
+    right: 300px;
   }
 }
 
@@ -536,7 +540,7 @@ footer {
   flex-flow: row wrap;
 
   li {
-    @extend .card-panel,.curve-in;
+    @extend .card-panel, .curve-in;
     width: 48%;
     display: inline-block;
     box-sizing: border-box;
@@ -547,12 +551,13 @@ footer {
     .text-content {
       padding: 5px 9px;
     }
-
     @media only all and (min-width: 600px) {
+      width: 32%;
+    }
+    @media only all and (min-width: 900px) {
       width: 24.5%;
     }
-
-    @media only all and (min-width: 992px) {
+    @media only all and (min-width: 1400px) {
       width: 13.8%;
     }
   }
@@ -574,10 +579,6 @@ main {
       opacity: 0;
     }
   }
-}
-
-aside.play-queue {
-  display: none;
 }
 
 @media only all and (min-width: 993px) {
@@ -698,6 +699,49 @@ aside.play-queue {
   justify-content: center;
   height: 100%;
   overflow: hidden;
+}
+
+aside.play-queue {
+  position: fixed;
+  right: 0;
+  top: 64px;
+  bottom: 60px;
+  width: 200px;
+  overflow-y: auto;
+
+  @media only all and (min-width: 1200px) {
+    width: 300px;
+  }
+
+  ul {
+    padding: 0;
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6px 4px;
+
+      &:first-of-type {
+        @extend .grey.lighten-3;
+      }
+
+      .title {
+        font-weight: bold;
+      }
+
+      .artist {
+        @extend .grey-text.text-darken-3;
+
+        &::after {
+          content: ", ";
+          display: inline;
+        }
+        &:last-of-type::after {
+          content: "";
+        }
+      }
+    }
+  }
 }
 
 @include keyframes(curve-in) {
