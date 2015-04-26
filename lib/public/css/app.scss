@@ -529,16 +529,24 @@ footer {
 }
 
 .pills {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-flow: row wrap;
+
   li {
-    width: 49%;
+    @extend .card-panel,.curve-in;
+    width: 48%;
     display: inline-block;
     box-sizing: border-box;
-    padding: 0 5px;
     overflow: hidden;
     vertical-align: top;
-    margin-bottom: 20px;
+    padding: 0;
 
-    @extend .curve-in;
+    .text-content {
+      padding: 5px 9px;
+    }
 
     @media only all and (min-width: 600px) {
       width: 24.5%;
