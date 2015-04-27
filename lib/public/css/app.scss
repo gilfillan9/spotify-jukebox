@@ -702,12 +702,20 @@ main {
 
 .context-menu {
   position: absolute;
+  width: 0;
+  height: 0;
+  @include transition((width 200ms, height 200ms));
+  overflow: hidden;
+  z-index: 5;
+
   ul {
-    @extend .collection;
+    opacity: 0;
+    @extend .collection, .z-depth-1;
+    min-width: 150px;
 
     li {
       @extend .collection-item;
-      @include transition(background-color 300ms);
+      @include transition((background-color 300ms, opacity 200ms));
 
       &.separator {
         height: 0;
