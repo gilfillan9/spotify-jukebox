@@ -174,12 +174,13 @@ header {
 main {
   position: absolute;
   top: 56px;
-  bottom: 50px;
+  bottom: 60px;
   left: 0;
   right: 0;
   overflow-y: auto;
   @media only all and (min-width: 600px) {
     top: 64px;
+    bottom: 62px;
     right: 200px;
   }
   @media only all and (min-width: 1200px) {
