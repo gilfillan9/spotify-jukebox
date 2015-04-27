@@ -540,26 +540,47 @@ footer {
   flex-flow: row wrap;
 
   li {
-    @extend .card-panel, .curve-in, .zoom-out;
-    width: 48%;
-    display: inline-block;
-    box-sizing: border-box;
-    overflow: hidden;
-    vertical-align: top;
-    padding: 0;
+    @extend li.pill;
+  }
+}
 
-    .text-content {
-      padding: 5px 9px;
-    }
-    @media only all and (min-width: 600px) {
-      width: 32%;
-    }
-    @media only all and (min-width: 900px) {
-      width: 24.5%;
-    }
-    @media only all and (min-width: 1400px) {
-      width: 13.8%;
-    }
+li.pill {
+  @extend .card-panel, .curve-in, .zoom-out;
+  width: 48%;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0;
+
+  .text-content {
+    padding: 5px 9px;
+  }
+  @media only all and (min-width: 600px) {
+    width: 32%;
+  }
+  @media only all and (min-width: 900px) {
+    width: 24.5%;
+  }
+  @media only all and (min-width: 1400px) {
+    width: 13.8%;
+  }
+}
+
+.pill-clicked {
+  @extend li.pill;
+
+  position: absolute;
+  background: #FFFFFF;
+  opacity: 1 !important;
+  z-index: 1;
+  margin: 0;
+  @include animation(none);
+
+  @include transition((top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms));
+
+  &.fade-out {
+    opacity: 0 !important;
   }
 }
 
@@ -636,7 +657,7 @@ main {
 .view-details {
 
   .view-detail-top {
-    @extend .card-panel, .slide-down-in;
+    @extend .card-panel;
     margin-top: 0;
     .detail-text {
       display: inline-block;
