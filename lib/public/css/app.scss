@@ -564,11 +564,11 @@ footer {
 }
 
 main {
-  h2, h5 {
-    @include transition(opacity 800ms);
+  h1, h2, h3, h4, h5, h6 {
+    @include transition(opacity 500ms);
     opacity: 0;
   }
-
+  
   &.animate-in {
     h1, h2, h3, h4, h5, h6 {
       opacity: 1;

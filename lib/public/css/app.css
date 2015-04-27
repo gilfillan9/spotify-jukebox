@@ -8504,12 +8504,12 @@ footer {
       .pills li {
         width: 13.8%; } }
 
-main h2, main h5 {
-  -webkit-transition: opacity 800ms;
-  -moz-transition: opacity 800ms;
-  -o-transition: opacity 800ms;
-  -ms-transition: opacity 800ms;
-  transition: opacity 800ms;
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms;
   opacity: 0; }
 main.animate-in h1, main.animate-in h2, main.animate-in h3, main.animate-in h4, main.animate-in h5, main.animate-in h6 {
   opacity: 1; }
@@ -8680,11 +8680,6 @@ aside.play-queue {
     -moz-animation-duration: 500ms;
     -ms-animation-duration: 500ms;
     -o-animation-duration: 500ms;
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     opacity: 0; }
     main.animate-in .curve-in, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .track-table, aside .curve-in, aside .pills li, .pills aside li, aside .track-table {
       -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
@@ -8698,6 +8693,11 @@ aside.play-queue {
       -o-animation-name: curve-in;
       animation-name: curve-in; }
     main.animate-in.animate-out .curve-in, main.animate-in.animate-out .pills li, .pills main.animate-in.animate-out li, main.animate-in.animate-out .track-table {
+      -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
       -webkit-animation-name: curve-out;
       -moz-animation-name: curve-out;
       -ms-animation-name: curve-out;
