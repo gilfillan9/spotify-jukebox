@@ -8074,6 +8074,9 @@ header {
   position: fixed;
   width: 100%;
   z-index: 5; }
+  @media only all and (min-width: 600px) {
+    header {
+      z-index: 1; } }
   header .show-search-btn, header .show-sidebar-btn, header .hide-search-btn, header .close-mobile-controls-btn {
     height: 100%;
     font-size: 1.25em; }
@@ -8524,7 +8527,7 @@ main.animate-in.animate-out h1, main.animate-in.animate-out h2, main.animate-in.
     width: 80px;
     top: 64px;
     bottom: 64px;
-    z-index: 1;
+    z-index: 2;
     padding: 0; }
     .left-nav li {
       height: 80px;
