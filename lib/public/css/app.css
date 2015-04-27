@@ -8669,6 +8669,27 @@ aside.play-queue {
   100% {
     transform: rotate(8deg) translateY(20%) rotate(-8deg);
     opacity: 0; } }
+@-webkit-keyframes zoom-out {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0);
+    opacity: 0.2; } }
+@-moz-keyframes zoom-out {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0);
+    opacity: 0.2; } }
+@keyframes zoom-out {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0);
+    opacity: 0.2; } }
 @media only all and (min-width: 600px) {
   .curve-in, .pills li, .track-table {
     -webkit-animation-fill-mode: both;
@@ -8680,31 +8701,38 @@ aside.play-queue {
     -moz-animation-duration: 500ms;
     -ms-animation-duration: 500ms;
     -o-animation-duration: 500ms;
-    opacity: 0; }
+    opacity: 0;
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1); }
     main.animate-in .curve-in, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .track-table, aside .curve-in, aside .pills li, .pills aside li, aside .track-table {
-      -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
       -webkit-animation-name: curve-in;
       -moz-animation-name: curve-in;
       -ms-animation-name: curve-in;
       -o-animation-name: curve-in;
       animation-name: curve-in; }
-    main.animate-in.animate-out .curve-in, main.animate-in.animate-out .pills li, .pills main.animate-in.animate-out li, main.animate-in.animate-out .track-table {
-      -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -webkit-animation-name: curve-out;
-      -moz-animation-name: curve-out;
-      -ms-animation-name: curve-out;
-      -o-animation-name: curve-out;
-      animation-name: curve-out; } }
 
-@media only all and (min-width: 600px) {
+  main.animate-in.animate-out .curve-out {
+    -webkit-animation-name: curve-out;
+    -moz-animation-name: curve-out;
+    -ms-animation-name: curve-out;
+    -o-animation-name: curve-out;
+    animation-name: curve-out; }
+
+  .zoom-out, .pills li {
+    -webkit-animation-duration: 300ms;
+    -moz-animation-duration: 300ms;
+    -ms-animation-duration: 300ms;
+    -o-animation-duration: 300ms; }
+    main.animate-in.animate-out .zoom-out, main.animate-in.animate-out .pills li, .pills main.animate-in.animate-out li {
+      -webkit-animation-name: zoom-out;
+      -moz-animation-name: zoom-out;
+      -ms-animation-name: zoom-out;
+      -o-animation-name: zoom-out;
+      animation-name: zoom-out; }
+
   .slide-down-in, .view-details .view-detail-top {
     -webkit-transition: transform 500ms;
     -moz-transition: transform 500ms;
@@ -8715,7 +8743,12 @@ aside.play-queue {
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
-    transform: translateY(-100%); }
+    transform: translateY(-100%);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1); }
     main.animate-in .slide-down-in, main.animate-in .view-details .view-detail-top, .view-details main.animate-in .view-detail-top, aside .slide-down-in, aside .view-details .view-detail-top, .view-details aside .view-detail-top {
       -webkit-transform: translateY(0);
       -moz-transform: translateY(0);
@@ -8728,7 +8761,6 @@ aside.play-queue {
       -ms-transform: translateY(-100%);
       -o-transform: translateY(-100%);
       transform: translateY(-100%); } }
-
 .search-content {
   display: none;
   position: fixed;

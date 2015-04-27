@@ -540,7 +540,7 @@ footer {
   flex-flow: row wrap;
 
   li {
-    @extend .card-panel, .curve-in;
+    @extend .card-panel, .curve-in, .zoom-out;
     width: 48%;
     display: inline-block;
     box-sizing: border-box;
@@ -568,7 +568,7 @@ main {
     @include transition(opacity 500ms);
     opacity: 0;
   }
-  
+
   &.animate-in {
     h1, h2, h3, h4, h5, h6 {
       opacity: 1;
@@ -769,27 +769,47 @@ aside.play-queue {
   }
 }
 
-.curve-in {
-  @media only all and (min-width: 600px) {
-    @include animation-fill-mode(both);
-    @include animation-duration(500ms);
-    opacity: 0;
-
-    main.animate-in &, aside & {
-      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
-      @include animation-name(curve-in);
-    }
-    main.animate-in.animate-out & {
-      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
-      @include animation-name(curve-out);
-    }
+@include keyframes(zoom-out) {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0.2;
   }
 }
 
-.slide-down-in {
-  @media only all and (min-width: 600px) {
+@media only all and (min-width: 600px) {
+  .curve-in {
+    @include animation-fill-mode(both);
+    @include animation-duration(500ms);
+    opacity: 0;
+    @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
+
+    main.animate-in &, aside & {
+      @include animation-name(curve-in);
+    }
+
+  }
+
+  .curve-out {
+    main.animate-in.animate-out & {
+      @include animation-name(curve-out);
+    }
+  }
+  .zoom-out {
+    @include animation-duration(300ms);
+
+    main.animate-in.animate-out & {
+      @include animation-name(zoom-out);
+    }
+  }
+
+  .slide-down-in {
     @include transition(transform 500ms);
     @include transform(translateY(-100%));
+    @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
 
     main.animate-in &, aside & {
       @include transform(translateY(0));
