@@ -749,32 +749,22 @@ aside.play-queue {
 
 @include keyframes(curve-in) {
   0% {
-    transform-origin: -400% -100%;
-    transform: rotate(4deg);
-    opacity: 0;
-  }
-  20% {
+    transform: rotate(8deg) translateY(20%) rotate(-8deg);
     opacity: 0;
   }
   100% {
-    transform-origin: -400% -100%;
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(0%) rotate(-0deg);
     opacity: 1;
   }
 }
 
 @include keyframes(curve-out) {
   0% {
-    transform-origin: -400% -100%;
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(0%) rotate(-0deg);
     opacity: 1;
   }
-  80% {
-    opacity: 0;
-  }
   100% {
-    transform-origin: -400% -100%;
-    transform: rotate(4deg);
+    transform: rotate(8deg) translateY(20%) rotate(-8deg);
     opacity: 0;
   }
 }
@@ -782,13 +772,15 @@ aside.play-queue {
 .curve-in {
   @media only all and (min-width: 600px) {
     @include animation-fill-mode(both);
-    @include animation-duration(800ms);
+    @include animation-duration(500ms);
     opacity: 0;
 
     main.animate-in &, aside & {
+      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
       @include animation-name(curve-in);
     }
     main.animate-in.animate-out & {
+      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
       @include animation-name(curve-out);
     }
   }
@@ -796,7 +788,7 @@ aside.play-queue {
 
 .slide-down-in {
   @media only all and (min-width: 600px) {
-    @include transition(transform 800ms);
+    @include transition(transform 500ms);
     @include transform(translateY(-100%));
 
     main.animate-in &, aside & {
