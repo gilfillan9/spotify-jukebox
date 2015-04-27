@@ -172,6 +172,7 @@ header {
 }
 
 main {
+  opacity: 0;
   position: absolute;
   top: 56px;
   bottom: 60px;
@@ -185,6 +186,10 @@ main {
   }
   @media only all and (min-width: 1200px) {
     right: 300px;
+  }
+
+  &.animate-in, &.animate-out {
+    opacity: 1;
   }
 }
 
@@ -657,7 +662,7 @@ main {
 .view-details {
 
   .view-detail-top {
-    @extend .card-panel;
+    @extend .card-panel, .slide-up-out;
     margin-top: 0;
     .detail-text {
       display: inline-block;
@@ -803,39 +808,31 @@ aside.play-queue {
 
 @media only all and (min-width: 600px) {
   .curve-in {
-    @include animation-fill-mode(both);
-    @include animation-duration(500ms);
-    opacity: 0;
-    @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
-
     main.animate-in &, aside & {
+      @include animation-fill-mode(both);
+      @include animation-duration(500ms);
+      opacity: 0;
+      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
       @include animation-name(curve-in);
     }
 
   }
 
-  .curve-out {
-    main.animate-in.animate-out & {
-      @include animation-name(curve-out);
-    }
-  }
   .zoom-out {
-    @include animation-duration(300ms);
 
-    main.animate-in.animate-out & {
+    main.animate-out & {
+      @include animation-fill-mode(both);
+      @include animation-duration(300ms);
       @include animation-name(zoom-out);
     }
   }
 
-  .slide-down-in {
+  .slide-up-out {
     @include transition(transform 500ms);
-    @include transform(translateY(-100%));
+    @include transform(translateY(0%));
     @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
 
-    main.animate-in &, aside & {
-      @include transform(translateY(0));
-    }
-    main.animate-in.animate-out & {
+    main.animate-out & {
       @include transform(translateY(-100%));
     }
   }

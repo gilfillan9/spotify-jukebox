@@ -8190,6 +8190,7 @@ header {
       transform: translateX(100%); } }
 
 main {
+  opacity: 0;
   position: absolute;
   top: 56px;
   bottom: 60px;
@@ -8204,6 +8205,8 @@ main {
   @media only all and (min-width: 1200px) {
     main {
       right: 300px; } }
+  main.animate-in, main.animate-out {
+    opacity: 1; }
 
 footer {
   display: none;
@@ -8508,8 +8511,8 @@ li.pill, .pills li, .pill-clicked {
 .pill-clicked {
   position: absolute;
   background: #FFFFFF;
-  z-index: 1;
   opacity: 1 !important;
+  z-index: 1;
   margin: 0;
   -webkit-animation: none;
   -moz-animation: none;
@@ -8711,7 +8714,7 @@ aside.play-queue {
     transform: scale(0);
     opacity: 0.2; } }
 @media only all and (min-width: 600px) {
-  .curve-in, li.pill, .pills li, .pill-clicked, .track-table {
+  main.animate-in .curve-in, main.animate-in li.pill, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .pill-clicked, main.animate-in .track-table, aside .curve-in, aside li.pill, aside .pills li, .pills aside li, aside .pill-clicked, aside .track-table {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     -ms-animation-fill-mode: both;
@@ -8726,56 +8729,46 @@ aside.play-queue {
     -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1); }
-    main.animate-in .curve-in, main.animate-in li.pill, main.animate-in .pills li, .pills main.animate-in li, main.animate-in .pill-clicked, main.animate-in .track-table, aside .curve-in, aside li.pill, aside .pills li, .pills aside li, aside .pill-clicked, aside .track-table {
-      -webkit-animation-name: curve-in;
-      -moz-animation-name: curve-in;
-      -ms-animation-name: curve-in;
-      -o-animation-name: curve-in;
-      animation-name: curve-in; }
+    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-animation-name: curve-in;
+    -moz-animation-name: curve-in;
+    -ms-animation-name: curve-in;
+    -o-animation-name: curve-in;
+    animation-name: curve-in; }
 
-  main.animate-in.animate-out .curve-out {
-    -webkit-animation-name: curve-out;
-    -moz-animation-name: curve-out;
-    -ms-animation-name: curve-out;
-    -o-animation-name: curve-out;
-    animation-name: curve-out; }
-
-  .zoom-out, li.pill, .pills li, .pill-clicked {
+  main.animate-out .zoom-out, main.animate-out li.pill, main.animate-out .pills li, .pills main.animate-out li, main.animate-out .pill-clicked {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-duration: 300ms;
     -moz-animation-duration: 300ms;
     -ms-animation-duration: 300ms;
-    -o-animation-duration: 300ms; }
-    main.animate-in.animate-out .zoom-out, main.animate-in.animate-out li.pill, main.animate-in.animate-out .pills li, .pills main.animate-in.animate-out li, main.animate-in.animate-out .pill-clicked {
-      -webkit-animation-name: zoom-out;
-      -moz-animation-name: zoom-out;
-      -ms-animation-name: zoom-out;
-      -o-animation-name: zoom-out;
-      animation-name: zoom-out; }
+    -o-animation-duration: 300ms;
+    -webkit-animation-name: zoom-out;
+    -moz-animation-name: zoom-out;
+    -ms-animation-name: zoom-out;
+    -o-animation-name: zoom-out;
+    animation-name: zoom-out; }
 
-  .slide-down-in {
+  .slide-up-out, .view-details .view-detail-top {
     -webkit-transition: transform 500ms;
     -moz-transition: transform 500ms;
     -o-transition: transform 500ms;
     -ms-transition: transform 500ms;
     transition: transform 500ms;
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1); }
-    main.animate-in .slide-down-in, aside .slide-down-in {
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0); }
-    main.animate-in.animate-out .slide-down-in {
+    main.animate-out .slide-up-out, main.animate-out .view-details .view-detail-top, .view-details main.animate-out .view-detail-top {
       -webkit-transform: translateY(-100%);
       -moz-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
