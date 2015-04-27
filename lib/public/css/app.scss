@@ -775,17 +775,18 @@ aside.play-queue {
           padding-left: 4px;
         }
 
-        .artist {
-          @extend .grey-text.text-darken-3;
+        .artists {
           margin-right: 25px;
           padding-left: 4px;
-
-          &::after {
-            content: ", ";
-            display: inline;
-          }
-          &:last-of-type::after {
-            content: "";
+            @extend .grey-text.text-darken-3;
+          .artist {
+            &::after {
+              content: ", ";
+              display: inline;
+            }
+            &:last-of-type::after {
+              content: "";
+            }
           }
         }
         span.current-votes {

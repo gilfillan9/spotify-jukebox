@@ -1573,7 +1573,7 @@
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .content .artist {
+.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .content .artists {
   color: #424242 !important; }
 
 .grey.darken-4 {
@@ -8668,13 +8668,13 @@ aside.play-queue {
           font-weight: bold;
           margin-right: 25px;
           padding-left: 4px; }
-        aside.play-queue ul li .content .artist {
+        aside.play-queue ul li .content .artists {
           margin-right: 25px;
           padding-left: 4px; }
-          aside.play-queue ul li .content .artist::after {
+          aside.play-queue ul li .content .artists .artist::after {
             content: ", ";
             display: inline; }
-          aside.play-queue ul li .content .artist:last-of-type::after {
+          aside.play-queue ul li .content .artists .artist:last-of-type::after {
             content: ""; }
         aside.play-queue ul li .content span.current-votes {
           position: absolute;
