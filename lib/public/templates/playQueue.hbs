@@ -1,8 +1,16 @@
 <ul>
     {{#each tracks}}
-        <li data-uuid="{{uuid}}" data-uri="{{uri}}" data-id="{{id}}" class="{{#if forcedTop}}forced-top{{/if}}">
-            <div class="title truncate">{{name}}</div>
-            <div class="artists truncate">{{#each artists}}<span class="artist">{{name}}</span>{{/each}}</div>
+        <li data-uuid="{{uuid}}" data-uri="{{uri}}" data-id="{{id}}" class="{{#if forcedTop}}forced-top{{/if}} waves-effect">
+            <div class="content">
+                <div class="title truncate">{{name}}</div>
+                <div class="artists truncate">{{#each artists}}<span class="artist">{{name}}</span>{{/each}}</div>
+                <span class="current-votes">{{votes}}</span>
+            </div>
+            <div class="votes">
+                <button class="vote-btn btn-flat waves-effect mdi-action-thumb-up up {{#if votedUp}}selected{{/if}}"></button>
+                <span>{{votes}}</span>
+                <button class="vote-btn btn-flat waves-effect mdi-action-thumb-down down {{#if votedDown}}selected{{/if}}"></button>
+            </div>
         </li>
     {{/each}}
 </ul>

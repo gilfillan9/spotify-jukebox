@@ -587,6 +587,10 @@ li.pill {
   &.fade-out {
     opacity: 0 !important;
   }
+
+  @media only all and (max-width: 600px) {
+    display: none;
+  }
 }
 
 main {
@@ -748,25 +752,79 @@ aside.play-queue {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 6px 4px;
+      position: relative;
+      padding: 6px 0;
 
       &:first-of-type {
         @extend .grey.lighten-3;
       }
+      .content {
+        @include transform(translateX(0px));
 
-      .title {
-        font-weight: bold;
+        .title {
+          font-weight: bold;
+          margin-right: 25px;
+          padding-left: 4px;
+        }
+
+        .artist {
+          @extend .grey-text.text-darken-3;
+          margin-right: 25px;
+          padding-left: 4px;
+
+          &::after {
+            content: ", ";
+            display: inline;
+          }
+          &:last-of-type::after {
+            content: "";
+          }
+        }
+        span.current-votes {
+          position: absolute;
+          top: 0;
+          right: 6px;
+          bottom: 0;
+          vertical-align: middle;
+        }
+      }
+      .votes {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        line-height: 100%;
+        @include transform(translateX(100%));
+
+        button {
+          &:active {
+            @extend .grey.lighten-3;
+          }
+
+          &.selected {
+            &.up {
+              color: green;
+            }
+
+            &.down {
+              color: red;
+            }
+          }
+        }
       }
 
-      .artist {
-        @extend .grey-text.text-darken-3;
+      .content, .votes {
+        @include transition(transform 400ms);
+      }
 
-        &::after {
-          content: ", ";
-          display: inline;
+      &.show-votes {
+        .content {
+          @include transform(translateX(-100%));
         }
-        &:last-of-type::after {
-          content: "";
+        .votes {
+          @include transform(translateX(0px));
         }
       }
     }

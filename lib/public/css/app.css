@@ -1534,7 +1534,7 @@
 .grey-text.text-lighten-4, .view-details .view-detail-top .detail-text h4.text-lighten-4 {
   color: #f5f5f5 !important; }
 
-.grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type {
+.grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type, aside.play-queue ul li .votes button:active {
   background-color: #eeeeee !important; }
 
 .grey-text.text-lighten-3, .view-details .view-detail-top .detail-text h4.text-lighten-3 {
@@ -1573,7 +1573,7 @@
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .artist {
+.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .content .artist {
   color: #424242 !important; }
 
 .grey.darken-4 {
@@ -8526,6 +8526,9 @@ li.pill, .pills li, .pill-clicked {
   transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms; }
   .pill-clicked.fade-out {
     opacity: 0 !important; }
+  @media only all and (max-width: 600px) {
+    .pill-clicked {
+      display: none; } }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
   -webkit-transition: opacity 500ms;
@@ -8641,14 +8644,67 @@ aside.play-queue {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 6px 4px; }
-      aside.play-queue ul li .title {
-        font-weight: bold; }
-      aside.play-queue ul li .artist::after {
-        content: ", ";
-        display: inline; }
-      aside.play-queue ul li .artist:last-of-type::after {
-        content: ""; }
+      position: relative;
+      padding: 6px 0; }
+      aside.play-queue ul li .content {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px); }
+        aside.play-queue ul li .content .title {
+          font-weight: bold;
+          margin-right: 25px;
+          padding-left: 4px; }
+        aside.play-queue ul li .content .artist {
+          margin-right: 25px;
+          padding-left: 4px; }
+          aside.play-queue ul li .content .artist::after {
+            content: ", ";
+            display: inline; }
+          aside.play-queue ul li .content .artist:last-of-type::after {
+            content: ""; }
+        aside.play-queue ul li .content span.current-votes {
+          position: absolute;
+          top: 0;
+          right: 6px;
+          bottom: 0;
+          vertical-align: middle; }
+      aside.play-queue ul li .votes {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        line-height: 100%;
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%); }
+        aside.play-queue ul li .votes button.selected.up {
+          color: green; }
+        aside.play-queue ul li .votes button.selected.down {
+          color: red; }
+      aside.play-queue ul li .content, aside.play-queue ul li .votes {
+        -webkit-transition: transform 400ms;
+        -moz-transition: transform 400ms;
+        -o-transition: transform 400ms;
+        -ms-transition: transform 400ms;
+        transition: transform 400ms; }
+      aside.play-queue ul li.show-votes .content {
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%); }
+      aside.play-queue ul li.show-votes .votes {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px); }
 
 @-webkit-keyframes curve-in {
   0% {
