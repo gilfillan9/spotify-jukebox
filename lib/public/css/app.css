@@ -8507,9 +8507,9 @@ main h2, main h5 {
   -ms-transition: opacity 800ms;
   transition: opacity 800ms;
   opacity: 0; }
-main.animate-in h2, main.animate-in h5 {
+main.animate-in h1, main.animate-in h2, main.animate-in h3, main.animate-in h4, main.animate-in h5, main.animate-in h6 {
   opacity: 1; }
-main.animate-in.animate-out h2, main.animate-in.animate-out h5 {
+main.animate-in.animate-out h1, main.animate-in.animate-out h2, main.animate-in.animate-out h3, main.animate-in.animate-out h4, main.animate-in.animate-out h5, main.animate-in.animate-out h6 {
   opacity: 0; }
 
 @media only all and (min-width: 993px) {

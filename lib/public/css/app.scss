@@ -570,12 +570,12 @@ main {
   }
 
   &.animate-in {
-    h2, h5 {
+    h1, h2, h3, h4, h5, h6 {
       opacity: 1;
     }
   }
   &.animate-in.animate-out {
-    h2, h5 {
+    h1, h2, h3, h4, h5, h6 {
       opacity: 0;
     }
   }
