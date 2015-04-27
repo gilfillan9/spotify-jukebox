@@ -703,11 +703,14 @@ main {
 
 aside.play-queue {
   position: fixed;
+  z-index: 2;
+  background: #FFFFFF;
   right: 0;
   top: 64px;
   bottom: 60px;
   width: 200px;
   overflow-y: auto;
+  @extend .z-depth-1;
 
   @media only all and (min-width: 1200px) {
     width: 300px;
