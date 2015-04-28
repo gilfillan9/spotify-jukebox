@@ -70,9 +70,10 @@
                 <a class="mdi-action-search hide-search-btn mdi-navigation-close waves-effect waves-light white-text"></a>
             </li>
         </ul>
-        <i class="mdi-action-search search-icon center-align"></i>
         <section class="search-wrap">
+            <i class="mdi-action-search search-icon center-align"></i>
             <input type="text" class="search" placeholder="Search songs, artists, albums etc...">
+            <i class="mdi-navigation-close close-search-icon center-align btn-flat waves-effect"></i>
         </section>
     </nav>
 </header>
@@ -80,7 +81,15 @@
 
 </main>
 <aside class="search-content">
+    <ul class="tabs search-tabs">
+        <li class="tab col s3 search-tab" data-tab="track"><a href="#">Tracks</a></li>
+        <li class="tab col s3 search-tab" data-tab="album"><a href="#">Albums</a></li>
+        <li class="tab col s3 search-tab" data-tab="artist"><a href="#">Artists</a></li>
+        <li class="tab col s3 search-tab" data-tab="playlist"><a href="#">Playlists</a></li>
+    </ul>
+    <h4>Search Results</h4>
 
+    <div class="search-results"></div>
 </aside>
 <aside class="play-queue hide-on-small-and-down">
     <ul></ul>

@@ -91,24 +91,41 @@ header {
     @include transition-delay(200ms);
   }
 
-  .search-icon {
-    position: absolute;
-    right: 0;
-    opacity: 0;
-    @include transition(all 0ms);
-    width: 44px;
-    font-size: 1.25em;
-  }
-
   .search-wrap {
-    opacity: 0;
-    @include transition(opacity 400ms);
+    @include transition(all 400ms);
     pointer-events: none;
-    height: 100%;
     @include transition-delay(0ms);
     position: absolute;
-    left: 44px;
+    left: 12px;
     right: 60px;
+    padding-left: 30px;
+    background: rgba(255, 255, 255, 0);
+    margin: 5px 0;
+    border-radius: 3px;
+
+    .search-icon, .close-search-icon {
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      @include transition(all 0ms);
+      font-size: 1.25em;
+      line-height: 3rem;
+      width: 30px;
+      height: 100%;
+      @extend .grey-text;
+    }
+    .close-search-icon {
+      display: none;
+    }
+
+    .search {
+      border-bottom: none !important;
+      box-shadow: none !important;
+      margin: 0;
+      float: right;
+      opacity: 0;
+      @extend .grey-text.text-darken-3;
+    }
   }
   @media only all and (max-width: 992px) {
     &.show-search {
@@ -120,17 +137,20 @@ header {
       }
 
       .search-wrap {
-        display: block !important;
-        opacity: 1;
         pointer-events: all;
-        @include transition-delay(400ms);
-      }
+        background: rgba(255, 255, 255, 1);
+        @include box-shadow-2(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
 
-      .search-icon {
-        right: 100%;
-        opacity: 1;
-        @include transform(translateX(100%));
-        @include transition((right 700ms, transform 700ms));
+        .search {
+          @include transition-delay(400ms);
+          opacity: 1;
+        }
+        .search-icon {
+          right: 100%;
+          opacity: 1;
+          @include transform(translateX(100%));
+          @include transition(all 700ms);
+        }
       }
 
       .brand-logo {
@@ -139,35 +159,76 @@ header {
         @include transition-delay(0ms);
       }
     }
+  }
 
-    body.show-mobile-controls & {
-      .close-mobile-controls-btn {
-        opacity: 1;
-        pointer-events: all;
-      }
-      .show-sidebar-btn {
-        opacity: 0;
-        pointer-events: none;
-      }
+  body.show-mobile-controls & {
+    .close-mobile-controls-btn {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .show-sidebar-btn {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 
   @media only all and (min-width: 992px) {
     .search-wrap {
-      opacity: 1;
-      @include transition(none);
-      max-width: 500px;
-      width: 80%;
-      margin-left: 200px;
+      @include box-shadow-2(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+      width: 500px;
       pointer-events: all;
+      background: rgba(255, 255, 255, 1);
+      position: fixed;
+      margin: 0;
+      top: 8px;
+      left: 200px;
+      right: auto;
+      bottom: auto;
+
+      .search-icon {
+        left: 0;
+        opacity: 1;
+      }
+
+      .search {
+        opacity: 1;
+      }
+      body.show-search-page & {
+        top: 64px;
+        left: 80px;
+        right: 200px;
+        height: 70px;
+        padding: 0 50px;
+        border-bottom: 1px solid grey;
+        border-radius: 0;
+        width: auto;
+
+        @media only all and (min-width: 1200px) {
+          right: 300px;
+        }
+
+        .search-icon, .close-search-icon {
+          left: 15px;
+          height: 70px;
+          line-height: 70px;
+        }
+        .close-search-icon {
+          right: 0;
+          text-align: center;
+          left: auto;
+          display: block;
+          opacity: 1;
+          width: 60px;
+          padding: 0;
+        }
+
+        .search {
+          height: 70px;
+          line-height: 70px;
+        }
+      }
     }
 
-    .search-icon {
-      right: auto;
-      left: 155px;
-      opacity: 1;
-      @include transform(translateX(100%));
-    }
   }
 }
 
@@ -778,7 +839,7 @@ aside.play-queue {
         .artists {
           margin-right: 25px;
           padding-left: 4px;
-            @extend .grey-text.text-darken-3;
+          @extend .grey-text.text-darken-3;
           .artist {
             &::after {
               content: ", ";
@@ -906,7 +967,7 @@ aside.play-queue {
 }
 
 .search-content {
-  display: none;
+  display: block;
   position: fixed;
   top: 56px;
   left: 0;
@@ -915,9 +976,13 @@ aside.play-queue {
   background: white;
   overflow-y: auto;
   padding: 0 10px;
+  opacity: 0;
+  pointer-events: none;
+  @include transition(opacity 500ms);
 
-  &.show {
-    display: block;
+  body.show-search-page & {
+    opacity: 1;
+    pointer-events: all;
   }
 
   @media only screen and (min-width: 600px) {
@@ -927,6 +992,7 @@ aside.play-queue {
 
   @media only screen and (min-width: 992px) {
     left: 80px;
+    padding-top: 70px;
   }
   @media only screen and (min-width: 1200px) {
     right: 300px;

@@ -1525,61 +1525,61 @@
 .grey.lighten-5 {
   background-color: #fafafa !important; }
 
-.grey-text.text-lighten-5, .view-details .view-detail-top .detail-text h4.text-lighten-5 {
+.grey-text.text-lighten-5, header .search-wrap .text-lighten-5.search-icon, header .search-wrap .text-lighten-5.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-5 {
   color: #fafafa !important; }
 
 .grey.lighten-4 {
   background-color: #f5f5f5 !important; }
 
-.grey-text.text-lighten-4, .view-details .view-detail-top .detail-text h4.text-lighten-4 {
+.grey-text.text-lighten-4, header .search-wrap .text-lighten-4.search-icon, header .search-wrap .text-lighten-4.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-4 {
   color: #f5f5f5 !important; }
 
 .grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type, aside.play-queue ul li .votes button:active {
   background-color: #eeeeee !important; }
 
-.grey-text.text-lighten-3, .view-details .view-detail-top .detail-text h4.text-lighten-3 {
+.grey-text.text-lighten-3, header .search-wrap .text-lighten-3.search-icon, header .search-wrap .text-lighten-3.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-3 {
   color: #eeeeee !important; }
 
 .grey.lighten-2 {
   background-color: #e0e0e0 !important; }
 
-.grey-text.text-lighten-2, .view-details .view-detail-top .detail-text h4.text-lighten-2 {
+.grey-text.text-lighten-2, header .search-wrap .text-lighten-2.search-icon, header .search-wrap .text-lighten-2.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-2 {
   color: #e0e0e0 !important; }
 
 .grey.lighten-1 {
   background-color: #bdbdbd !important; }
 
-.grey-text.text-lighten-1, .view-details .view-detail-top .detail-text h4.text-lighten-1 {
+.grey-text.text-lighten-1, header .search-wrap .text-lighten-1.search-icon, header .search-wrap .text-lighten-1.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-1 {
   color: #bdbdbd !important; }
 
 .grey {
   background-color: #9e9e9e !important; }
 
-.grey-text, .view-details .view-detail-top .detail-text h4 {
+.grey-text, header .search-wrap .search-icon, header .search-wrap .close-search-icon, .view-details .view-detail-top .detail-text h4 {
   color: #9e9e9e !important; }
 
 .grey.darken-1 {
   background-color: #757575 !important; }
 
-.grey-text.text-darken-1, .view-details .view-detail-top .detail-text h4.text-darken-1 {
+.grey-text.text-darken-1, header .search-wrap .text-darken-1.search-icon, header .search-wrap .text-darken-1.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-1 {
   color: #757575 !important; }
 
 .grey.darken-2 {
   background-color: #616161 !important; }
 
-.grey-text.text-darken-2, .view-details .view-detail-top .detail-text h4.text-darken-2 {
+.grey-text.text-darken-2, header .search-wrap .text-darken-2.search-icon, header .search-wrap .text-darken-2.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-2 {
   color: #616161 !important; }
 
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .content .artists {
+.grey-text.text-darken-3, header .search-wrap .text-darken-3.search-icon, header .search-wrap .text-darken-3.close-search-icon, header .search-wrap .search, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .content .artists {
   color: #424242 !important; }
 
 .grey.darken-4 {
   background-color: #212121 !important; }
 
-.grey-text.text-darken-4, .view-details .view-detail-top .detail-text h4.text-darken-4 {
+.grey-text.text-darken-4, header .search-wrap .text-darken-4.search-icon, header .search-wrap .text-darken-4.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-4 {
   color: #212121 !important; }
 
 .shades.black {
@@ -8098,61 +8098,77 @@ header {
     -o-transition-delay: 200ms;
     -ms-transition-delay: 200ms;
     transition-delay: 200ms; }
-  header .search-icon {
-    position: absolute;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: all 0ms;
-    -moz-transition: all 0ms;
-    -o-transition: all 0ms;
-    -ms-transition: all 0ms;
-    transition: all 0ms;
-    width: 44px;
-    font-size: 1.25em; }
   header .search-wrap {
-    opacity: 0;
-    -webkit-transition: opacity 400ms;
-    -moz-transition: opacity 400ms;
-    -o-transition: opacity 400ms;
-    -ms-transition: opacity 400ms;
-    transition: opacity 400ms;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -o-transition: all 400ms;
+    -ms-transition: all 400ms;
+    transition: all 400ms;
     pointer-events: none;
-    height: 100%;
     -webkit-transition-delay: 0ms;
     -moz-transition-delay: 0ms;
     -o-transition-delay: 0ms;
     -ms-transition-delay: 0ms;
     transition-delay: 0ms;
     position: absolute;
-    left: 44px;
-    right: 60px; }
+    left: 12px;
+    right: 60px;
+    padding-left: 30px;
+    background: rgba(255, 255, 255, 0);
+    margin: 5px 0;
+    border-radius: 3px; }
+    header .search-wrap .search-icon, header .search-wrap .close-search-icon {
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: all 0ms;
+      -moz-transition: all 0ms;
+      -o-transition: all 0ms;
+      -ms-transition: all 0ms;
+      transition: all 0ms;
+      font-size: 1.25em;
+      line-height: 3rem;
+      width: 30px;
+      height: 100%; }
+    header .search-wrap .close-search-icon {
+      display: none; }
+    header .search-wrap .search {
+      border-bottom: none !important;
+      box-shadow: none !important;
+      margin: 0;
+      float: right;
+      opacity: 0; }
   @media only all and (max-width: 992px) {
     header.show-search .show-search-btn, header.show-search .show-sidebar-btn, header.show-search .close-mobile-controls-btn {
       display: none; }
     header.show-search .hide-search-btn {
       display: initial; }
     header.show-search .search-wrap {
-      display: block !important;
-      opacity: 1;
       pointer-events: all;
-      -webkit-transition-delay: 400ms;
-      -moz-transition-delay: 400ms;
-      -o-transition-delay: 400ms;
-      -ms-transition-delay: 400ms;
-      transition-delay: 400ms; }
-    header.show-search .search-icon {
-      right: 100%;
-      opacity: 1;
-      -webkit-transform: translateX(100%);
-      -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      -o-transform: translateX(100%);
-      transform: translateX(100%);
-      -webkit-transition: right 700ms, transform 700ms;
-      -moz-transition: right 700ms, transform 700ms;
-      -o-transition: right 700ms, transform 700ms;
-      -ms-transition: right 700ms, transform 700ms;
-      transition: right 700ms, transform 700ms; }
+      background: white;
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+      header.show-search .search-wrap .search {
+        -webkit-transition-delay: 400ms;
+        -moz-transition-delay: 400ms;
+        -o-transition-delay: 400ms;
+        -ms-transition-delay: 400ms;
+        transition-delay: 400ms;
+        opacity: 1; }
+      header.show-search .search-wrap .search-icon {
+        right: 100%;
+        opacity: 1;
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: all 700ms;
+        -moz-transition: all 700ms;
+        -o-transition: all 700ms;
+        -ms-transition: all 700ms;
+        transition: all 700ms; }
     header.show-search .brand-logo {
       opacity: 0;
       pointer-events: none;
@@ -8160,34 +8176,60 @@ header {
       -moz-transition-delay: 0ms;
       -o-transition-delay: 0ms;
       -ms-transition-delay: 0ms;
-      transition-delay: 0ms; }
-    body.show-mobile-controls header .close-mobile-controls-btn {
-      opacity: 1;
-      pointer-events: all; }
-    body.show-mobile-controls header .show-sidebar-btn {
-      opacity: 0;
-      pointer-events: none; } }
+      transition-delay: 0ms; } }
+  body.show-mobile-controls header .close-mobile-controls-btn {
+    opacity: 1;
+    pointer-events: all; }
+  body.show-mobile-controls header .show-sidebar-btn {
+    opacity: 0;
+    pointer-events: none; }
   @media only all and (min-width: 992px) {
     header .search-wrap {
-      opacity: 1;
-      -webkit-transition: none;
-      -moz-transition: none;
-      -o-transition: none;
-      -ms-transition: none;
-      transition: none;
-      max-width: 500px;
-      width: 80%;
-      margin-left: 200px;
-      pointer-events: all; }
-    header .search-icon {
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      width: 500px;
+      pointer-events: all;
+      background: white;
+      position: fixed;
+      margin: 0;
+      top: 8px;
+      left: 200px;
       right: auto;
-      left: 155px;
-      opacity: 1;
-      -webkit-transform: translateX(100%);
-      -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      -o-transform: translateX(100%);
-      transform: translateX(100%); } }
+      bottom: auto; }
+      header .search-wrap .search-icon {
+        left: 0;
+        opacity: 1; }
+      header .search-wrap .search {
+        opacity: 1; }
+      body.show-search-page header .search-wrap {
+        top: 64px;
+        left: 80px;
+        right: 200px;
+        height: 70px;
+        padding: 0 50px;
+        border-bottom: 1px solid grey;
+        border-radius: 0;
+        width: auto; } }
+    @media only all and (min-width: 992px) and (min-width: 1200px) {
+      body.show-search-page header .search-wrap {
+        right: 300px; } }
+  @media only all and (min-width: 992px) {
+        body.show-search-page header .search-wrap .search-icon, body.show-search-page header .search-wrap .close-search-icon {
+          left: 15px;
+          height: 70px;
+          line-height: 70px; }
+        body.show-search-page header .search-wrap .close-search-icon {
+          right: 0;
+          text-align: center;
+          left: auto;
+          display: block;
+          opacity: 1;
+          width: 60px;
+          padding: 0; }
+        body.show-search-page header .search-wrap .search {
+          height: 70px;
+          line-height: 70px; } }
 
 main {
   opacity: 0;
@@ -8843,7 +8885,7 @@ aside.play-queue {
       -o-transform: translateY(-100%);
       transform: translateY(-100%); } }
 .search-content {
-  display: none;
+  display: block;
   position: fixed;
   top: 56px;
   left: 0;
@@ -8851,16 +8893,25 @@ aside.play-queue {
   bottom: 50px;
   background: white;
   overflow-y: auto;
-  padding: 0 10px; }
-  .search-content.show {
-    display: block; }
+  padding: 0 10px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms; }
+  body.show-search-page .search-content {
+    opacity: 1;
+    pointer-events: all; }
   @media only screen and (min-width: 600px) {
     .search-content {
       top: 64px;
       right: 200px; } }
   @media only screen and (min-width: 992px) {
     .search-content {
-      left: 80px; } }
+      left: 80px;
+      padding-top: 70px; } }
   @media only screen and (min-width: 1200px) {
     .search-content {
       right: 300px; } }
