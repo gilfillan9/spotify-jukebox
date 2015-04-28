@@ -11,12 +11,12 @@
     <h4>Popular Tracks</h4>
 
     <div class="track-table-wrap">
-        <table class="track-table" data-uri="{{uri}}">
+        <div class="track-table" data-uri="{{uri}}">
             {{> trackTableTop}}
             {{#each tracks}}
                 {{> track}}
             {{/each}}
-        </table>
+        </div>
     </div>
     <h4>Albums</h4>
     <ul class="pills">

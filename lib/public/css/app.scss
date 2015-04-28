@@ -107,7 +107,6 @@ header {
       position: absolute;
       right: 0;
       opacity: 0;
-      @include transition(all 0ms);
       font-size: 1.25em;
       line-height: 3rem;
       width: 30px;
@@ -447,7 +446,7 @@ footer {
     overflow: hidden;
     z-index: 3;
     .text-wrap {
-      display: flex;
+      @include flexbox;
       height: 100%;
       flex-direction: column;
       justify-content: center;
@@ -536,7 +535,7 @@ footer {
     }
   }
   .current-art-wrap {
-    display: flex;
+    @include flexbox;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -566,7 +565,7 @@ footer {
     }
 
     ul li {
-      display: flex;
+      @include flexbox;
       flex-direction: column;
       justify-content: center;
       padding: 5px 10px;
@@ -599,7 +598,7 @@ footer {
 }
 
 .pills {
-  display: flex;
+  @include flexbox;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
@@ -793,7 +792,7 @@ main {
 
 .preloader-outer-wrapper {
   margin: auto;
-  display: flex;
+  @include flexbox;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -818,7 +817,7 @@ aside.play-queue {
   ul {
     padding: 0;
     li {
-      display: flex;
+      @include flexbox;
       flex-direction: column;
       justify-content: center;
       position: relative;
@@ -996,5 +995,89 @@ aside.play-queue {
   }
   @media only screen and (min-width: 1200px) {
     right: 300px;
+  }
+}
+
+.track-table {
+  .row {
+    &.header {
+      display: none;
+    }
+
+    .column {
+      text-align: left;
+
+      &.action {
+        display: none;
+        a {
+          @extend .grey-text;
+          @include transition(color 400ms);
+        }
+      }
+    }
+    &:hover .column.action a {
+      @extend .grey-text.text-darken-3;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+    div.artist {
+      @extend .grey-text.text-darken-3;
+    }
+    .time {
+      display: none;
+    }
+
+    @media only all and (min-width: 993px) {
+      @include transition(background 500ms);
+      padding: 10px 0;
+      margin: 0;
+      &, &.header {
+        @include flexbox;
+      }
+      &:hover {
+        background: #f2f2f2;
+      }
+      &.header {
+        font-weight: bold;
+        border-bottom: 1px solid #d0d0d0;
+
+        .column {
+          padding: 10px 5px;
+        }
+
+        &:hover {
+          background: #FFFFFF;
+        }
+      }
+      .column {
+        padding: 0 5px;
+        &.action {
+          width: 30px;
+          text-align: center;
+          display: initial;
+          a {
+            color: grey;
+          }
+        }
+        &.title {
+          @include flex(1 0 0);
+          font-weight: normal;
+        }
+        &.artist {
+          @include flex(1 0 0);
+          color: #000000;
+        }
+        &.time {
+          @include flex(1 0 0);
+          max-width: 80px;
+          display: initial;
+        }
+        &.album {
+          @include flex(1 0 0);
+        }
+      }
+    }
   }
 }

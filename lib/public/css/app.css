@@ -1525,61 +1525,61 @@
 .grey.lighten-5 {
   background-color: #fafafa !important; }
 
-.grey-text.text-lighten-5, header .search-wrap .text-lighten-5.search-icon, header .search-wrap .text-lighten-5.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-5 {
+.grey-text.text-lighten-5, header .search-wrap .text-lighten-5.search-icon, header .search-wrap .text-lighten-5.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-5, .track-table .row .column.action a.text-lighten-5 {
   color: #fafafa !important; }
 
 .grey.lighten-4 {
   background-color: #f5f5f5 !important; }
 
-.grey-text.text-lighten-4, header .search-wrap .text-lighten-4.search-icon, header .search-wrap .text-lighten-4.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-4 {
+.grey-text.text-lighten-4, header .search-wrap .text-lighten-4.search-icon, header .search-wrap .text-lighten-4.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-4, .track-table .row .column.action a.text-lighten-4 {
   color: #f5f5f5 !important; }
 
 .grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type, aside.play-queue ul li .votes button:active {
   background-color: #eeeeee !important; }
 
-.grey-text.text-lighten-3, header .search-wrap .text-lighten-3.search-icon, header .search-wrap .text-lighten-3.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-3 {
+.grey-text.text-lighten-3, header .search-wrap .text-lighten-3.search-icon, header .search-wrap .text-lighten-3.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-3, .track-table .row .column.action a.text-lighten-3 {
   color: #eeeeee !important; }
 
 .grey.lighten-2 {
   background-color: #e0e0e0 !important; }
 
-.grey-text.text-lighten-2, header .search-wrap .text-lighten-2.search-icon, header .search-wrap .text-lighten-2.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-2 {
+.grey-text.text-lighten-2, header .search-wrap .text-lighten-2.search-icon, header .search-wrap .text-lighten-2.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-2, .track-table .row .column.action a.text-lighten-2 {
   color: #e0e0e0 !important; }
 
 .grey.lighten-1 {
   background-color: #bdbdbd !important; }
 
-.grey-text.text-lighten-1, header .search-wrap .text-lighten-1.search-icon, header .search-wrap .text-lighten-1.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-1 {
+.grey-text.text-lighten-1, header .search-wrap .text-lighten-1.search-icon, header .search-wrap .text-lighten-1.close-search-icon, .view-details .view-detail-top .detail-text h4.text-lighten-1, .track-table .row .column.action a.text-lighten-1 {
   color: #bdbdbd !important; }
 
 .grey {
   background-color: #9e9e9e !important; }
 
-.grey-text, header .search-wrap .search-icon, header .search-wrap .close-search-icon, .view-details .view-detail-top .detail-text h4 {
+.grey-text, header .search-wrap .search-icon, header .search-wrap .close-search-icon, .view-details .view-detail-top .detail-text h4, .track-table .row .column.action a {
   color: #9e9e9e !important; }
 
 .grey.darken-1 {
   background-color: #757575 !important; }
 
-.grey-text.text-darken-1, header .search-wrap .text-darken-1.search-icon, header .search-wrap .text-darken-1.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-1 {
+.grey-text.text-darken-1, header .search-wrap .text-darken-1.search-icon, header .search-wrap .text-darken-1.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-1, .track-table .row .column.action a.text-darken-1 {
   color: #757575 !important; }
 
 .grey.darken-2 {
   background-color: #616161 !important; }
 
-.grey-text.text-darken-2, header .search-wrap .text-darken-2.search-icon, header .search-wrap .text-darken-2.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-2 {
+.grey-text.text-darken-2, header .search-wrap .text-darken-2.search-icon, header .search-wrap .text-darken-2.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-2, .track-table .row .column.action a.text-darken-2 {
   color: #616161 !important; }
 
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, header .search-wrap .text-darken-3.search-icon, header .search-wrap .text-darken-3.close-search-icon, header .search-wrap .search, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .content .artists {
+.grey-text.text-darken-3, header .search-wrap .text-darken-3.search-icon, header .search-wrap .text-darken-3.close-search-icon, header .search-wrap .search, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .view-details .view-detail-top .detail-text h4.text-darken-3, aside.play-queue ul li .content .artists, .track-table .row .column.action a.text-darken-3, .track-table .row:hover .column.action a, .track-table .row div.artist {
   color: #424242 !important; }
 
 .grey.darken-4 {
   background-color: #212121 !important; }
 
-.grey-text.text-darken-4, header .search-wrap .text-darken-4.search-icon, header .search-wrap .text-darken-4.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-4 {
+.grey-text.text-darken-4, header .search-wrap .text-darken-4.search-icon, header .search-wrap .text-darken-4.close-search-icon, .view-details .view-detail-top .detail-text h4.text-darken-4, .track-table .row .column.action a.text-darken-4 {
   color: #212121 !important; }
 
 .shades.black {
@@ -8121,11 +8121,6 @@ header {
       position: absolute;
       right: 0;
       opacity: 0;
-      -webkit-transition: all 0ms;
-      -moz-transition: all 0ms;
-      -o-transition: all 0ms;
-      -ms-transition: all 0ms;
-      transition: all 0ms;
       font-size: 1.25em;
       line-height: 3rem;
       width: 30px;
@@ -8409,6 +8404,10 @@ footer {
     -ms-transition-delay: 770ms;
     transition-delay: 770ms; }
     .mobile-controls .current-track-details .text-wrap {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       height: 100%;
       flex-direction: column;
@@ -8467,6 +8466,10 @@ footer {
     .mobile-controls .durations-wrap .length {
       float: right; }
   .mobile-controls .current-art-wrap {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8507,6 +8510,10 @@ footer {
       -ms-transition: transform 800ms cubic-bezier(0.41, 0.58, 0.43, 1);
       transition: transform 800ms cubic-bezier(0.41, 0.58, 0.43, 1); }
     .mobile-controls .play-queue ul li {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -8525,6 +8532,10 @@ footer {
   margin: 10px; }
 
 .pills {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -8674,6 +8685,10 @@ main.animate-in.animate-out h1, main.animate-in.animate-out h2, main.animate-in.
 
 .preloader-outer-wrapper {
   margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8695,6 +8710,10 @@ aside.play-queue {
   aside.play-queue ul {
     padding: 0; }
     aside.play-queue ul li {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -8915,5 +8934,82 @@ aside.play-queue {
   @media only screen and (min-width: 1200px) {
     .search-content {
       right: 300px; } }
+
+.track-table .row.header {
+  display: none; }
+.track-table .row .column {
+  text-align: left; }
+  .track-table .row .column.action {
+    display: none; }
+    .track-table .row .column.action a {
+      -webkit-transition: color 400ms;
+      -moz-transition: color 400ms;
+      -o-transition: color 400ms;
+      -ms-transition: color 400ms;
+      transition: color 400ms; }
+.track-table .row .title {
+  font-weight: bold; }
+.track-table .row .time {
+  display: none; }
+@media only all and (min-width: 993px) {
+  .track-table .row {
+    -webkit-transition: background 500ms;
+    -moz-transition: background 500ms;
+    -o-transition: background 500ms;
+    -ms-transition: background 500ms;
+    transition: background 500ms;
+    padding: 10px 0;
+    margin: 0; }
+    .track-table .row, .track-table .row.header {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+    .track-table .row:hover {
+      background: #f2f2f2; }
+    .track-table .row.header {
+      font-weight: bold;
+      border-bottom: 1px solid #d0d0d0; }
+      .track-table .row.header .column {
+        padding: 10px 5px; }
+      .track-table .row.header:hover {
+        background: #FFFFFF; }
+    .track-table .row .column {
+      padding: 0 5px; }
+      .track-table .row .column.action {
+        width: 30px;
+        text-align: center;
+        display: initial; }
+        .track-table .row .column.action a {
+          color: grey; }
+      .track-table .row .column.title {
+        -webkit-box-flex: 1 0 0;
+        -moz-box-flex: 1 0 0;
+        -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+        flex: 1 0 0;
+        font-weight: normal; }
+      .track-table .row .column.artist {
+        -webkit-box-flex: 1 0 0;
+        -moz-box-flex: 1 0 0;
+        -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+        flex: 1 0 0;
+        color: #000000; }
+      .track-table .row .column.time {
+        -webkit-box-flex: 1 0 0;
+        -moz-box-flex: 1 0 0;
+        -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+        flex: 1 0 0;
+        max-width: 80px;
+        display: initial; }
+      .track-table .row .column.album {
+        -webkit-box-flex: 1 0 0;
+        -moz-box-flex: 1 0 0;
+        -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+        flex: 1 0 0; } }
 
 /*# sourceMappingURL=app.css.map */
