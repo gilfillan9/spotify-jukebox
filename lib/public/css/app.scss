@@ -595,45 +595,76 @@ footer {
 
 .browse {
   margin: 10px;
+
+  .pills {
+    margin: 0 -12px;
+  }
 }
 
 .pills {
   @include flexbox;
   align-items: flex-start;
-  justify-content: space-between;
+  align-content: stretch;
   flex-direction: row;
   flex-flow: row wrap;
-
-  li {
-    @extend li.pill;
-  }
 }
 
-li.pill {
-  @extend .card-panel, .curve-in, .zoom-out;
-  width: 48%;
-  display: inline-block;
-  box-sizing: border-box;
+.pill {
+  @extend .curve-in, .zoom-out, .blue-grey.lighten-2;
+  @include flexbox;
+
+  flex-grow: 1;
+  flex-flow: column wrap;
+  flex-basis: 40%;
+
   overflow: hidden;
   vertical-align: top;
   padding: 0;
+  margin: 2px;
+
+  @media only all and (min-width: 600px) {
+    flex-basis: 24%;
+  }
+  @media only all and (min-width: 992px) {
+    flex-basis: 19%;
+  }
+  @media only all and (min-width: 1200px) {
+    flex-basis: 12%;
+  }
 
   .text-content {
-    padding: 5px 9px;
+    @extend .blue-grey.lighten-4;
+    padding: 16px;
+    color: #FDFDFD;
+
+    &.dark-text {
+      color: rgba(0, 0, 0, 0.870588);
+    }
+
+    &.one-line {
+      height: 48px;
+    }
+
+    &.two-lines {
+      height: 68px;
+    }
+    div {
+      font-size: 16px;
+      &.sub {
+        font-size: 12px;
+      }
+    }
   }
-  @media only all and (min-width: 600px) {
-    width: 32%;
-  }
-  @media only all and (min-width: 900px) {
-    width: 24.5%;
-  }
-  @media only all and (min-width: 1400px) {
-    width: 13.8%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
 .pill-clicked {
-  @extend li.pill;
+  @extend .pill;
 
   position: absolute;
   background: #FFFFFF;
@@ -726,15 +757,17 @@ main {
 .view-details {
 
   .view-detail-top {
-    @extend .card-panel, .slide-up-out;
+    @extend .card-panel, .slide-up-out, .blue-grey.darken-4;
+    border-radius: 0;
     margin-top: 0;
     .detail-text {
       display: inline-block;
       vertical-align: top;
       margin-left: 10px;
+      color: #FDFDFD;
 
       h4 {
-        @extend .grey-text;
+        @extend .blue-grey-text.text-darken-3;
         margin-top: 0;
       }
 

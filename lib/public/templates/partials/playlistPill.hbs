@@ -1,7 +1,8 @@
-<li data-uri="{{uri}}" data-action="view" class="radiate-delay">
-    <img class="responsive-img" src="{{images.[0].url}}"/>
+<div data-uri="{{uri}}" data-action="view" class="radiate-delay pill">
+    <img src="{{images.[0].url}}"/>
 
-    <div class="text-content">
-        <span class="name">{{name}}</span>
+    <div class="text-content two-lines">
+        <div class="truncate">{{name}}</div>
+        <div class="truncate sub">{{tracks.total}} tracks</div>
     </div>
-</li>
+</div>
