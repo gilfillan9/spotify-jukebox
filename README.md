@@ -41,7 +41,7 @@ To start the jukebox just type `node lib/app.js` within the root folder.
 ## Credits
 * [node-spotify](http://node-spotify.com)
 * [handlebars.js](http://handlebarsjs.com/)
-* [bootstrap](http://getbootstrap.com/)
+* [materialize](http://materializecss.com/)
 * [spotify-web-api-js](https://github.com/JMPerez/spotify-web-api-js/)
 * [jquery](http://jquery.com/)
 * [async.js](https://github.com/caolan/async/)
@@ -52,7 +52,6 @@ To start the jukebox just type `node lib/app.js` within the root folder.
 * [promise](https://github.com/then/promise)
 * [request](https://github.com/request/request)
 * [cron](https://github.com/ncb000gt/node-cron)
-* [underscore](http://underscorejs.org/)
 
 ## License
 MIT
