@@ -1513,7 +1513,7 @@
 .blue-grey.darken-3 {
   background-color: #37474f !important; }
 
-.blue-grey-text.text-darken-3, .view-details .view-detail-top .detail-text h4 {
+.blue-grey-text.text-darken-3 {
   color: #37474f !important; }
 
 .blue-grey.darken-4, .view-details .view-detail-top {
@@ -8665,18 +8665,59 @@ main.animate-in.animate-out h1, main.animate-in.animate-out h2, main.animate-in.
           font-size: 2.75em; } }
 .view-details .view-detail-top {
   border-radius: 0;
-  margin-top: 0; }
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start; }
   .view-details .view-detail-top .detail-text {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 10px;
-    color: #FDFDFD; }
+    color: #FDFDFD;
+    margin: 6px;
+    flex: 3; }
     .view-details .view-detail-top .detail-text h4 {
-      margin-top: 0; }
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      line-height: 1.2em;
+      margin: 0; }
+      .dark-text .view-details .view-detail-top .detail-text h4 {
+        color: rgba(0, 0, 0, 0.5); }
+    .view-details .view-detail-top .detail-text h3 {
+      font-size: 18px;
+      line-height: 1.4em;
+      font-weight: bold;
+      margin: 4px 0; }
+    .view-details .view-detail-top .detail-text p {
+      font-size: 14px;
+      line-height: 1.2em;
+      margin: 0; }
     .view-details .view-detail-top .detail-text .buttons-wrap {
-      margin-top: 20px; }
-  .view-details .view-detail-top img {
+      display: none;
+      margin-top: 10px; }
+    @media only all and (min-width: 600px) {
+      .view-details .view-detail-top .detail-text h3 {
+        font-size: 1.3em; }
+      .view-details .view-detail-top .detail-text h4 {
+        font-size: 1.5em; }
+      .view-details .view-detail-top .detail-text p {
+        font-size: 1.1em; }
+      .view-details .view-detail-top .detail-text .buttons-wrap {
+        display: block; } }
+    @media only all and (min-width: 992px) {
+      .view-details .view-detail-top .detail-text {
+        margin: 12px; }
+        .view-details .view-detail-top .detail-text h3 {
+          font-size: 2.2em; } }
+  .view-details .view-detail-top .image-wrap {
+    flex: 2;
+    margin-bottom: -6px;
     max-width: 300px; }
+    .view-details .view-detail-top .image-wrap img {
+      max-width: 100%;
+      height: auto; }
 .view-details .track-table-wrap {
   margin: 10px; }
 
