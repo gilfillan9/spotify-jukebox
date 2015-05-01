@@ -269,6 +269,14 @@ main {
     right: 300px;
   }
 
+  &.animate-out {
+    .card {
+      @include transition((background 500ms, box-shadow 500ms));
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
 }
 
 footer {
@@ -756,8 +764,10 @@ footer {
 
     position: relative;
     z-index: 2;
+    @include transition(z-index 400ms step-end);
     body.show-search-page & {
-      z-index: auto;
+      z-index: 0;
+      @include transition(z-index 400ms step-start);
     }
 
     @include flexbox;
@@ -848,7 +858,7 @@ footer {
       }
     }
 
-    & + .track-table{
+    & + .track-table {
       margin-top: 0;
     }
   }
@@ -857,10 +867,6 @@ footer {
 
 [data-action] {
   cursor: pointer;
-}
-
-.track-table {
-  @extend .hoverable, .responsive-table, .slide-down-in, .card;
 }
 
 .context-menu {
@@ -1057,7 +1063,6 @@ aside.play-queue {
   }
 
   .zoom-out {
-
     .animate-out & {
       @include animation-fill-mode(both);
       @include animation-duration(300ms);
@@ -1066,11 +1071,10 @@ aside.play-queue {
   }
 
   .slide-up-out {
-    @include transition(transform 500ms);
     @include transform(translateY(0%));
-    @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
-
     .animate-out & {
+      @include transition(transform 500ms);
+      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
       @include transform(translateY(-100%));
     }
   }
@@ -1131,6 +1135,7 @@ aside.play-queue {
 }
 
 .track-table {
+  @extend .card, .slide-down-in, .zoom-out;
   .row {
     &.header {
       display: none;
