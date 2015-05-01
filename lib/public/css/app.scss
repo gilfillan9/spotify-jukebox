@@ -864,8 +864,11 @@ main {
   cursor: pointer;
 }
 
-.track-table {
-  @extend .hoverable, .responsive-table, .curve-in;
+.track-table-wrap {
+  overflow: hidden;
+  .track-table {
+    @extend .hoverable, .responsive-table, .slide-down-in;
+  }
 }
 
 .context-menu {
@@ -1043,7 +1046,7 @@ aside.play-queue {
 
 @media only all and (min-width: 600px) {
   .curve-in {
-    main.animate-in &, aside & {
+    .animate-in &, aside & {
       @include animation-fill-mode(both);
       @include animation-duration(500ms);
       opacity: 0;
@@ -1055,7 +1058,7 @@ aside.play-queue {
 
   .zoom-out {
 
-    main.animate-out & {
+    .animate-out & {
       @include animation-fill-mode(both);
       @include animation-duration(300ms);
       @include animation-name(zoom-out);
@@ -1067,8 +1070,20 @@ aside.play-queue {
     @include transform(translateY(0%));
     @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
 
-    main.animate-out & {
+    .animate-out & {
       @include transform(translateY(-100%));
+    }
+  }
+  .slide-down-in {
+    @include transition(transform 500ms);
+    @include transform(translateY(-100%));
+    @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
+
+    .animate-in & {
+      @include transform(translateY(0%));
+    }
+    .animate-out & {
+      @include transform(translateY(0%));
     }
   }
 }

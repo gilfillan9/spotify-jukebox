@@ -2218,13 +2218,13 @@ table {
     border-bottom: 1px solid #d0d0d0; }
   table.striped tbody tr:nth-child(odd) {
     background-color: #f2f2f2; }
-  table.hoverable tbody tr, table.track-table tbody tr {
+  table.hoverable tbody tr, .track-table-wrap table.track-table tbody tr {
     -webkit-transition: background-color 0.25s ease;
     -moz-transition: background-color 0.25s ease;
     -o-transition: background-color 0.25s ease;
     -ms-transition: background-color 0.25s ease;
     transition: background-color 0.25s ease; }
-    table.hoverable tbody tr:hover, table.track-table tbody tr:hover {
+    table.hoverable tbody tr:hover, .track-table-wrap table.track-table tbody tr:hover {
       background-color: #f2f2f2; }
   table.centered thead tr th, table.centered tbody tr td {
     text-align: center; }
@@ -2240,59 +2240,59 @@ td, th {
   border-radius: 2px; }
 
 @media only screen and (max-width: 992px) {
-  table.responsive-table, table.track-table {
+  table.responsive-table, .track-table-wrap table.track-table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     display: block;
     position: relative;
     /* sort out borders */ }
-    table.responsive-table th, table.track-table th,
+    table.responsive-table th, .track-table-wrap table.track-table th,
     table.responsive-table td,
-    table.track-table td {
+    .track-table-wrap table.track-table td {
       margin: 0;
       vertical-align: top; }
-    table.responsive-table th, table.track-table th {
+    table.responsive-table th, .track-table-wrap table.track-table th {
       text-align: left; }
-    table.responsive-table thead, table.track-table thead {
+    table.responsive-table thead, .track-table-wrap table.track-table thead {
       display: block;
       float: left; }
-      table.responsive-table thead tr, table.track-table thead tr {
+      table.responsive-table thead tr, .track-table-wrap table.track-table thead tr {
         display: block;
         padding: 0 10px 0 0; }
-        table.responsive-table thead tr th::before, table.track-table thead tr th::before {
+        table.responsive-table thead tr th::before, .track-table-wrap table.track-table thead tr th::before {
           content: "\00a0"; }
-    table.responsive-table tbody, table.track-table tbody {
+    table.responsive-table tbody, .track-table-wrap table.track-table tbody {
       display: block;
       width: auto;
       position: relative;
       overflow-x: auto;
       white-space: nowrap; }
-      table.responsive-table tbody tr, table.track-table tbody tr {
+      table.responsive-table tbody tr, .track-table-wrap table.track-table tbody tr {
         display: inline-block;
         vertical-align: top; }
-    table.responsive-table th, table.track-table th {
+    table.responsive-table th, .track-table-wrap table.track-table th {
       display: block;
       text-align: right; }
-    table.responsive-table td, table.track-table td {
+    table.responsive-table td, .track-table-wrap table.track-table td {
       display: block;
       min-height: 1.25em;
       text-align: left; }
-    table.responsive-table tr, table.track-table tr {
+    table.responsive-table tr, .track-table-wrap table.track-table tr {
       padding: 0 10px; }
-    table.responsive-table thead, table.track-table thead {
+    table.responsive-table thead, .track-table-wrap table.track-table thead {
       border: 0;
       border-right: 1px solid #d0d0d0; }
-    table.responsive-table.bordered th, table.bordered.track-table th {
+    table.responsive-table.bordered th, .track-table-wrap table.bordered.track-table th {
       border-bottom: 0;
       border-left: 0; }
-    table.responsive-table.bordered td, table.bordered.track-table td {
+    table.responsive-table.bordered td, .track-table-wrap table.bordered.track-table td {
       border-left: 0;
       border-right: 0;
       border-bottom: 0; }
-    table.responsive-table.bordered tr, table.bordered.track-table tr {
+    table.responsive-table.bordered tr, .track-table-wrap table.bordered.track-table tr {
       border: 0; }
-    table.responsive-table.bordered tbody tr, table.bordered.track-table tbody tr {
+    table.responsive-table.bordered tbody tr, .track-table-wrap table.bordered.track-table tbody tr {
       border-right: 1px solid #d0d0d0; } }
 .collection, .context-menu ul {
   margin: 0.5rem 0 1rem 0;
@@ -8741,6 +8741,9 @@ main {
 [data-action] {
   cursor: pointer; }
 
+.track-table-wrap {
+  overflow: hidden; }
+
 .context-menu {
   position: absolute;
   width: 0;
@@ -8926,7 +8929,7 @@ aside.play-queue {
     transform: scale(0);
     opacity: 0.2; } }
 @media only all and (min-width: 600px) {
-  main.animate-in .curve-in, main.animate-in .pill, main.animate-in .track-table, aside .curve-in, aside .pill, aside .track-table {
+  .animate-in .curve-in, .animate-in .pill, aside .curve-in, aside .pill {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     -ms-animation-fill-mode: both;
@@ -8948,7 +8951,7 @@ aside.play-queue {
     -o-animation-name: curve-in;
     animation-name: curve-in; }
 
-  main.animate-out .zoom-out, main.animate-out .pill {
+  .animate-out .zoom-out, .animate-out .pill {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     -ms-animation-fill-mode: both;
@@ -8980,12 +8983,41 @@ aside.play-queue {
     -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
     animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1); }
-    main.animate-out .slide-up-out, main.animate-out .view-details .view-detail-top, .view-details main.animate-out .view-detail-top {
+    .animate-out .slide-up-out, .animate-out .view-details .view-detail-top, .view-details .animate-out .view-detail-top {
       -webkit-transform: translateY(-100%);
       -moz-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
       -o-transform: translateY(-100%);
-      transform: translateY(-100%); } }
+      transform: translateY(-100%); }
+
+  .slide-down-in, .track-table-wrap .track-table {
+    -webkit-transition: transform 500ms;
+    -moz-transition: transform 500ms;
+    -o-transition: transform 500ms;
+    -ms-transition: transform 500ms;
+    transition: transform 500ms;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1); }
+    .animate-in .slide-down-in, .animate-in .track-table-wrap .track-table, .track-table-wrap .animate-in .track-table {
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    .animate-out .slide-down-in, .animate-out .track-table-wrap .track-table, .track-table-wrap .animate-out .track-table {
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); } }
 .search-content {
   display: block;
   position: fixed;
