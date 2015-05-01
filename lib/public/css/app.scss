@@ -847,6 +847,10 @@ footer {
         height: auto;
       }
     }
+
+    & + .track-table{
+      margin-top: 0;
+    }
   }
 
 }

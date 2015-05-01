@@ -8730,6 +8730,8 @@ footer {
     .view-details .view-detail-top .image-wrap img {
       max-width: 100%;
       height: auto; }
+  .view-details .view-detail-top + .track-table {
+    margin-top: 0; }
 
 [data-action] {
   cursor: pointer; }
