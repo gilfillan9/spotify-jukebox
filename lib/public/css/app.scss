@@ -593,14 +593,6 @@ footer {
   }
 }
 
-.browse {
-  margin: 10px;
-
-  .pills {
-    margin: 0 -12px;
-  }
-}
-
 .pills {
   @include flexbox;
   align-items: flex-start;
@@ -708,6 +700,20 @@ main {
     h1, h2, h3, h4, h5, h6 {
       opacity: 0;
     }
+  }
+
+  h2, h5 {
+    font-size: 20px;
+    padding: 0 0 0 14px;
+    margin: 0;
+    height: 64px;
+    line-height: 64px;
+  }
+
+  h5 {
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
   }
 }
 
@@ -855,9 +861,6 @@ main {
     }
   }
 
-  .track-table-wrap {
-    margin: 10px;
-  }
 }
 
 [data-action] {

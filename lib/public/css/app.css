@@ -8528,11 +8528,6 @@ footer {
       .mobile-controls .play-queue ul li:first-of-type {
         display: none; }
 
-.browse {
-  margin: 10px; }
-  .browse .pills {
-    margin: 0 -12px; }
-
 .pills {
   display: -webkit-box;
   display: -moz-box;
@@ -8628,6 +8623,16 @@ main {
     opacity: 1; }
   main.animate-in.animate-out h1, main.animate-in.animate-out h2, main.animate-in.animate-out h3, main.animate-in.animate-out h4, main.animate-in.animate-out h5, main.animate-in.animate-out h6 {
     opacity: 0; }
+  main h2, main h5 {
+    font-size: 20px;
+    padding: 0 0 0 14px;
+    margin: 0;
+    height: 64px;
+    line-height: 64px; }
+  main h5 {
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px; }
 
 @media only all and (min-width: 993px) {
   nav a.brand-logo {
@@ -8735,8 +8740,6 @@ main {
     .view-details .view-detail-top .image-wrap img {
       max-width: 100%;
       height: auto; }
-.view-details .track-table-wrap {
-  margin: 10px; }
 
 [data-action] {
   cursor: pointer; }
@@ -8789,14 +8792,12 @@ aside.play-queue {
   top: 64px;
   bottom: 60px;
   width: 200px;
-  overflow-y: auto;
-  padding: 15px 0; }
+  overflow-y: auto; }
   @media only all and (min-width: 1200px) {
     aside.play-queue {
       width: 300px; } }
   aside.play-queue ul {
-    padding: 0;
-    margin: 0; }
+    padding: 0; }
     aside.play-queue ul li {
       display: -webkit-box;
       display: -moz-box;

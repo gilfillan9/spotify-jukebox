@@ -1,15 +1,13 @@
-<div class="browse">
-    <h2 class="flow-text">{{message}}</h2>
-    <div class="pills">
-        {{#each featured}}
-            {{> playlistPill}}
-        {{/each}}
-    </div>
-    <div class="sepe"></div>
-    <h5>Categories</h5>
-    <div class="pills">
-        {{#each categories}}
-            {{> categoryPill}}
-        {{/each}}
-    </div>
+<h2>{{message}}</h2>
+<div class="pills">
+    {{#each featured}}
+        {{> playlistPill}}
+    {{/each}}
+</div>
+<div class="sepe"></div>
+<h5>Categories</h5>
+<div class="pills">
+    {{#each categories}}
+        {{> categoryPill}}
+    {{/each}}
 </div>
