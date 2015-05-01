@@ -10,20 +10,20 @@
             <h3>{{name}}</h3>
         </div>
     </div>
-    <h5>Popular Tracks</h5>
+    <h2>Popular Tracks</h2>
 
-    <div class="track-table-wrap">
-        <div class="track-table" data-uri="{{uri}}">
-            {{> trackTableTop}}
-            {{#each tracks}}
-                {{> track}}
-            {{/each}}
-        </div>
-    </div>
-    <h5>Albums</h5>
-    <ul class="pills">
-        {{#each albums}}
-            {{> albumPill}}
+    <div class="track-table" data-uri="{{uri}}">
+        {{> trackTableTop}}
+        {{#each tracks}}
+            {{> track}}
         {{/each}}
-    </ul>
+    </div>
+    <div class="card">
+        <h5>Albums</h5>
+        <ul class="pills">
+            {{#each albums}}
+                {{> albumPill}}
+            {{/each}}
+        </ul>
+    </div>
 </div>

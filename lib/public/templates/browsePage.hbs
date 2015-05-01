@@ -1,13 +1,18 @@
-<h2>{{message}}</h2>
-<div class="pills">
-    {{#each featured}}
-        {{> playlistPill}}
-    {{/each}}
+<div class="card">
+    <h2>{{message}}</h2>
+
+    <div class="pills">
+        {{#each featured}}
+            {{> playlistPill}}
+        {{/each}}
+    </div>
 </div>
-<div class="sepe"></div>
-<h5>Categories</h5>
-<div class="pills">
-    {{#each categories}}
-        {{> categoryPill}}
-    {{/each}}
+<div class="card">
+    <h2>Categories</h2>
+
+    <div class="pills">
+        {{#each categories}}
+            {{> categoryPill}}
+        {{/each}}
+    </div>
 </div>
