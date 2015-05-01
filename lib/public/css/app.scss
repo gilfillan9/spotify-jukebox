@@ -610,7 +610,7 @@ footer {
 }
 
 .pill {
-  @extend .curve-in, .zoom-out, .blue-grey.lighten-2;
+  @extend .curve-in, .zoom-out, .blue-grey.lighten-4;
   @include flexbox;
 
   flex-grow: 1;
@@ -633,13 +633,7 @@ footer {
   }
 
   .text-content {
-    @extend .blue-grey.lighten-4;
     padding: 16px;
-    color: #FDFDFD;
-
-    &.dark-text {
-      color: rgba(0, 0, 0, 0.870588);
-    }
 
     &.one-line {
       height: 48px;
@@ -656,31 +650,44 @@ footer {
     }
   }
 
+  color: #FDFDFD;
+  &.dark-text {
+    color: rgba(0, 0, 0, 0.870588);
+  }
+
   img {
     display: block;
     width: 100%;
     height: auto;
   }
-}
 
-.pill-clicked {
-  @extend .pill;
+  &.pill-clicked {
+    @extend .z-depth-1;
+    position: absolute;
+    opacity: 1 !important;
+    z-index: 1;
+    margin: 0;
+    @include animation(none);
+    @include transition((top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms));
 
-  position: absolute;
-  background: #FFFFFF;
-  opacity: 1 !important;
-  z-index: 1;
-  margin: 0;
-  @include animation(none);
+    &.fade-out {
+      opacity: 0 !important;
+    }
 
-  @include transition((top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms));
+    @media only all and (max-width: 600px) {
+      display: none;
+    }
 
-  &.fade-out {
-    opacity: 0 !important;
-  }
+    img {
+      display: block;
+      width: auto;
+      max-width: 300px;
+    }
 
-  @media only all and (max-width: 600px) {
-    display: none;
+    .text-content {
+      @include transition(opacity 200ms);
+      opacity: 0;
+    }
   }
 }
 

@@ -1468,7 +1468,7 @@
 .blue-grey-text.text-lighten-5 {
   color: #eceff1 !important; }
 
-.blue-grey.lighten-4, .pill .text-content, .pill-clicked .text-content {
+.blue-grey.lighten-4, .pill {
   background-color: #cfd8dc !important; }
 
 .blue-grey-text.text-lighten-4 {
@@ -1480,7 +1480,7 @@
 .blue-grey-text.text-lighten-3 {
   color: #b0bec5 !important; }
 
-.blue-grey.lighten-2, .pill, .pill-clicked {
+.blue-grey.lighten-2 {
   background-color: #90a4ae !important; }
 
 .blue-grey-text.text-lighten-2 {
@@ -2029,7 +2029,7 @@ ul {
 .clearfix {
   clear: both; }
 
-.z-depth-1, nav, .card-panel, .left-nav, footer, .mobile-controls, .view-details .view-detail-top, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, body.show-mobile-queue .mobile-controls .current-track-details, .context-menu ul, aside.play-queue {
+.z-depth-1, nav, .card-panel, .left-nav, footer, .mobile-controls, .view-details .view-detail-top, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, body.show-mobile-queue .mobile-controls .current-track-details, .pill.pill-clicked, .context-menu ul, aside.play-queue {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
@@ -8544,7 +8544,7 @@ footer {
   flex-direction: row;
   flex-flow: row wrap; }
 
-.pill, .pill-clicked {
+.pill {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -8556,55 +8556,64 @@ footer {
   overflow: hidden;
   vertical-align: top;
   padding: 0;
-  margin: 2px; }
+  margin: 2px;
+  color: #FDFDFD; }
   @media only all and (min-width: 600px) {
-    .pill, .pill-clicked {
+    .pill {
       flex-basis: 24%; } }
   @media only all and (min-width: 992px) {
-    .pill, .pill-clicked {
+    .pill {
       flex-basis: 19%; } }
   @media only all and (min-width: 1200px) {
-    .pill, .pill-clicked {
+    .pill {
       flex-basis: 12%; } }
-  .pill .text-content, .pill-clicked .text-content {
-    padding: 16px;
-    color: #FDFDFD; }
-    .pill .text-content.dark-text, .pill-clicked .text-content.dark-text {
-      color: rgba(0, 0, 0, 0.87059); }
-    .pill .text-content.one-line, .pill-clicked .text-content.one-line {
+  .pill .text-content {
+    padding: 16px; }
+    .pill .text-content.one-line {
       height: 48px; }
-    .pill .text-content.two-lines, .pill-clicked .text-content.two-lines {
+    .pill .text-content.two-lines {
       height: 68px; }
-    .pill .text-content div, .pill-clicked .text-content div {
+    .pill .text-content div {
       font-size: 16px; }
-      .pill .text-content div.sub, .pill-clicked .text-content div.sub {
+      .pill .text-content div.sub {
         font-size: 12px; }
-  .pill img, .pill-clicked img {
+  .pill.dark-text {
+    color: rgba(0, 0, 0, 0.87059); }
+  .pill img {
     display: block;
     width: 100%;
     height: auto; }
-
-.pill-clicked {
-  position: absolute;
-  background: #FFFFFF;
-  opacity: 1 !important;
-  z-index: 1;
-  margin: 0;
-  -webkit-animation: none;
-  -moz-animation: none;
-  -ms-animation: none;
-  -o-animation: none;
-  animation: none;
-  -webkit-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
-  -moz-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
-  -o-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
-  -ms-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
-  transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms; }
-  .pill-clicked.fade-out {
-    opacity: 0 !important; }
-  @media only all and (max-width: 600px) {
-    .pill-clicked {
-      display: none; } }
+  .pill.pill-clicked {
+    position: absolute;
+    opacity: 1 !important;
+    z-index: 1;
+    margin: 0;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
+    animation: none;
+    -webkit-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
+    -moz-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
+    -o-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
+    -ms-transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms;
+    transition: top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms; }
+    .pill.pill-clicked.fade-out {
+      opacity: 0 !important; }
+    @media only all and (max-width: 600px) {
+      .pill.pill-clicked {
+        display: none; } }
+    .pill.pill-clicked img {
+      display: block;
+      width: auto;
+      max-width: 300px; }
+    .pill.pill-clicked .text-content {
+      -webkit-transition: opacity 200ms;
+      -moz-transition: opacity 200ms;
+      -o-transition: opacity 200ms;
+      -ms-transition: opacity 200ms;
+      transition: opacity 200ms;
+      opacity: 0; }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
   -webkit-transition: opacity 500ms;
@@ -8909,7 +8918,7 @@ aside.play-queue {
     transform: scale(0);
     opacity: 0.2; } }
 @media only all and (min-width: 600px) {
-  main.animate-in .curve-in, main.animate-in .pill, main.animate-in .pill-clicked, main.animate-in .track-table, aside .curve-in, aside .pill, aside .pill-clicked, aside .track-table {
+  main.animate-in .curve-in, main.animate-in .pill, main.animate-in .track-table, aside .curve-in, aside .pill, aside .track-table {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     -ms-animation-fill-mode: both;
@@ -8931,7 +8940,7 @@ aside.play-queue {
     -o-animation-name: curve-in;
     animation-name: curve-in; }
 
-  main.animate-out .zoom-out, main.animate-out .pill, main.animate-out .pill-clicked {
+  main.animate-out .zoom-out, main.animate-out .pill {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     -ms-animation-fill-mode: both;
