@@ -8685,23 +8685,29 @@ main {
   display: flex;
   flex-flow: row;
   align-items: flex-start; }
+  .view-details .view-detail-top.dark-text h4 {
+    color: rgba(0, 0, 0, 0.3); }
+  .view-details .view-detail-top.dark-text h2 {
+    color: rgba(0, 0, 0, 0.87); }
+  .view-details .view-detail-top.dark-text p {
+    color: rgba(0, 0, 0, 0.54); }
   .view-details .view-detail-top .detail-text {
     color: #FDFDFD;
     margin: 6px;
     flex: 3; }
     .view-details .view-detail-top .detail-text h4 {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.3);
       font-size: 14px;
       line-height: 1.2em;
       margin: 0; }
-      .dark-text .view-details .view-detail-top .detail-text h4 {
-        color: rgba(0, 0, 0, 0.5); }
     .view-details .view-detail-top .detail-text h3 {
+      color: white;
       font-size: 18px;
       line-height: 1.4em;
       font-weight: bold;
       margin: 4px 0; }
     .view-details .view-detail-top .detail-text p {
+      color: rgba(255, 255, 255, 0.8);
       font-size: 14px;
       line-height: 1.2em;
       margin: 0; }

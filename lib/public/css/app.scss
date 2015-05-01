@@ -693,7 +693,7 @@ footer {
 
 main {
   overflow-x: hidden;
-  
+
   h1, h2, h3, h4, h5, h6 {
     @include transition(opacity 500ms);
     opacity: 0;
@@ -774,22 +774,32 @@ main {
     flex-flow: row;
     align-items: flex-start;
 
+    &.dark-text {
+      h4 {
+        color: rgba(0, 0, 0, 0.3);
+      }
+      h2 {
+        color: rgba(0, 0, 0, 0.87);
+      }
+      p {
+        color: rgba(0, 0, 0, 0.54);
+      }
+    }
+
     .detail-text {
       color: #FDFDFD;
       margin: 6px;
       flex: 3;
 
       h4 {
-        color: rgba(255, 255, 255, 0.5);
-        .dark-text & {
-          color: rgba(0, 0, 0, 0.5);
-        }
+        color: rgba(255, 255, 255, 0.3);
         font-size: 14px;
         line-height: 1.2em;
         margin: 0;
       }
 
       h3 {
+        color: rgba(255, 255, 255, 1);
         font-size: 18px;
         line-height: 1.4em;
         font-weight: bold;
@@ -797,6 +807,7 @@ main {
       }
 
       p {
+        color: rgba(255, 255, 255, 0.8);
         font-size: 14px;
         line-height: 1.2em;
         margin: 0;
