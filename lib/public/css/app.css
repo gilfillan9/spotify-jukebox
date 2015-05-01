@@ -8615,17 +8615,19 @@ footer {
       transition: opacity 200ms;
       opacity: 0; }
 
-main h1, main h2, main h3, main h4, main h5, main h6 {
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  -ms-transition: opacity 500ms;
-  transition: opacity 500ms;
-  opacity: 0; }
-main.animate-in h1, main.animate-in h2, main.animate-in h3, main.animate-in h4, main.animate-in h5, main.animate-in h6 {
-  opacity: 1; }
-main.animate-in.animate-out h1, main.animate-in.animate-out h2, main.animate-in.animate-out h3, main.animate-in.animate-out h4, main.animate-in.animate-out h5, main.animate-in.animate-out h6 {
-  opacity: 0; }
+main {
+  overflow-x: hidden; }
+  main h1, main h2, main h3, main h4, main h5, main h6 {
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
+    opacity: 0; }
+  main.animate-in h1, main.animate-in h2, main.animate-in h3, main.animate-in h4, main.animate-in h5, main.animate-in h6 {
+    opacity: 1; }
+  main.animate-in.animate-out h1, main.animate-in.animate-out h2, main.animate-in.animate-out h3, main.animate-in.animate-out h4, main.animate-in.animate-out h5, main.animate-in.animate-out h6 {
+    opacity: 0; }
 
 @media only all and (min-width: 993px) {
   nav a.brand-logo {
