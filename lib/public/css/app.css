@@ -8789,12 +8789,14 @@ aside.play-queue {
   top: 64px;
   bottom: 60px;
   width: 200px;
-  overflow-y: auto; }
+  overflow-y: auto;
+  padding: 15px 0; }
   @media only all and (min-width: 1200px) {
     aside.play-queue {
       width: 300px; } }
   aside.play-queue ul {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     aside.play-queue ul li {
       display: -webkit-box;
       display: -moz-box;
@@ -8804,7 +8806,13 @@ aside.play-queue {
       flex-direction: column;
       justify-content: center;
       position: relative;
-      padding: 6px 0; }
+      padding: 6px 0;
+      background: #FFFFFF;
+      -webkit-transition: top 800ms;
+      -moz-transition: top 800ms;
+      -o-transition: top 800ms;
+      -ms-transition: top 800ms;
+      transition: top 800ms; }
       aside.play-queue ul li .content {
         -webkit-transform: translateX(0px);
         -moz-transform: translateX(0px);
@@ -8864,6 +8872,10 @@ aside.play-queue {
         -ms-transform: translateX(0px);
         -o-transform: translateX(0px);
         transform: translateX(0px); }
+      aside.play-queue ul li.moving {
+        position: absolute;
+        left: 0;
+        right: 0; }
 
 @-webkit-keyframes curve-in {
   0% {

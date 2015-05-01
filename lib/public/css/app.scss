@@ -933,6 +933,7 @@ aside.play-queue {
       justify-content: center;
       position: relative;
       padding: 6px 0;
+      background: #FFFFFF;
 
       &:first-of-type {
         @extend .grey.lighten-3;
@@ -1007,6 +1008,13 @@ aside.play-queue {
           @include transform(translateX(0px));
         }
       }
+
+      &.moving {
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+      @include transition(top 800ms);
     }
   }
 }
