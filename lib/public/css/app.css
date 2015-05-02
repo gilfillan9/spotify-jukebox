@@ -8072,7 +8072,7 @@ body.show-left-bar::after {
 header {
   position: fixed;
   width: 100%;
-  z-index: 5; }
+  z-index: 10; }
   @media only all and (min-width: 600px) {
     header {
       z-index: 1; } }
@@ -8672,83 +8672,101 @@ footer {
           text-align: center; }
         .left-nav li a i {
           font-size: 2.75em; } }
-.view-details .view-detail-top {
-  position: relative;
-  z-index: 2;
-  -webkit-transition: z-index 400ms step-end;
-  -moz-transition: z-index 400ms step-end;
-  -o-transition: z-index 400ms step-end;
-  -ms-transition: z-index 400ms step-end;
-  transition: z-index 400ms step-end;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row;
-  align-items: flex-start; }
-  body.show-search-page .view-details .view-detail-top {
-    z-index: 0;
-    -webkit-transition: z-index 400ms step-start;
-    -moz-transition: z-index 400ms step-start;
-    -o-transition: z-index 400ms step-start;
-    -ms-transition: z-index 400ms step-start;
-    transition: z-index 400ms step-start; }
-  @media only all and (min-width: 600px) {
-    .view-details .view-detail-top {
-      margin: 0 -10px; } }
-  .view-details .view-detail-top.dark-text h4 {
-    color: rgba(0, 0, 0, 0.3); }
-  .view-details .view-detail-top.dark-text h2 {
-    color: rgba(0, 0, 0, 0.87); }
-  .view-details .view-detail-top.dark-text p {
-    color: rgba(0, 0, 0, 0.54); }
-  .view-details .view-detail-top .detail-text {
-    color: #FDFDFD;
-    margin: 6px;
-    flex: 3; }
-    .view-details .view-detail-top .detail-text h4 {
-      color: rgba(255, 255, 255, 0.3);
-      font-size: 14px;
-      line-height: 1.2em;
-      margin: 0; }
-    .view-details .view-detail-top .detail-text h3 {
-      color: white;
-      font-size: 18px;
-      line-height: 1.4em;
-      font-weight: bold;
-      margin: 4px 0; }
-    .view-details .view-detail-top .detail-text p {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 14px;
-      line-height: 1.2em;
-      margin: 0; }
-    .view-details .view-detail-top .detail-text .buttons-wrap {
-      display: none;
-      margin-top: 10px; }
+.view-details {
+  margin-top: 100px; }
+  @media only all and (min-width: 992px) {
+    .view-details {
+      margin-top: 300px; } }
+  .view-details .view-detail-top {
+    height: 100px;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    -webkit-transition: z-index 400ms step-end;
+    -moz-transition: z-index 400ms step-end;
+    -o-transition: z-index 400ms step-end;
+    -ms-transition: z-index 400ms step-end;
+    transition: z-index 400ms step-end;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start; }
+    body.show-search-page .view-details .view-detail-top, .animate-out .view-details .view-detail-top {
+      z-index: 0;
+      -webkit-transition: z-index 400ms step-start;
+      -moz-transition: z-index 400ms step-start;
+      -o-transition: z-index 400ms step-start;
+      -ms-transition: z-index 400ms step-start;
+      transition: z-index 400ms step-start; }
+    .animate-out .view-details .view-detail-top {
+      z-index: 0; }
     @media only all and (min-width: 600px) {
-      .view-details .view-detail-top .detail-text h3 {
-        font-size: 1.3em; }
-      .view-details .view-detail-top .detail-text h4 {
-        font-size: 1.5em; }
-      .view-details .view-detail-top .detail-text p {
-        font-size: 1.1em; }
-      .view-details .view-detail-top .detail-text .buttons-wrap {
-        display: block; } }
+      .view-details .view-detail-top {
+        top: 64px;
+        right: 200px; } }
     @media only all and (min-width: 992px) {
-      .view-details .view-detail-top .detail-text {
-        margin: 12px; }
+      .view-details .view-detail-top {
+        left: 80px;
+        height: 300px; } }
+    @media only all and (min-width: 1200px) {
+      .view-details .view-detail-top {
+        right: 300px; } }
+    .view-details .view-detail-top.dark-text h4 {
+      color: rgba(0, 0, 0, 0.3); }
+    .view-details .view-detail-top.dark-text h2 {
+      color: rgba(0, 0, 0, 0.87); }
+    .view-details .view-detail-top.dark-text p {
+      color: rgba(0, 0, 0, 0.54); }
+    .view-details .view-detail-top .detail-text {
+      color: #FDFDFD;
+      margin: 6px;
+      flex: 3; }
+      .view-details .view-detail-top .detail-text h4 {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 14px;
+        line-height: 1.2em;
+        margin: 0; }
+      .view-details .view-detail-top .detail-text h3 {
+        color: white;
+        font-size: 18px;
+        line-height: 1.4em;
+        font-weight: bold;
+        margin: 4px 0; }
+      .view-details .view-detail-top .detail-text p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        line-height: 1.2em;
+        margin: 0; }
+      .view-details .view-detail-top .detail-text .buttons-wrap {
+        display: none;
+        margin-top: 10px; }
+      @media only all and (min-width: 600px) {
         .view-details .view-detail-top .detail-text h3 {
-          font-size: 2.2em; } }
-  .view-details .view-detail-top .image-wrap {
-    flex: 2;
-    margin-bottom: -6px;
-    max-width: 300px; }
-    .view-details .view-detail-top .image-wrap img {
-      max-width: 100%;
-      height: auto; }
-  .view-details .view-detail-top + .track-table {
-    margin-top: 0; }
+          font-size: 1.3em; }
+        .view-details .view-detail-top .detail-text h4 {
+          font-size: 1.5em; }
+        .view-details .view-detail-top .detail-text p {
+          font-size: 1.1em; }
+        .view-details .view-detail-top .detail-text .buttons-wrap {
+          display: block; } }
+      @media only all and (min-width: 992px) {
+        .view-details .view-detail-top .detail-text {
+          margin: 12px; }
+          .view-details .view-detail-top .detail-text h3 {
+            font-size: 2.2em; } }
+    .view-details .view-detail-top .image-wrap {
+      flex: 2;
+      height: 100px; }
+      .view-details .view-detail-top .image-wrap img {
+        max-height: 100%;
+        width: auto; }
+    .view-details .view-detail-top + .track-table {
+      margin-top: 0; }
 
 [data-action] {
   cursor: pointer; }

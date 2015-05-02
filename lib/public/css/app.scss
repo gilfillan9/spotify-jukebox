@@ -66,7 +66,7 @@ body {
 header {
   position: fixed;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
   @media only all and (min-width: 600px) {
     z-index: 1;
   }
@@ -758,14 +758,25 @@ footer {
 }
 
 .view-details {
+  margin-top: 100px;
+
+  @media only all and (min-width: 992px) {
+    margin-top: 300px;
+  }
 
   .view-detail-top {
     @extend .slide-up-out, .blue-grey.darken-4;
+    height: 100px;
 
-    position: relative;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+
     z-index: 2;
+
     @include transition(z-index 400ms step-end);
-    body.show-search-page & {
+    body.show-search-page &, .animate-out & {
       z-index: 0;
       @include transition(z-index 400ms step-start);
     }
@@ -775,7 +786,16 @@ footer {
     align-items: flex-start;
 
     @media only all and (min-width: 600px) {
-      margin: 0 -10px;
+      top: 64px;
+      right: 200px;
+    }
+
+    @media only all and (min-width: 992px) {
+      left: 80px;
+      height: 300px;
+    }
+    @media only all and (min-width: 1200px) {
+      right: 300px;
     }
 
     &.dark-text {
@@ -849,12 +869,11 @@ footer {
 
     .image-wrap {
       flex: 2;
-      margin-bottom: -6px;
-      max-width: 300px;
+      height: 100px;
 
       img {
-        max-width: 100%;
-        height: auto;
+        max-height: 100%;
+        width: auto;
       }
     }
 
