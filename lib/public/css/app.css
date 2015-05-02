@@ -8993,11 +8993,11 @@ aside.play-queue {
     -o-transform: translateY(0%);
     transform: translateY(0%); }
     .animate-out .slide-up-out, .animate-out .view-details .view-detail-top, .view-details .animate-out .view-detail-top {
-      -webkit-transition: transform 500ms;
-      -moz-transition: transform 500ms;
-      -o-transition: transform 500ms;
-      -ms-transition: transform 500ms;
-      transition: transform 500ms;
+      -webkit-transition: transform 500ms ease-in;
+      -moz-transition: transform 500ms ease-in;
+      -o-transition: transform 500ms ease-in;
+      -ms-transition: transform 500ms ease-in;
+      transition: transform 500ms ease-in;
       -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
       -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
       -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
@@ -9010,11 +9010,11 @@ aside.play-queue {
       transform: translateY(-100%); }
 
   .slide-down-in, .track-table {
-    -webkit-transition: transform 500ms;
-    -moz-transition: transform 500ms;
-    -o-transition: transform 500ms;
-    -ms-transition: transform 500ms;
-    transition: transform 500ms;
+    -webkit-transition: transform 500ms ease-out;
+    -moz-transition: transform 500ms ease-out;
+    -o-transition: transform 500ms ease-out;
+    -ms-transition: transform 500ms ease-out;
+    transition: transform 500ms ease-out;
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
