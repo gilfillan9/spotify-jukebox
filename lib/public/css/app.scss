@@ -1247,6 +1247,10 @@ aside.play-queue {
   justify-content: center;
 
   .text-wrap {
+    @include flexbox;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     top: 10vh;
     p.title {

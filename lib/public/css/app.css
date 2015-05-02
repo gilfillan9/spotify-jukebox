@@ -9179,6 +9179,14 @@ aside.play-queue {
   background: url("/images/warning.svg") no-repeat center 20%;
   background-size: 50vmin; }
   .error-wrap .text-wrap {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     top: 10vh; }
     .error-wrap .text-wrap p.title {
