@@ -1246,14 +1246,25 @@ aside.play-queue {
   align-items: center;
   justify-content: center;
 
-  p.title {
-    font-size: 1.6em;
-    color: rgba(0, 0, 0, 0.5);
-    margin:  0 0 12px 0;
+  .text-wrap {
+    position: relative;
+    top: 10vh;
+    p.title {
+      font-size: 1.6em;
+      color: rgba(0, 0, 0, 0.5);
+      margin: 0 0 12px 0;
+    }
+    p.message {
+      font-size: 1.1em;
+      color: rgba(0, 0, 0, 0.3);
+      margin: 0;
+    }
   }
-  p.message {
-    font-size: 1.1em;
-    color: rgba(0, 0, 0, 0.3);
-    margin: 0;
+
+  background: url('/images/warning.svg') no-repeat center 20%;
+  background-size: 50vmin;
+
+  @media only all and (min-width: 600px) {
+    background-size: 40vmin;
   }
 }
