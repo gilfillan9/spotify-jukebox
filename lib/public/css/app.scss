@@ -1237,3 +1237,23 @@ aside.play-queue {
     }
   }
 }
+
+.error-wrap {
+  @include flexbox;
+  height: 100%;
+
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  p.title {
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.5);
+    margin:  0 0 12px 0;
+  }
+  p.message {
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.3);
+    margin: 0;
+  }
+}

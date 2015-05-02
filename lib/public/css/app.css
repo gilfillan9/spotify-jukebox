@@ -8703,8 +8703,6 @@ footer {
       -o-transition: z-index 400ms step-start;
       -ms-transition: z-index 400ms step-start;
       transition: z-index 400ms step-start; }
-    .animate-out .view-details .view-detail-top {
-      z-index: 0; }
     @media only all and (min-width: 600px) {
       .view-details .view-detail-top {
         top: 64px;
@@ -9167,5 +9165,24 @@ aside.play-queue {
         -webkit-flex: 1 0 0;
         -ms-flex: 1 0 0;
         flex: 1 0 0; } }
+
+.error-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; }
+  .error-wrap p.title {
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0 12px 0; }
+  .error-wrap p.message {
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.3);
+    margin: 0; }
 
 /*# sourceMappingURL=app.css.map */
