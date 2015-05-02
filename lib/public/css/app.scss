@@ -11,7 +11,8 @@ html, body {
 }
 
 .left-nav {
-  @extend .card-panel, .z-depth-5;
+  @extend .z-depth-5;
+  background: #FFFFFF;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -23,6 +24,8 @@ html, body {
   z-index: 999;
   @include transition(transform 500ms);
 
+  padding: 10px 0;
+
   .show-left-bar & {
     transform: translateX(0);
   }
@@ -30,15 +33,28 @@ html, body {
   li {
     display: block;
     margin: 1px 0;
-    height: 35px;
+    padding: 5px 10px;
     a {
       display: inline-block;
       padding: 7px 3px;
       vertical-align: middle;
       width: 100%;
+      color: rgba(0, 0, 0, 0.83);
+      font-size: 1.2em;
       &.active {
         @extend .green.lighten-3;
       }
+
+      span {
+        padding-left: 15px;
+      }
+    }
+
+    &.separator {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      margin: 7px 0;
+      height: 0px;
+      padding: 0;
     }
   }
 }
@@ -730,7 +746,10 @@ footer {
 
       a {
         padding: 0;
+        color: #039be5;
         display: block;
+        font-size: initial;
+
         @include transition(transform 300ms);
         &:hover {
           @include transform(translateY(-50%));
@@ -746,13 +765,16 @@ footer {
           width: 80px;
           line-height: 80px;
           text-align: center;
+          padding: 0;
         }
 
         i {
           font-size: 2.75em;
         }
       }
-
+      &.separator {
+        display: none;
+      }
     }
   }
 }
