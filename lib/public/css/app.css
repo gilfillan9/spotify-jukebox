@@ -1534,7 +1534,7 @@
 .grey-text.text-lighten-4, header .search-wrap .text-lighten-4.search-icon, header .search-wrap .text-lighten-4.close-search-icon, .track-table .row .column.action a.text-lighten-4 {
   color: #f5f5f5 !important; }
 
-.grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type, aside.play-queue ul li .votes button:active {
+.grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type, aside.play-queue ul li .votes button:active, aside.play-queue ul li .votes button:focus {
   background-color: #eeeeee !important; }
 
 .grey-text.text-lighten-3, header .search-wrap .text-lighten-3.search-icon, header .search-wrap .text-lighten-3.close-search-icon, .track-table .row .column.action a.text-lighten-3 {
@@ -8896,6 +8896,10 @@ aside.play-queue {
             color: green; }
           aside.play-queue ul li .votes button.selected.down {
             color: red; }
+          aside.play-queue ul li .votes button.back-btn {
+            position: absolute;
+            left: 0;
+            padding: 0 20px; }
       aside.play-queue ul li .content, aside.play-queue ul li .votes {
         -webkit-transition: transform 400ms;
         -moz-transition: transform 400ms;

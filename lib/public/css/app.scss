@@ -1022,7 +1022,7 @@ aside.play-queue {
         button {
           height: 100%;
 
-          &:active {
+          &:active, &:focus {
             @extend .grey.lighten-3;
           }
 
@@ -1034,6 +1034,12 @@ aside.play-queue {
             &.down {
               color: red;
             }
+          }
+
+          &.back-btn {
+            position: absolute;
+            left: 0;
+            padding: 0 20px;
           }
         }
       }
