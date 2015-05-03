@@ -1003,8 +1003,9 @@ aside.play-queue {
         span.current-votes {
           position: absolute;
           top: 0;
-          right: 6px;
+          right: 12px;
           bottom: 0;
+          line-height: 44px;
           vertical-align: middle;
         }
       }
@@ -1019,6 +1020,8 @@ aside.play-queue {
         @include transform(translateX(100%));
 
         button {
+          height: 100%;
+
           &:active {
             @extend .grey.lighten-3;
           }

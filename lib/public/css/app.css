@@ -8873,8 +8873,9 @@ aside.play-queue {
         aside.play-queue ul li .content span.current-votes {
           position: absolute;
           top: 0;
-          right: 6px;
+          right: 12px;
           bottom: 0;
+          line-height: 44px;
           vertical-align: middle; }
       aside.play-queue ul li .votes {
         position: absolute;
@@ -8889,10 +8890,12 @@ aside.play-queue {
         -ms-transform: translateX(100%);
         -o-transform: translateX(100%);
         transform: translateX(100%); }
-        aside.play-queue ul li .votes button.selected.up {
-          color: green; }
-        aside.play-queue ul li .votes button.selected.down {
-          color: red; }
+        aside.play-queue ul li .votes button {
+          height: 100%; }
+          aside.play-queue ul li .votes button.selected.up {
+            color: green; }
+          aside.play-queue ul li .votes button.selected.down {
+            color: red; }
       aside.play-queue ul li .content, aside.play-queue ul li .votes {
         -webkit-transition: transform 400ms;
         -moz-transition: transform 400ms;
