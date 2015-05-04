@@ -859,11 +859,6 @@ footer {
         margin: 0;
       }
 
-      .buttons-wrap {
-        display: none;
-        margin-top: 10px;
-      }
-
       @media only all and (min-width: 600px) {
         h3 {
           font-size: 1.3em;
@@ -873,10 +868,6 @@ footer {
         }
         p {
           font-size: 1.1em;
-        }
-
-        .buttons-wrap {
-          display: block;
         }
       }
 
@@ -896,6 +887,34 @@ footer {
       img {
         max-height: 100%;
         width: auto;
+      }
+    }
+
+    .play-controls {
+      position: absolute;
+      bottom: -27px;
+      opacity: 0;
+
+      .animate-in & {
+        @include transition(opacity 500ms ease-out);
+        opacity: 1;
+      }
+      .animate-out & {
+        @include transition(opacity 500ms ease-in);
+        opacity: 0;
+      }
+
+      @media only all and (min-width: 600px) {
+        right: 40px;
+      }
+      @media only all and (min-width: 1200px) {
+        right: 80px;
+      }
+      @media only all and (max-width: 600px) {
+        ul {
+          top: 74px;
+          bottom: 0;
+        }
       }
     }
 
@@ -1301,5 +1320,44 @@ aside.play-queue {
 
   @media only all and (min-width: 600px) {
     background-size: 40vmin;
+  }
+}
+
+.fixed-action-btn {
+
+  ul {
+    margin: 0;
+    padding: 10px 0;
+    li {
+      position: relative;
+      margin: 0;
+      padding-bottom: 1rem;
+      label {
+        @extend .grey-text.text-lighten-4, .grey.darken-2;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        padding: 0 10px;
+        margin-top: -1.25rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        opacity: 0;
+        @include transform(translateX(-100%));
+        @include transition(opacity 400ms);
+        pointer-events: none;
+        white-space: nowrap;
+      }
+
+      &:hover label {
+        opacity: 1;
+      }
+    }
+  }
+  @media only all and (max-width: 601px) {
+    &:hover ul li label {
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 }

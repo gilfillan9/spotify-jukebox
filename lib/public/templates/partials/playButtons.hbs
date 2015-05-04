@@ -1,0 +1,19 @@
+<div class="fixed-action-btn play-controls">
+    <a class="btn-floating btn-large red">
+        <i class="large mdi-av-play-arrow"></i>
+    </a>
+    <ul>
+        <li>
+            <label>Add to Queue</label>
+            <button class="btn-floating blue" data-uri="{{uri}}" data-action="add">
+                <i class="large mdi-av-playlist-add"></i>
+            </button>
+        </li>
+        <li>
+            <label>Replace Queue</label>
+            <button class="btn-floating green" data-uri="{{uri}}" data-action="clear|add">
+                <i class="large mdi-av-queue-music"></i>
+            </button>
+        </li>
+    </ul>
+</div>

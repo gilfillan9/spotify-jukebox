@@ -1531,7 +1531,7 @@
 .grey.lighten-4 {
   background-color: #f5f5f5 !important; }
 
-.grey-text.text-lighten-4, header .search-wrap .text-lighten-4.search-icon, header .search-wrap .text-lighten-4.close-search-icon, .track-table .row .column.action a.text-lighten-4 {
+.grey-text.text-lighten-4, header .search-wrap .text-lighten-4.search-icon, header .search-wrap .text-lighten-4.close-search-icon, .track-table .row .column.action a.text-lighten-4, .fixed-action-btn ul li label {
   color: #f5f5f5 !important; }
 
 .grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type, aside.play-queue ul li .votes button:active, aside.play-queue ul li .votes button:focus {
@@ -1564,7 +1564,7 @@
 .grey-text.text-darken-1, header .search-wrap .text-darken-1.search-icon, header .search-wrap .text-darken-1.close-search-icon, .track-table .row .column.action a.text-darken-1 {
   color: #757575 !important; }
 
-.grey.darken-2 {
+.grey.darken-2, .fixed-action-btn ul li label {
   background-color: #616161 !important; }
 
 .grey-text.text-darken-2, header .search-wrap .text-darken-2.search-icon, header .search-wrap .text-darken-2.close-search-icon, .track-table .row .column.action a.text-darken-2 {
@@ -8756,18 +8756,13 @@ footer {
         font-size: 14px;
         line-height: 1.2em;
         margin: 0; }
-      .view-details .view-detail-top .detail-text .buttons-wrap {
-        display: none;
-        margin-top: 10px; }
       @media only all and (min-width: 600px) {
         .view-details .view-detail-top .detail-text h3 {
           font-size: 1.3em; }
         .view-details .view-detail-top .detail-text h4 {
           font-size: 1.5em; }
         .view-details .view-detail-top .detail-text p {
-          font-size: 1.1em; }
-        .view-details .view-detail-top .detail-text .buttons-wrap {
-          display: block; } }
+          font-size: 1.1em; } }
       @media only all and (min-width: 992px) {
         .view-details .view-detail-top .detail-text {
           margin: 12px; }
@@ -8779,6 +8774,34 @@ footer {
       .view-details .view-detail-top .image-wrap img {
         max-height: 100%;
         width: auto; }
+    .view-details .view-detail-top .play-controls {
+      position: absolute;
+      bottom: -27px;
+      opacity: 0; }
+      .animate-in .view-details .view-detail-top .play-controls {
+        -webkit-transition: opacity 500ms ease-out;
+        -moz-transition: opacity 500ms ease-out;
+        -o-transition: opacity 500ms ease-out;
+        -ms-transition: opacity 500ms ease-out;
+        transition: opacity 500ms ease-out;
+        opacity: 1; }
+      .animate-out .view-details .view-detail-top .play-controls {
+        -webkit-transition: opacity 500ms ease-in;
+        -moz-transition: opacity 500ms ease-in;
+        -o-transition: opacity 500ms ease-in;
+        -ms-transition: opacity 500ms ease-in;
+        transition: opacity 500ms ease-in;
+        opacity: 0; }
+      @media only all and (min-width: 600px) {
+        .view-details .view-detail-top .play-controls {
+          right: 40px; } }
+      @media only all and (min-width: 1200px) {
+        .view-details .view-detail-top .play-controls {
+          right: 80px; } }
+      @media only all and (max-width: 600px) {
+        .view-details .view-detail-top .play-controls ul {
+          top: 74px;
+          bottom: 0; } }
     .view-details .view-detail-top + .track-table {
       margin-top: 0; }
 
@@ -9223,5 +9246,41 @@ aside.play-queue {
   @media only all and (min-width: 600px) {
     .error-wrap {
       background-size: 40vmin; } }
+
+.fixed-action-btn ul {
+  margin: 0;
+  padding: 10px 0; }
+  .fixed-action-btn ul li {
+    position: relative;
+    margin: 0;
+    padding-bottom: 1rem; }
+    .fixed-action-btn ul li label {
+      border-radius: 4px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      padding: 0 10px;
+      margin-top: -1.25rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      opacity: 0;
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transition: opacity 400ms;
+      -moz-transition: opacity 400ms;
+      -o-transition: opacity 400ms;
+      -ms-transition: opacity 400ms;
+      transition: opacity 400ms;
+      pointer-events: none;
+      white-space: nowrap; }
+    .fixed-action-btn ul li:hover label {
+      opacity: 1; }
+@media only all and (max-width: 601px) {
+  .fixed-action-btn:hover ul li label {
+    opacity: 1;
+    pointer-events: all; } }
 
 /*# sourceMappingURL=app.css.map */
