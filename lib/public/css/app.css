@@ -8992,23 +8992,26 @@ aside.play-queue {
   0% {
     transform: scale(1);
     opacity: 1; }
+  80% {
+    opacity: 0; }
   100% {
-    transform: scale(0);
-    opacity: 0.2; } }
+    transform: scale(0); } }
 @-moz-keyframes zoom-out {
   0% {
     transform: scale(1);
     opacity: 1; }
+  80% {
+    opacity: 0; }
   100% {
-    transform: scale(0);
-    opacity: 0.2; } }
+    transform: scale(0); } }
 @keyframes zoom-out {
   0% {
     transform: scale(1);
     opacity: 1; }
+  80% {
+    opacity: 0; }
   100% {
-    transform: scale(0);
-    opacity: 0.2; } }
+    transform: scale(0); } }
 @media only all and (min-width: 600px) {
   .animate-in .curve-in, .animate-in .pill, aside .curve-in, aside .pill {
     -webkit-animation-fill-mode: both;
@@ -9021,11 +9024,11 @@ aside.play-queue {
     -ms-animation-duration: 500ms;
     -o-animation-duration: 500ms;
     opacity: 0;
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     -webkit-animation-name: curve-in;
     -moz-animation-name: curve-in;
     -ms-animation-name: curve-in;
@@ -9042,6 +9045,11 @@ aside.play-queue {
     -moz-animation-duration: 300ms;
     -ms-animation-duration: 300ms;
     -o-animation-duration: 300ms;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     -webkit-animation-name: zoom-out;
     -moz-animation-name: zoom-out;
     -ms-animation-name: zoom-out;
@@ -9060,11 +9068,11 @@ aside.play-queue {
       -o-transition: transform 500ms ease-in;
       -ms-transition: transform 500ms ease-in;
       transition: transform 500ms ease-in;
-      -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-      animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      -webkit-animation-timing-function: ease-in;
+      -moz-animation-timing-function: ease-in;
+      -ms-animation-timing-function: ease-in;
+      -o-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
       -webkit-transform: translateY(-100%);
       -moz-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
@@ -9082,11 +9090,11 @@ aside.play-queue {
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -moz-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -ms-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    -o-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-    animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1); }
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
     .animate-in .slide-down-in, .animate-in .track-table {
       -webkit-transform: translateY(0%);
       -moz-transform: translateY(0%);

@@ -1113,9 +1113,11 @@ aside.play-queue {
     transform: scale(1);
     opacity: 1;
   }
+  80% {
+    opacity: 0;
+  }
   100% {
     transform: scale(0);
-    opacity: 0.2;
   }
 }
 
@@ -1125,7 +1127,7 @@ aside.play-queue {
       @include animation-fill-mode(both);
       @include animation-duration(500ms);
       opacity: 0;
-      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
+      @include animation-timing-function(ease-out);
       @include animation-name(curve-in);
     }
 
@@ -1135,6 +1137,7 @@ aside.play-queue {
     .animate-out & {
       @include animation-fill-mode(both);
       @include animation-duration(300ms);
+      @include animation-timing-function(ease-in);
       @include animation-name(zoom-out);
     }
   }
@@ -1143,14 +1146,14 @@ aside.play-queue {
     @include transform(translateY(0%));
     .animate-out & {
       @include transition(transform 500ms ease-in);
-      @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
+      @include animation-timing-function(ease-in);
       @include transform(translateY(-100%));
     }
   }
   .slide-down-in {
     @include transition(transform 500ms ease-out);
     @include transform(translateY(-100%));
-    @include animation-timing-function(cubic-bezier(.55, 0, .1, 1));
+    @include animation-timing-function(ease-out);
 
     .animate-in & {
       @include transform(translateY(0%));
