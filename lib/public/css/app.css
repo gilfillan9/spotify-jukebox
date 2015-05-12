@@ -8692,7 +8692,7 @@ footer {
   margin-top: 100px; }
   @media only all and (min-width: 992px) {
     .view-details {
-      margin-top: 300px; } }
+      margin: 300px 20px 0; } }
   .view-details .view-detail-top {
     height: 100px;
     position: fixed;
@@ -9290,5 +9290,8 @@ aside.play-queue {
   .fixed-action-btn:hover ul li label {
     opacity: 1;
     pointer-events: all; } }
+@media only all and (min-width: 601px) {
+  .fixed-action-btn ul button {
+    opacity: 0; } }
 
 /*# sourceMappingURL=app.css.map */
