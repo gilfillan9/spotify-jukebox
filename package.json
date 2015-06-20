@@ -6,11 +6,12 @@
     "async": "*",
     "express": "*",
     "loudness": "*",
+    "nedb": "*",
+    "node-spotify": "*",
     "node-uuid": "*",
     "promise": "*",
+    "prompt": "^0.2.14",
     "request": "*",
-    "socket.io": "*",
-    "nedb": "*",
-    "node-spotify": "*"
+    "socket.io": "*"
   }
 }
