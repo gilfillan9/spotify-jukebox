@@ -6979,9 +6979,6 @@ select {
   .preloader-wrapper.big {
     width: 64px;
     height: 64px; }
-  .preloader-wrapper.bigger {
-    width: 124px;
-    height: 124px; }
   .preloader-wrapper.active {
     /* duration: 360 * ARCTIME / (ARCSTARTROT + (360-ARCSIZE)) */
     -webkit-animation: container-rotate 1568ms linear infinite;
