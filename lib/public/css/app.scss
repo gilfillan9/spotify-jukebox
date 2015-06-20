@@ -1356,16 +1356,14 @@ aside.play-queue {
         opacity: 1;
       }
     }
+    button {
+      opacity: 0;
+    }
   }
   @media only all and (max-width: 601px) {
     &:hover ul li label {
       opacity: 1;
       pointer-events: all;
-    }
-  }
-  @media only all and (min-width: 601px) {
-    ul button {
-      opacity: 0;
     }
   }
 }

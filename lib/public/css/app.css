@@ -9286,12 +9286,11 @@ aside.play-queue {
       white-space: nowrap; }
     .fixed-action-btn ul li:hover label {
       opacity: 1; }
+  .fixed-action-btn ul button {
+    opacity: 0; }
 @media only all and (max-width: 601px) {
   .fixed-action-btn:hover ul li label {
     opacity: 1;
     pointer-events: all; } }
-@media only all and (min-width: 601px) {
-  .fixed-action-btn ul button {
-    opacity: 0; } }
 
 /*# sourceMappingURL=app.css.map */
