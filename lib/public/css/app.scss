@@ -1367,3 +1367,9 @@ aside.play-queue {
     }
   }
 }
+
+@media only all and (min-width: 993px) {
+  #toast-container {
+    right: 315px;
+  }
+}

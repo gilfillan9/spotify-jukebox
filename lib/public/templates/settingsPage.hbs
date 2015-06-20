@@ -1,6 +1,49 @@
 <div class="settings-page">
     <h2>Settings</h2>
-    <a class="btn btn-default save-queue">Save Queue</a>
-    <a class="btn btn-danger clear-queue">Clear Queue</a>
-    <a class="btn btn-danger reboot-pi">Reboot Pi</a>
+
+    <div class="card-panel">
+        <a class="btn btn-default save-queue">Save Queue</a>
+        <a class="btn btn-danger clear-queue">Clear Queue</a>
+        <a class="btn btn-danger reboot-pi">Reboot Pi</a>
+    </div>
+
+    <div class="card">
+        <h2>Spotify Accounts</h2>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <select id="accounts"></select>
+                <label for="accounts">Switch Account</label>
+            </div>
+        </div>
+
+        <h2>Add Spotify Account</h2>
+
+        <div class="row">
+            <form class="col s12 add-auth-file">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Friendly Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="username" type="text" class="validate">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="password" type="text" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="right btn waves-effect waves-light" type="submit" name="action">Add
+                        <i class="mdi-content-send right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
 </div>
