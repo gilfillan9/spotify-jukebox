@@ -1,14 +1,13 @@
 {
-    "http":    {
-        "ip":   "0.0.0.0",
-        "port": 80
-    },
-    "spotify": {
-        "username":       "<CHANGEME>",
-        "password":       "<CHANGEME>",
-        "apiKeyLocation": "./spotify_appkey.key",
-        "clientId":      "<CHANGEME>",
-        "clientSecret":   "<CHANGEME>",
-	"traceFileLocation": "./data/trace.log"
-    }
+  "http": {
+    "ip": "0.0.0.0",
+    "port": 80
+  },
+  "spotify": {
+    "authDir": "./data/auth/",
+    "apiKeyLocation": "./spotify_appkey.key",
+    "clientId": "<CHANGEME>",
+    "clientSecret": "<CHANGEME>",
+    "traceFileLocation": "./data/trace.log"
+  }
 }
