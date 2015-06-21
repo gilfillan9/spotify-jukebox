@@ -8818,7 +8818,6 @@ footer {
   overflow: hidden;
   z-index: 5; }
   .context-menu ul {
-    opacity: 0;
     min-width: 150px;
     margin: 0;
     padding: 10px 0;
@@ -8831,7 +8830,7 @@ footer {
       transition: none;
       width: 100%;
       display: block;
-      padding: 5px 16px;
+      padding: 5px 20px;
       border: 0; }
       .context-menu ul li.separator {
         height: 1px;
