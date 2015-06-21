@@ -2,7 +2,7 @@
     <ul>
         {{#each items}}
             {{#ifCond "text" type}}
-                <li data-action="{{action}}" data-uri="{{uri}}">
+                <li data-action="{{action}}" data-uri="{{uri}}" class="waves-effect">
                     {{#if icon}}<i class="{{icon}} context-icon"></i>{{/if}}
                     {{#if image}}<img src="{{image}}" class="context-icon"/>{{/if}}
                     <span class="content">{{text}}</span>

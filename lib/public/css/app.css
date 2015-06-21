@@ -8809,6 +8809,7 @@ footer {
   position: absolute;
   width: 0;
   height: 0;
+  margin: 0;
   -webkit-transition: width 200ms, height 200ms;
   -moz-transition: width 200ms, height 200ms;
   -o-transition: width 200ms, height 200ms;
@@ -8818,17 +8819,28 @@ footer {
   z-index: 5; }
   .context-menu ul {
     opacity: 0;
-    min-width: 150px; }
+    min-width: 150px;
+    margin: 0;
+    padding: 10px 0;
+    background: white; }
     .context-menu ul li {
-      -webkit-transition: background-color 300ms, opacity 200ms;
-      -moz-transition: background-color 300ms, opacity 200ms;
-      -o-transition: background-color 300ms, opacity 200ms;
-      -ms-transition: background-color 300ms, opacity 200ms;
-      transition: background-color 300ms, opacity 200ms; }
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      -ms-transition: none;
+      transition: none;
+      width: 100%;
+      display: block;
+      padding: 5px 16px;
+      border: 0; }
       .context-menu ul li.separator {
-        height: 0;
+        height: 1px;
+        background: #eee;
         padding: 0;
-        margin: 0; }
+        margin: 6px 0; }
+      .context-menu ul li i {
+        vertical-align: middle;
+        padding-right: 6px; }
 
 .preloader-outer-wrapper {
   margin: auto;
@@ -9143,7 +9155,8 @@ aside.play-queue {
 .track-table .row.header {
   display: none; }
 .track-table .row .column {
-  text-align: left; }
+  text-align: left;
+  padding: 0 10px; }
   .track-table .row .column.action {
     display: none; }
     .track-table .row .column.action a {
@@ -9173,49 +9186,49 @@ aside.play-queue {
       display: flex; }
     .track-table .row:hover {
       background: #f2f2f2; }
-    .track-table .row.header {
-      font-weight: bold;
-      border-bottom: 1px solid #d0d0d0; }
-      .track-table .row.header .column {
-        padding: 10px 5px; }
-      .track-table .row.header:hover {
-        background: #FFFFFF; }
+      .track-table .row:hover .column.title a {
+        display: block; }
     .track-table .row .column {
-      padding: 0 5px; }
-      .track-table .row .column.action {
-        width: 30px;
-        text-align: center;
-        display: initial; }
-        .track-table .row .column.action a {
-          color: grey; }
+      padding: 4px 16px;
+      -webkit-box-flex: 1 0 0;
+      -moz-box-flex: 1 0 0;
+      -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0;
+      flex: 1 0 0; }
+      .track-table .row .column, .track-table .row .column a {
+        color: #616161; }
       .track-table .row .column.title {
-        -webkit-box-flex: 1 0 0;
-        -moz-box-flex: 1 0 0;
-        -webkit-flex: 1 0 0;
-        -ms-flex: 1 0 0;
-        flex: 1 0 0;
-        font-weight: normal; }
-      .track-table .row .column.artist {
-        -webkit-box-flex: 1 0 0;
-        -moz-box-flex: 1 0 0;
-        -webkit-flex: 1 0 0;
-        -ms-flex: 1 0 0;
-        flex: 1 0 0;
+        font-weight: normal;
         color: #000000; }
+        .track-table .row .column.title a {
+          color: #000000;
+          display: none;
+          float: right;
+          font-size: 24px;
+          margin: -8px 0;
+          width: 36px;
+          border-radius: 50%;
+          text-align: center; }
+          .track-table .row .column.title a:hover {
+            text-decoration: none; }
+      .track-table .row .column.artist a::after {
+        content: ", "; }
+      .track-table .row .column.artist a:last-of-type::after {
+        content: ""; }
       .track-table .row .column.time {
-        -webkit-box-flex: 1 0 0;
-        -moz-box-flex: 1 0 0;
-        -webkit-flex: 1 0 0;
-        -ms-flex: 1 0 0;
-        flex: 1 0 0;
         max-width: 80px;
         display: initial; }
-      .track-table .row .column.album {
-        -webkit-box-flex: 1 0 0;
-        -moz-box-flex: 1 0 0;
-        -webkit-flex: 1 0 0;
-        -ms-flex: 1 0 0;
-        flex: 1 0 0; } }
+      .track-table .row .column a:hover {
+        text-decoration: underline; }
+    .track-table .row.header {
+      border-bottom: 1px solid #d0d0d0; }
+      .track-table .row.header .column {
+        color: #000000;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: bold; }
+      .track-table .row.header:hover {
+        background: #FFFFFF; } }
 
 .error-wrap {
   display: -webkit-box;

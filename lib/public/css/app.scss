@@ -933,6 +933,7 @@ footer {
   position: absolute;
   width: 0;
   height: 0;
+  margin: 0;
   @include transition((width 200ms, height 200ms));
   overflow: hidden;
   z-index: 5;
@@ -941,19 +942,32 @@ footer {
     opacity: 0;
     @extend .collection, .z-depth-1;
     min-width: 150px;
+    margin: 0;
+    padding: 10px 0;
+    background: white;
 
     li {
       @extend .collection-item;
-      @include transition((background-color 300ms, opacity 200ms));
+      @include transition(none);
+      width: 100%;
+      display: block;
+      padding: 5px 16px;
+      border: 0;
 
       &.separator {
-        height: 0;
+        height: 1px;
+        background: #eee;
         padding: 0;
-        margin: 0;
+        margin: 6px 0;
       }
 
       &:hover {
         @extend .grey.lighten-3;
+      }
+
+      i {
+        vertical-align: middle;
+        padding-right: 6px;
       }
     }
   }
@@ -1215,6 +1229,7 @@ aside.play-queue {
 
     .column {
       text-align: left;
+      padding: 0 10px;
 
       &.action {
         display: none;
@@ -1247,44 +1262,68 @@ aside.play-queue {
       }
       &:hover {
         background: #f2f2f2;
-      }
-      &.header {
-        font-weight: bold;
-        border-bottom: 1px solid #d0d0d0;
 
-        .column {
-          padding: 10px 5px;
-        }
-
-        &:hover {
-          background: #FFFFFF;
+        .column.title a {
+          display: block;
         }
       }
       .column {
-        padding: 0 5px;
-        &.action {
-          width: 30px;
-          text-align: center;
-          display: initial;
+        padding: 4px 16px;
+        @include flex(1 0 0);
+        &, a {
+          color: #616161;
+        }
+
+        &.title {
+          font-weight: normal;
+          color: #000000;
           a {
-            color: grey;
+            color: #000000;
+            display: none;
+            float: right;
+            font-size: 24px;
+            margin: -8px 0;
+            width: 36px;
+            border-radius: 50%;
+            text-align: center;
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
-        &.title {
-          @include flex(1 0 0);
-          font-weight: normal;
-        }
         &.artist {
-          @include flex(1 0 0);
-          color: #000000;
+
+          a::after {
+            content: ", ";
+          }
+          a:last-of-type::after {
+            content: "";
+          }
         }
         &.time {
-          @include flex(1 0 0);
           max-width: 80px;
           display: initial;
         }
         &.album {
-          @include flex(1 0 0);
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.header {
+        border-bottom: 1px solid #d0d0d0;
+
+        .column {
+          color: #000000;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background: #FFFFFF;
         }
       }
     }
