@@ -1525,61 +1525,61 @@
 .grey.lighten-5 {
   background-color: #fafafa !important; }
 
-.grey-text.text-lighten-5, header .search-wrap .text-lighten-5.search-icon, header .search-wrap .text-lighten-5.close-search-icon, .track-table .row .column.action a.text-lighten-5 {
+.grey-text.text-lighten-5, .track-table .row .column.action a.text-lighten-5 {
   color: #fafafa !important; }
 
 .grey.lighten-4 {
   background-color: #f5f5f5 !important; }
 
-.grey-text.text-lighten-4, header .search-wrap .text-lighten-4.search-icon, header .search-wrap .text-lighten-4.close-search-icon, .track-table .row .column.action a.text-lighten-4, .fixed-action-btn ul li label {
+.grey-text.text-lighten-4, .track-table .row .column.action a.text-lighten-4, .fixed-action-btn ul li label {
   color: #f5f5f5 !important; }
 
 .grey.lighten-3, .mobile-controls .current-track-details button.mobile-show-queue:focus, .mobile-controls .controls-wrap .buttons-wrap button:focus, .context-menu ul li:hover, aside.play-queue ul li:first-of-type, aside.play-queue ul li .votes button:active, aside.play-queue ul li .votes button:focus {
   background-color: #eeeeee !important; }
 
-.grey-text.text-lighten-3, header .search-wrap .text-lighten-3.search-icon, header .search-wrap .text-lighten-3.close-search-icon, .track-table .row .column.action a.text-lighten-3 {
+.grey-text.text-lighten-3, .track-table .row .column.action a.text-lighten-3 {
   color: #eeeeee !important; }
 
 .grey.lighten-2 {
   background-color: #e0e0e0 !important; }
 
-.grey-text.text-lighten-2, header .search-wrap .text-lighten-2.search-icon, header .search-wrap .text-lighten-2.close-search-icon, .track-table .row .column.action a.text-lighten-2 {
+.grey-text.text-lighten-2, .track-table .row .column.action a.text-lighten-2 {
   color: #e0e0e0 !important; }
 
 .grey.lighten-1 {
   background-color: #bdbdbd !important; }
 
-.grey-text.text-lighten-1, header .search-wrap .text-lighten-1.search-icon, header .search-wrap .text-lighten-1.close-search-icon, .track-table .row .column.action a.text-lighten-1 {
+.grey-text.text-lighten-1, .track-table .row .column.action a.text-lighten-1 {
   color: #bdbdbd !important; }
 
 .grey {
   background-color: #9e9e9e !important; }
 
-.grey-text, header .search-wrap .search-icon, header .search-wrap .close-search-icon, .track-table .row .column.action a {
+.grey-text, .track-table .row .column.action a {
   color: #9e9e9e !important; }
 
 .grey.darken-1 {
   background-color: #757575 !important; }
 
-.grey-text.text-darken-1, header .search-wrap .text-darken-1.search-icon, header .search-wrap .text-darken-1.close-search-icon, .context-menu ul li i, .track-table .row .column.action a.text-darken-1 {
+.grey-text.text-darken-1, .context-menu ul li i, .track-table .row .column.action a.text-darken-1 {
   color: #757575 !important; }
 
 .grey.darken-2, .fixed-action-btn ul li label {
   background-color: #616161 !important; }
 
-.grey-text.text-darken-2, header .search-wrap .text-darken-2.search-icon, header .search-wrap .text-darken-2.close-search-icon, aside.play-queue ul li .content .artists, .track-table .row .column.action a.text-darken-2 {
+.grey-text.text-darken-2, aside.play-queue ul li .content .artists, .track-table .row .column.action a.text-darken-2 {
   color: #616161 !important; }
 
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, header .search-wrap .text-darken-3.search-icon, header .search-wrap .text-darken-3.close-search-icon, header .search-wrap .search, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .context-menu ul li:hover i, .track-table .row .column.action a.text-darken-3, .track-table .row:hover .column.action a, .track-table .row div.artist {
+.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .context-menu ul li:hover i, .track-table .row .column.action a.text-darken-3, .track-table .row:hover .column.action a, .track-table .row div.artist {
   color: #424242 !important; }
 
 .grey.darken-4 {
   background-color: #212121 !important; }
 
-.grey-text.text-darken-4, header .search-wrap .text-darken-4.search-icon, header .search-wrap .text-darken-4.close-search-icon, .track-table .row .column.action a.text-darken-4 {
+.grey-text.text-darken-4, .track-table .row .column.action a.text-darken-4 {
   color: #212121 !important; }
 
 .shades.black {
@@ -8128,7 +8128,7 @@ header {
     position: absolute;
     left: 12px;
     right: 60px;
-    padding-left: 42px;
+    padding-left: 38px;
     background: rgba(255, 255, 255, 0);
     margin: 5px 0;
     border-radius: 3px; }
@@ -8138,8 +8138,9 @@ header {
       opacity: 0;
       font-size: 1.25em;
       line-height: 3rem;
-      width: 30px;
-      height: 100%; }
+      width: 34px;
+      height: 100%;
+      color: #FFF; }
     header .search-wrap .close-search-icon {
       display: none; }
     header .search-wrap .search {
@@ -8147,7 +8148,10 @@ header {
       box-shadow: none !important;
       margin: 0;
       float: right;
-      opacity: 0; }
+      opacity: 0;
+      color: #FFF; }
+      header .search-wrap .search::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.7) !important; }
   @media only all and (max-width: 992px) {
     header.show-search .show-search-btn, header.show-search .show-sidebar-btn, header.show-search .close-mobile-controls-btn {
       display: none; }
@@ -8155,10 +8159,7 @@ header {
       display: initial; }
     header.show-search .search-wrap {
       pointer-events: all;
-      background: white;
-      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+      background: rgba(255, 255, 255, 0.35); }
       header.show-search .search-wrap .search {
         -webkit-transition-delay: 400ms;
         -moz-transition-delay: 400ms;
@@ -8201,48 +8202,28 @@ header {
       position: fixed;
       top: 6px;
       height: 52px;
-      margin: auto; }
-      header .search-wrap .search-icon {
-        left: 8px;
+      padding-left: 68px;
+      margin: auto; } }
+  @media only all and (min-width: 992px) and (min-width: 1200px) {
+    header .search-wrap {
+      width: 800px; } }
+  @media only all and (min-width: 992px) {
+      header .search-wrap .search-icon, header .search-wrap .close-search-icon {
+        left: 12px;
         opacity: 1;
-        color: #FFF !important;
         font-size: 22px;
         line-height: 52px; }
       header .search-wrap .search {
         opacity: 1;
         height: 52px; }
-        header .search-wrap .search::-webkit-input-placeholder {
-          color: rgba(255, 255, 255, 0.7) !important; }
       body.show-search-page header .search-wrap {
-        top: 64px;
-        left: 80px;
-        right: 200px;
-        height: 70px;
-        padding: 0 50px;
-        border-radius: 0;
-        box-shadow: none;
-        width: auto;
-        background: white; } }
-    @media only all and (min-width: 992px) and (min-width: 1200px) {
-      body.show-search-page header .search-wrap {
-        right: 300px; } }
-  @media only all and (min-width: 992px) {
-        body.show-search-page header .search-wrap .search-icon, body.show-search-page header .search-wrap .close-search-icon {
-          left: 15px;
-          height: 70px;
-          line-height: 70px;
-          color: #9e9e9e !important; }
+        background: rgba(255, 255, 255, 0.35); }
         body.show-search-page header .search-wrap .close-search-icon {
-          right: 0;
-          text-align: center;
-          left: auto;
           display: block;
-          opacity: 1;
-          width: 60px;
-          padding: 0; }
-        body.show-search-page header .search-wrap .search {
-          height: 70px;
-          line-height: 70px; } }
+          left: auto;
+          text-align: center;
+          width: 30px;
+          right: 0; } }
 
 main {
   position: absolute;
@@ -9171,8 +9152,7 @@ aside.play-queue {
       right: 200px; } }
   @media only screen and (min-width: 992px) {
     .search-content {
-      left: 80px;
-      padding-top: 70px; } }
+      left: 80px; } }
   @media only screen and (min-width: 1200px) {
     .search-content {
       right: 300px; } }
