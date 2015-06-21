@@ -10,6 +10,17 @@ html, body {
   left: 0;
 }
 
+body {
+  > header, > main, > footer, > aside, > section {
+    @include transition(transform 500ms);
+  }
+  &.show-left-bar {
+    > header, > main, > footer, > aside, > section.mobile-current-playing {
+      transform: translateX(200px);
+    }
+  }
+}
+
 .left-nav {
   @extend .z-depth-5;
   background: #FFFFFF;
@@ -17,8 +28,7 @@ html, body {
   top: 0;
   bottom: 0;
   left: 0;
-  max-width: 300px;
-  width: 90%;
+  width: 300px;
   transform: translateX(-100%);
   margin: 0;
   z-index: 999;

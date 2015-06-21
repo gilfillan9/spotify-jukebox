@@ -8019,14 +8019,22 @@ html, body {
   right: 0;
   left: 0; }
 
+body > header, body > main, body > footer, body > aside, body > section {
+  -webkit-transition: transform 500ms;
+  -moz-transition: transform 500ms;
+  -o-transition: transform 500ms;
+  -ms-transition: transform 500ms;
+  transition: transform 500ms; }
+body.show-left-bar > header, body.show-left-bar > main, body.show-left-bar > footer, body.show-left-bar > aside, body.show-left-bar > section.mobile-current-playing {
+  transform: translateX(200px); }
+
 .left-nav {
   background: #FFFFFF;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  max-width: 300px;
-  width: 90%;
+  width: 300px;
   transform: translateX(-100%);
   margin: 0;
   z-index: 999;
