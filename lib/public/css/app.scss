@@ -940,7 +940,7 @@ footer {
 
   ul {
     @extend .collection, .z-depth-1;
-    min-width: 150px;
+    min-width: 180px;
     margin: 0;
     padding: 10px 0;
     background: white;
@@ -960,14 +960,20 @@ footer {
         margin: 6px 0;
       }
 
-      &:hover {
-        @extend .grey.lighten-3;
-      }
-
       i {
         vertical-align: middle;
-        padding-right: 6px;
+        padding-right: 8px;
+        font-size: 20px;
+        @extend .grey-text.text-darken-1;
       }
+
+      &:hover {
+        @extend .grey.lighten-3;
+        i {
+          @extend .grey-text.text-darken-3;
+        }
+      }
+
     }
   }
 }
@@ -1015,13 +1021,13 @@ aside.play-queue {
         .title {
           font-weight: bold;
           margin-right: 25px;
-          padding-left: 4px;
+          padding-left: 8px;
         }
 
         .artists {
           margin-right: 25px;
-          padding-left: 4px;
-          @extend .grey-text.text-darken-3;
+          padding-left: 8px;
+          @extend .grey-text.text-darken-2;
           .artist {
             &::after {
               content: ", ";
@@ -1035,12 +1041,26 @@ aside.play-queue {
         span.current-votes {
           position: absolute;
           top: 0;
-          right: 12px;
+          right: 18px;
           bottom: 0;
           line-height: 44px;
           vertical-align: middle;
         }
       }
+      .show-context-menu {
+        position: absolute;
+        right: 40px;
+        top: 5px;
+        width: 36px;
+        border-radius: 50%;
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        display: inline-block;
+        opacity: 0;
+        @include transition((opacity 400ms ease))
+      }
+
       .votes {
         position: absolute;
         top: 0;
@@ -1095,6 +1115,10 @@ aside.play-queue {
         right: 0;
       }
       @include transition(top 800ms);
+
+      &:hover .show-context-menu {
+        opacity: 1;
+      }
     }
   }
 }

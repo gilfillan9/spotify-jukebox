@@ -1561,19 +1561,19 @@
 .grey.darken-1 {
   background-color: #757575 !important; }
 
-.grey-text.text-darken-1, header .search-wrap .text-darken-1.search-icon, header .search-wrap .text-darken-1.close-search-icon, .track-table .row .column.action a.text-darken-1 {
+.grey-text.text-darken-1, header .search-wrap .text-darken-1.search-icon, header .search-wrap .text-darken-1.close-search-icon, .context-menu ul li i, .track-table .row .column.action a.text-darken-1 {
   color: #757575 !important; }
 
 .grey.darken-2, .fixed-action-btn ul li label {
   background-color: #616161 !important; }
 
-.grey-text.text-darken-2, header .search-wrap .text-darken-2.search-icon, header .search-wrap .text-darken-2.close-search-icon, .track-table .row .column.action a.text-darken-2 {
+.grey-text.text-darken-2, header .search-wrap .text-darken-2.search-icon, header .search-wrap .text-darken-2.close-search-icon, aside.play-queue ul li .content .artists, .track-table .row .column.action a.text-darken-2 {
   color: #616161 !important; }
 
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, header .search-wrap .text-darken-3.search-icon, header .search-wrap .text-darken-3.close-search-icon, header .search-wrap .search, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, aside.play-queue ul li .content .artists, .track-table .row .column.action a.text-darken-3, .track-table .row:hover .column.action a, .track-table .row div.artist {
+.grey-text.text-darken-3, header .search-wrap .text-darken-3.search-icon, header .search-wrap .text-darken-3.close-search-icon, header .search-wrap .search, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .context-menu ul li:hover i, .track-table .row .column.action a.text-darken-3, .track-table .row:hover .column.action a, .track-table .row div.artist {
   color: #424242 !important; }
 
 .grey.darken-4 {
@@ -8818,7 +8818,7 @@ footer {
   overflow: hidden;
   z-index: 5; }
   .context-menu ul {
-    min-width: 150px;
+    min-width: 180px;
     margin: 0;
     padding: 10px 0;
     background: white; }
@@ -8839,7 +8839,8 @@ footer {
         margin: 6px 0; }
       .context-menu ul li i {
         vertical-align: middle;
-        padding-right: 6px; }
+        padding-right: 8px;
+        font-size: 20px; }
 
 .preloader-outer-wrapper {
   margin: auto;
@@ -8892,10 +8893,10 @@ aside.play-queue {
         aside.play-queue ul li .content .title {
           font-weight: bold;
           margin-right: 25px;
-          padding-left: 4px; }
+          padding-left: 8px; }
         aside.play-queue ul li .content .artists {
           margin-right: 25px;
-          padding-left: 4px; }
+          padding-left: 8px; }
           aside.play-queue ul li .content .artists .artist::after {
             content: ", ";
             display: inline; }
@@ -8904,10 +8905,26 @@ aside.play-queue {
         aside.play-queue ul li .content span.current-votes {
           position: absolute;
           top: 0;
-          right: 12px;
+          right: 18px;
           bottom: 0;
           line-height: 44px;
           vertical-align: middle; }
+      aside.play-queue ul li .show-context-menu {
+        position: absolute;
+        right: 40px;
+        top: 5px;
+        width: 36px;
+        border-radius: 50%;
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        transition: opacity 400ms ease; }
       aside.play-queue ul li .votes {
         position: absolute;
         top: 0;
@@ -8953,6 +8970,8 @@ aside.play-queue {
         position: absolute;
         left: 0;
         right: 0; }
+      aside.play-queue ul li:hover .show-context-menu {
+        opacity: 1; }
 
 @-webkit-keyframes curve-in {
   0% {
