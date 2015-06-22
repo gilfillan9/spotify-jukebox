@@ -11,48 +11,64 @@
     <link href="/css/app.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
     <script src="/js/materialize.js"></script>
     <script src="/js/color-thief.min.js"></script>
     <script src="/js/async.js"></script>
     <script src="/js/spotify-web-api.js"></script>
     <script src="/js/handlebars-v3.0.3.js"></script>
     <script src="/js/app.js"></script>
+
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <!--Iron elements-->
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/iron-icons/av-icons.html">
+    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="bower_components/iron-image/iron-image.html">
+
+    <!--Paper elements-->
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+
 </head>
 <body>
 <ul class="left-nav">
-    <li class="waves-effect">
+    <paper-button>
         <a href="#" data-nav="browse">
             <i class="mdi-av-album"></i>
             <span>Browse</span>
         </a>
-    </li>
-    <li class="waves-effect">
+    </paper-button>
+    <paper-button>
         <a href="#" data-nav="nowPlaying">
             <i class="mdi-av-queue-music"></i>
             <span>Playing</span>
         </a>
-    </li>
-    <li class="separator"></li>
-    <li class="waves-effect">
+    </paper-button>
+    <paper-button>
         <a href="#" class="phone-call-on">
             <i class="mdi-notification-phone-in-talk"></i>
             <span>Phone On</span>
             <span>Phone On</span>
         </a>
-    </li>
-    <li class="waves-effect">
+    </paper-button>
+    <paper-button>
         <a href="#" class="phone-call-off">
             <i class="mdi-communication-ring-volume"></i>
             <span>Phone Off</span>
         </a>
-    </li>
-    <li class="separator"></li>
-    <li class="waves-effect">
+    </paper-button>
+    <paper-button>
         <a href="#" data-nav="settings">
             <i class="mdi-action-settings"></i>
             <span>Settings</span>
         </a>
-    </li>
+    </paper-button>
 </ul>
 <header>
     <nav>
@@ -80,7 +96,7 @@
         </section>
     </nav>
 </header>
-<main>
+<main class="fullbleed layout vertical">
 
 </main>
 <aside class="search-content animate-in">

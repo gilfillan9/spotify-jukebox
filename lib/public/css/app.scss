@@ -8,6 +8,7 @@ html, body {
   bottom: 0;
   right: 0;
   left: 0;
+  height: 100%;
 }
 
 body {
@@ -266,6 +267,14 @@ main {
     margin: 4px 0;
   }
 
+  paper-scroll-header-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
   @media only all and (min-width: 600px) {
     top: 64px;
     bottom: 62px;
@@ -288,6 +297,12 @@ main {
     }
   }
 
+}
+
+paper-toolbar {
+  &.x-tall {
+    height: 256px;
+  }
 }
 
 footer {
@@ -733,11 +748,19 @@ footer {
     z-index: 2;
     padding: 0;
 
-    li {
+    paper-button {
       height: 80px;
       overflow: hidden;
       margin: 0;
       padding: 0;
+      width: 80px;
+
+      &:hover {
+        background: #eee;
+      }
+      paper-material {
+        padding: 0 !important;
+      }
 
       a {
         padding: 0;
@@ -748,7 +771,6 @@ footer {
         @include transition(transform 300ms);
         &:hover {
           @include transform(translateY(-50%));
-          background: #eee;
         }
         &.selected {
           color: #ee6e73;
@@ -1046,14 +1068,14 @@ aside.play-queue {
         position: absolute;
         right: 40px;
         top: 5px;
-        width: 36px;
+        width: 40px;
         border-radius: 50%;
-        color: #000000;
-        font-size: 24px;
         text-align: center;
-        display: inline-block;
         opacity: 0;
-        @include transition((opacity 400ms ease))
+        @include transition((opacity 400ms ease));
+        iron-icon {
+          font-size: 24px;
+        }
       }
 
       .votes {
@@ -1428,4 +1450,8 @@ aside.play-queue {
   #toast-container {
     right: 315px;
   }
+}
+
+paper-button.text-white {
+  color: #FFF;
 }
