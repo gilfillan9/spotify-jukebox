@@ -17,7 +17,7 @@ body {
   }
   &.show-left-bar {
     > header, > main, > footer, > aside, > section.mobile-current-playing {
-      transform: translate3d(200px, 0, 0);
+      @include transform(translate3d(200px, 0, 0));
     }
   }
 }
@@ -30,7 +30,7 @@ body {
   bottom: 0;
   left: 0;
   width: 300px;
-  transform: translate3d(-100%, 0, 0);
+  @include transform(translate3d(-100%, 0, 0));
   margin: 0;
   z-index: 999;
   @include transition(transform 500ms);
@@ -38,7 +38,7 @@ body {
   padding: 10px 0;
 
   .show-left-bar & {
-    transform: translate3d(0, 0, 0);
+    @include transform(translate3d(0, 0, 0));
   }
 
   li {
@@ -741,7 +741,7 @@ footer {
   }
 
   .left-nav {
-    transform: none;
+    @include transform(none);
     width: 80px;
     top: 64px;
     bottom: 64px;
@@ -1142,36 +1142,36 @@ aside.play-queue {
 
 @include keyframes(curve-in) {
   0% {
-    transform: rotate(8deg) translateY(20%) rotate(-8deg);
+    @include transform((rotate(8deg) translateY(20%) rotate(-8deg)));
     opacity: 0;
   }
   100% {
-    transform: rotate(0deg) translateY(0%) rotate(-0deg);
+    @include transform(rotate(0deg) translateY(0%) rotate(-0deg));
     opacity: 1;
   }
 }
 
 @include keyframes(curve-out) {
   0% {
-    transform: rotate(0deg) translateY(0%) rotate(-0deg);
+    @include transform(rotate(0deg) translateY(0%) rotate(-0deg));
     opacity: 1;
   }
   100% {
-    transform: rotate(8deg) translateY(20%) rotate(-8deg);
+    @include transform(rotate(8deg) translateY(20%) rotate(-8deg));
     opacity: 0;
   }
 }
 
 @include keyframes(zoom-out) {
   0% {
-    transform: scale(1);
+    @include transform(scale(1));
     opacity: 1;
   }
   80% {
     opacity: 0;
   }
   100% {
-    transform: scale(0);
+    @include transform(scale(0));
   }
 }
 
