@@ -8062,7 +8062,9 @@ body.show-left-bar > header, body.show-left-bar > main, body.show-left-bar > foo
   .left-nav li {
     display: block;
     margin: 1px 0;
-    padding: 5px 10px; }
+    padding: 0; }
+    .left-nav li paper-button {
+      border-radius: 0; }
     .left-nav li a {
       display: inline-block;
       padding: 7px 3px;
@@ -8071,12 +8073,8 @@ body.show-left-bar > header, body.show-left-bar > main, body.show-left-bar > foo
       color: rgba(0, 0, 0, 0.83);
       font-size: 1.2em; }
       .left-nav li a span {
-        padding-left: 15px; }
-    .left-nav li.separator {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      margin: 7px 0;
-      height: 0px;
-      padding: 0; }
+        padding-left: 15px;
+        text-transform: initial !important; }
 
 body::after {
   position: fixed;
