@@ -644,7 +644,7 @@ footer {
 
 .pills {
   @include flexbox;
-  align-items: flex-start;
+  align-items: stretch;
   align-content: stretch;
   flex-direction: row;
   flex-flow: row wrap;
@@ -653,9 +653,10 @@ footer {
 .pill {
   @extend .curve-in, .zoom-out, .blue-grey.lighten-4;
   @include flexbox;
+  @include flex(1);
 
-  flex-grow: 1;
-  flex-flow: column wrap;
+  flex-direction: column;
+  justify-content: space-between;
   flex-basis: 40%;
 
   overflow: hidden;
@@ -663,14 +664,56 @@ footer {
   padding: 0;
   margin: 2px;
 
+  &.double-length {
+    flex-basis: 80%;
+    flex-flow: row;
+
+    img, .text-content {
+      @include flex(1);
+      flex-basis: 50%;
+    }
+
+    img {
+      background-size: cover !important;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .text-content {
+      flex-flow: column;
+      height: auto;
+
+      .truncate {
+        white-space: initial;
+        overflow: initial;
+        text-overflow: initial;
+      }
+    }
+  }
+
   @media only all and (min-width: 600px) {
-    flex-basis: 24%;
+    max-width: 60%;
+    min-width: 40%;
+    &.double-length {
+      max-width: 100%;
+      min-width: 100%;
+    }
   }
   @media only all and (min-width: 992px) {
-    flex-basis: 19%;
+    max-width: 22%;
+    min-width: 18%;
+    &.double-length {
+      max-width: 40%;
+      min-width: 36%;
+    }
   }
   @media only all and (min-width: 1200px) {
-    flex-basis: 12%;
+    max-width: 14%;
+    min-width: 10%;
+    &.double-length {
+      max-width: 28.25%;
+      min-width: 20%;
+    }
   }
 
   .text-content {
@@ -700,6 +743,8 @@ footer {
     display: block;
     width: 100%;
     height: auto;
+    background-position: center center;
+    background-size: cover;
   }
 
   &.pill-clicked {
@@ -708,6 +753,7 @@ footer {
     opacity: 1 !important;
     z-index: 1;
     margin: 0;
+    max-width: none;
     @include animation(none);
     @include transition((top 600ms, left 600ms, width 600ms, height 600ms, opacity 300ms));
 
