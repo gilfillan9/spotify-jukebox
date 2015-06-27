@@ -991,49 +991,17 @@ footer {
 
 .context-menu {
   position: absolute;
-  width: 0;
-  height: 0;
+  z-index: 10;
+  min-width: 180px;
   margin: 0;
-  @include transition((width 200ms, height 200ms));
-  overflow: hidden;
-  z-index: 5;
+  padding: 0;
+  background: #FFF;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
 
-  ul {
-    @extend .collection, .z-depth-1;
-    min-width: 180px;
-    margin: 0;
-    padding: 10px 0;
-    background: white;
-
-    li {
-      @extend .collection-item;
-      @include transition(none);
-      width: 100%;
-      display: block;
-      padding: 5px 20px;
-      border: 0;
-
-      &.separator {
-        height: 1px;
-        background: #eee;
-        padding: 0;
-        margin: 6px 0;
-      }
-
-      i {
-        vertical-align: middle;
-        padding-right: 8px;
-        font-size: 20px;
-        @extend .grey-text.text-darken-1;
-      }
-
-      &:hover {
-        @extend .grey.lighten-3;
-        i {
-          @extend .grey-text.text-darken-3;
-        }
-      }
-
+  paper-item, paper-icon-item {
+    position: relative;
+    &:hover {
+      background-color: #eeeeee;
     }
   }
 }
@@ -1055,8 +1023,12 @@ aside.play-queue {
   top: 64px;
   bottom: 60px;
   width: 200px;
-  overflow-y: auto;
+  overflow-y: scroll;
   @extend .z-depth-2;
+
+  body.play-queue-open & {
+    overflow: visible;
+  }
 
   @media only all and (min-width: 1200px) {
     width: 300px;
@@ -1064,20 +1036,32 @@ aside.play-queue {
 
   ul {
     padding: 0;
+    background: #EEEEEE;
+    position: relative;
+
     li {
       @include flexbox;
+      @include transition(all 0.5s);
       flex-direction: column;
       justify-content: center;
       position: relative;
-      padding: 6px 0;
-      background: #FFFFFF;
+      padding: 0;
+      cursor: pointer;
+      right: 0;
+      margin: 0;
 
       &:first-of-type {
         @extend .grey.lighten-3;
       }
-      .content {
-        @include transform(translateX(0px));
+      paper-material {
+        @include transition(all 0.5s);
+        height: 56px;
+        padding: 6px 0;
+        overflow: hidden;
+        background: #FFFFFF;
+      }
 
+      .content {
         .title {
           font-weight: bold;
           margin-right: 25px;
@@ -1106,13 +1090,31 @@ aside.play-queue {
           line-height: 44px;
           vertical-align: middle;
         }
+
       }
+      .extra-content {
+        @include transition(opacity 1s);
+        opacity: 0;
+        height: 146px;
+        margin: 8px 0 -4px 0;
+
+        .cover-art {
+          width: 146px;
+          height: 146px;
+        }
+
+        .content {
+          display: inline-block;
+          width: 250px;
+          vertical-align: top;
+        }
+      }
+
       .show-context-menu {
         position: absolute;
         right: 40px;
         top: 5px;
         width: 40px;
-        border-radius: 50%;
         text-align: center;
         opacity: 0;
         @include transition((opacity 400ms ease));
@@ -1122,22 +1124,10 @@ aside.play-queue {
       }
 
       .votes {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-        line-height: 100%;
-        @include transform(translateX(100%));
+        display: inline-block;
+        vertical-align: top;
 
-        button {
-          height: 100%;
-
-          &:active, &:focus {
-            @extend .grey.lighten-3;
-          }
-
+        paper-icon-button {
           &.selected {
             &.up {
               color: green;
@@ -1148,24 +1138,6 @@ aside.play-queue {
             }
           }
 
-          &.back-btn {
-            position: absolute;
-            left: 0;
-            padding: 0 20px;
-          }
-        }
-      }
-
-      .content, .votes {
-        @include transition(transform 400ms);
-      }
-
-      &.show-votes {
-        .content {
-          @include transform(translateX(-100%));
-        }
-        .votes {
-          @include transform(translateX(0px));
         }
       }
 
@@ -1174,7 +1146,39 @@ aside.play-queue {
         left: 0;
         right: 0;
       }
-      @include transition(top 800ms);
+
+      &.open {
+        margin: 8px 0 -138px 0;
+        width: 400px;
+        right: 150px;
+
+        paper-material {
+          z-index: 5;
+          height: 200px;
+          .extra-content {
+            opacity: 1;
+          }
+          .show-context-menu {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.close {
+        margin: 0;
+        right: 0;
+
+        width: 200px;
+        @media only all and (min-width: 1200px) {
+          width: 300px;
+        }
+        paper-material {
+          height: 56px;
+          .extra-content {
+            opacity: 0;
+          }
+        }
+      }
 
       &:hover .show-context-menu {
         opacity: 1;

@@ -1,16 +1,21 @@
-<div class="context-menu">
-    <ul>
-        {{#each items}}
-            {{#ifCond "text" type}}
-                <li data-action="{{action}}" data-uri="{{uri}}" class="waves-effect">
-                    {{#if icon}}<i class="{{icon}} context-icon"></i>{{/if}}
-                    {{#if image}}<img src="{{image}}" class="context-icon"/>{{/if}}
-                    <span class="content">{{text}}</span>
-                </li>
-            {{/ifCond}}
-            {{#ifCond "separator" type}}
-                <li class="separator"></li>
-            {{/ifCond}}
-        {{/each}}
-    </ul>
-</div>
+<paper-material class="context-menu no-highlight">
+    {{#each items}}
+        {{#ifCond "text" type}}
+            {{#if icon}}
+                <paper-icon-item data-action="{{action}}" data-uri="{{uri}}">
+                    <paper-ripple></paper-ripple>
+                    <iron-icon item-icon icon="{{icon}}"></iron-icon>
+                    {{text}}
+                </paper-icon-item>
+            {{else}}
+                <paper-item data-action="{{action}}" data-uri="{{uri}}">
+                    <paper-ripple></paper-ripple>
+                    {{text}}
+                </paper-item>
+            {{/if}}
+        {{/ifCond}}
+        {{#ifCond "separator" type}}
+            <paper-separator-item></paper-separator-item>
+        {{/ifCond}}
+    {{/each}}
+</paper-material>
