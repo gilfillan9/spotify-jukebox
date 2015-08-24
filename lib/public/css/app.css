@@ -8609,9 +8609,7 @@ footer {
       flex: 1;
       flex-basis: 50%; }
     .pill.double-length img {
-      background-size: cover !important;
-      background-position: center;
-      background-repeat: no-repeat; }
+      object-fit: cover; }
     .pill.double-length .text-content {
       flex-flow: column;
       height: auto; }

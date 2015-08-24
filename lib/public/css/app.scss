@@ -674,9 +674,7 @@ footer {
     }
 
     img {
-      background-size: cover !important;
-      background-position: center;
-      background-repeat: no-repeat;
+      object-fit: cover;
     }
 
     .text-content {
