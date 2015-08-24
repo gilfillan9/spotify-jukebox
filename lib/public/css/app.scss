@@ -392,8 +392,43 @@ footer {
       }
 
       &.current-artist {
-        @extend .grey-text.text-darken-3;
+        display: inline-block;
         font-size: 0.85em;
+        a {
+          @extend .grey-text.text-darken-3;
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &::after {
+            content: ',';
+            padding-right: 4px;
+            display: inline-block;
+            text-decoration: none;
+          }
+
+          &:last-of-type::after {
+            content: '';
+            padding-right: 0;
+          }
+        }
+      }
+
+      &.current-album {
+        display: inline-block;
+        font-size: 0.85em;
+        &:hover {
+          text-decoration: underline;
+        }
+        a {
+          @extend .grey-text.text-darken-3;
+        }
+      }
+
+      &.spacer {
+        display: inline-block;
+        @extend .grey-text.text-darken-3;
+        padding: 0 2px;
       }
     }
   }
@@ -1499,4 +1534,22 @@ aside.play-queue {
 
 paper-button.text-white {
   color: #FFF;
+}
+
+.now-playing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+  }
 }

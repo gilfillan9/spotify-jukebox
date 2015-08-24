@@ -1573,7 +1573,7 @@
 .grey.darken-3 {
   background-color: #424242 !important; }
 
-.grey-text.text-darken-3, footer .current-playing div.current-artist, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .track-table .row .column.action a.text-darken-3, .track-table .row:hover .column.action a, .track-table .row div.artist {
+.grey-text.text-darken-3, footer .current-playing div.current-artist a, footer .current-playing div.current-album a, footer .current-playing div.spacer, .mobile-current-playing .details-wrap span.current-artist, .mobile-controls .current-track-details .text-wrap span.current-artist, .mobile-controls .play-queue ul li .artist, .track-table .row .column.action a.text-darken-3, .track-table .row:hover .column.action a, .track-table .row div.artist {
   color: #424242 !important; }
 
 .grey.darken-4 {
@@ -8344,7 +8344,26 @@ footer {
     footer .current-playing div.current-title {
       font-weight: bold; }
     footer .current-playing div.current-artist {
+      display: inline-block;
       font-size: 0.85em; }
+      footer .current-playing div.current-artist a:hover {
+        text-decoration: underline; }
+      footer .current-playing div.current-artist a::after {
+        content: ',';
+        padding-right: 4px;
+        display: inline-block;
+        text-decoration: none; }
+      footer .current-playing div.current-artist a:last-of-type::after {
+        content: "";
+        padding-right: 0; }
+    footer .current-playing div.current-album {
+      display: inline-block;
+      font-size: 0.85em; }
+      footer .current-playing div.current-album:hover {
+        text-decoration: underline; }
+    footer .current-playing div.spacer {
+      display: inline-block;
+      padding: 0 2px; }
   @media only all and (min-width: 600px) {
     footer {
       display: block; } }
@@ -9444,5 +9463,20 @@ aside.play-queue {
     right: 315px; } }
 paper-button.text-white {
   color: #FFF; }
+
+.now-playing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .now-playing img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover; }
 
 /*# sourceMappingURL=app.css.map */
