@@ -22,8 +22,6 @@ You must create a config file containing the information used to login to spotif
             "port": 80
         },
         "spotify": {
-            "username":       "<CHANGEME>",
-            "password":       "<CHANGEME>",
             "apiKeyLocation": "./spotify_appkey.key",
             "clientId":      "<CHANGEME>",
             "clientSecret":   "<CHANGEME>"
@@ -31,7 +29,7 @@ You must create a config file containing the information used to login to spotif
     }
 ```
 
-The username and password must be for a premium spotify account and are only used to log into libspotify
+On first launch it will ask for a username and password for a spotify account. This account needs to be premium (limitation of libspotify)
 
 ## Usage
 To start the jukebox just type `node lib/app.js` within the root folder. 
@@ -51,7 +49,10 @@ To start the jukebox just type `node lib/app.js` within the root folder.
 * [node-uuid](https://github.com/broofa/node-uuid)
 * [promise](https://github.com/then/promise)
 * [request](https://github.com/request/request)
-* [cron](https://github.com/ncb000gt/node-cron)
+* [nedb](https://github.com/louischatriot/nedb)
+* [prompt](https://github.com/flatiron/prompt)
+* [bower](http://bower.io)
+* [polymer](https://www.polymer-project.org)
 
 ## License
-MIT
+[MIT](LICENSE)
