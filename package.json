@@ -12,6 +12,12 @@
     "promise": "*",
     "prompt": "^0.2.14",
     "request": "*",
-    "socket.io": "*"
-  }
+    "socket.io": "*",
+    "snyk": "^1.83.0"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
