@@ -10,7 +10,7 @@
     "node-spotify": "*",
     "node-uuid": "*",
     "promise": "*",
-    "prompt": "^0.2.14",
+    "prompt": "^1.2.0",
     "request": "*",
     "socket.io": "*"
   }
